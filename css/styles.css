@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     font-family: 'Cinzel', serif;
     margin: 0;
@@ -8,6 +9,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header styling */
 header {
     background: linear-gradient(to right, #4CAF50, #1DA1F2);
     color: #ffffff;
@@ -16,12 +18,14 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Header title styling */
 header h1 {
     margin: 0;
     font-size: 2em;
     font-family: 'Cinzel', serif;
 }
 
+/* Section styling */
 section {
     margin: 20px;
     padding: 20px;
@@ -31,19 +35,23 @@ section {
     flex: 1;
 }
 
+/* Subheading styling */
 h2 {
     color: #333;
 }
 
+/* Link styling */
 a {
     color: #1a73e8;
     text-decoration: none;
 }
 
+/* Link hover effect */
 a:hover {
     text-decoration: underline;
 }
 
+/* Profile photo styling */
 #profile-photo img {
     display: block;
     margin: 0 auto;
@@ -51,6 +59,7 @@ a:hover {
     border: 4px solid #35A8A1;
 }
 
+/* Username styling */
 .username {
     text-align: center;
     font-size: 1.5em;
@@ -59,6 +68,7 @@ a:hover {
     margin: 10px 0;
 }
 
+/* Job title styling */
 .jobtitle {
     text-align: center;
     font-size: 1.2em;
@@ -66,6 +76,7 @@ a:hover {
     margin: 5px 0;
 }
 
+/* Contact icons container styling */
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -74,6 +85,7 @@ a:hover {
     margin-top: 10px;
 }
 
+/* Contact icons link styling */
 .contact-icons a {
     font-size: 24px;
     background-color: #4CAF50;
@@ -85,10 +97,12 @@ a:hover {
     border-radius: 5px;
 }
 
+/* Contact icons link hover effect */
 .contact-icons a:hover {
     opacity: 0.7;
 }
 
+/* Horizontal rule styling */
 hr {
     border: none;
     border-top: 2px solid #ccc;
@@ -96,15 +110,18 @@ hr {
     width: 60%;
 }
 
+/* About me section styling */
 #about-me {
     text-align: center;
 }
 
+/* About me section subheading styling */
 #about-me h2 {
     margin-bottom: 20px;
     color: #4CAF50; /* Matches the green color used in the header gradient */
 }
 
+/* About me section paragraph styling */
 #about-me p {
     text-align: justify;
     line-height: 1.6;
@@ -115,6 +132,7 @@ hr {
     max-width: 800px;
 }
 
+/* Footer styling */
 footer {
     background: linear-gradient(to right, #1DA1F2, #4CAF50);
     color: #fff;
@@ -122,6 +140,7 @@ footer {
     padding: 20px 0;
 }
 
+/* Footer content container styling */
 footer .footer-content {
     display: flex;
     justify-content: space-between;
@@ -132,25 +151,31 @@ footer .footer-content {
     padding: 0 20px;
 }
 
+/* Footer username styling */
 footer .username {
     font-weight: bold;
 }
 
+/* Footer icons container styling */
 .footer-icons {
     display: flex;
     gap: 15px;
 }
 
+/* Footer icons link styling */
 .footer-icons a {
     font-size: 24px;
     color: #fff;
 }
 
+/* Footer icons link hover effect */
 .footer-icons a:hover {
     opacity: 0.7;
 }
 
 /* Responsive Design */
+
+/* Tablet and smaller devices */
 @media (max-width: 768px) {
     section {
         margin: 10px;
@@ -180,6 +205,7 @@ footer .username {
     }
 }
 
+/* Mobile and smaller devices */
 @media (max-width: 480px) {
     header {
         padding: 10px 0;
