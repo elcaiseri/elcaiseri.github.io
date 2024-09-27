@@ -16,7 +16,7 @@ const schemaMarkup = {
   "gender": "Male",
   "nationality": "Egyptian",
   "jobTitle": "AI / ML Engineer",
-  "description": "Islam Kassem is a top-rated AI and Machine Learning Engineer with a strong academic background and a Master’s degree in Data Science. Ranked in the top 1% on Kaggle as a Kaggle Master, he specializes in Data Science, Deep Learning, NLP, and Python Development. Additionally, Eslam is a Top-Rated freelancer on Upwork, delivering impactful AI and machine learning solutions to clients worldwide.",
+  "description": "Islam Kassem is an AI / ML Engineer passionate about extracting patterns and trends from data to drive impactful insights. I specialize in building and scaling machine learning models to solve real-world problems.",
   "email": "kassem@elcaiseri.com",
   "telephone": "+201202462195",
   "url": "https://elcaiseri.com",
