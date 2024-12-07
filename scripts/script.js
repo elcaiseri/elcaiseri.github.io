@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Eslam Kassem",
-  "alternateName": "Islam Kassem",
+  "name": "Islam Kassem",
+  "alternateName": "Eslam Kassem",
   "birthDate": "1998-07-15",
   "gender": "Male",
   "nationality": "Egyptian",
