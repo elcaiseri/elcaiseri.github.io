@@ -140,7 +140,10 @@ h2 {
    ============================= */
 #about-me p {
     text-align: justify;
-    line-height: 1.6;
+    text-justify: inter-word;
+    word-spacing: -1.5px;
+    hyphens: auto;
+    line-height: 1.5;
     margin: 0 auto;
     padding: 10px;
     font-size: 1.1em;
