@@ -9,6 +9,35 @@ body {
     min-height: 100vh;
 }
 
+/* Dark Mode Adjustments */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+/* Ensure Sections Have Dark Background */
+body.dark-mode section {
+    background-color: #1e1e1e; /* Darker background for sections */
+    color: #e0e0e0; /* Light text */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Softer shadow */
+}
+
+/* Subheadings in Dark Mode */
+body.dark-mode h2 {
+    color: #4CAF50; /* Keep the theme color */
+}
+
+/* About Me Paragraph */
+body.dark-mode #about-me p {
+    color: #e0e0e0; /* Light text */
+}
+
+/* Footer Dark Mode Adjustments */
+body.dark-mode footer {
+    background: linear-gradient(to right, #1DA1F2, #4CAF50);
+    color: white;
+}
+
 /* Header styling */
 header {
     background: linear-gradient(to right, #4CAF50, #1DA1F2);
@@ -24,6 +53,23 @@ header h1 {
     font-size: 2em;
     font-family: 'Cinzel', serif;
 }
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
 
 /* Section styling */
 section {
