@@ -129,6 +129,10 @@ a:hover {
     margin: 5px 0;
 }
 
+body.dark-mode .jobtitle {
+    color: #e0e0e0; /* Light text */
+}
+
 /* Contact icons container styling */
 .contact-icons {
     display: flex;
