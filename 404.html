@@ -13,50 +13,188 @@
             padding: 50px 20px;
             max-width: 600px;
             margin: 0 auto;
+            animation: fadeInUp 0.6s ease-out;
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .error-code {
             font-size: 8em;
-            color: var(--accent-color);
+            background: linear-gradient(135deg, var(--accent-color), var(--skill-border));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin: 0;
             line-height: 1;
+            position: relative;
         }
+
+        .error-code::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            border-radius: 2px;
+        }
+
         .error-message {
             font-size: 1.5em;
             margin: 20px 0;
+            color: var(--text-color);
         }
+
+        .error-description {
+            color: var(--text-color);
+            opacity: 0.8;
+            margin: 15px 0;
+        }
+
         .home-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             margin-top: 30px;
             padding: 12px 24px;
             background: var(--accent-color);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: opacity 0.3s;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
         }
+
         .home-link:hover {
-            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .home-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .home-link:hover i {
+            transform: translateX(-3px);
+        }
+
+        .suggested-links {
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--surface-shadow);
+        }
+
+        .suggested-links h2 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .suggested-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .suggested-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: var(--section-bg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .suggested-links a:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: var(--surface-shadow);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6em;
+            }
+            
+            .error-message {
+                font-size: 1.3em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 4em;
+            }
+            
+            .error-message {
+                font-size: 1.1em;
+            }
+
+            .suggested-links ul {
+                flex-direction: column;
+                align-items: stretch;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Islam Kassem</h1>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
-        </button>
+        <div class="container">
+            <h1>Islam Kassem</h1>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
     <main>
         <section class="error-container">
             <h1 class="error-code">404</h1>
             <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
-            <a href="/" class="home-link">Back to Home</a>
+            <p class="error-description">The page might have been moved, deleted, or never existed. Let's get you back on track!</p>
+            <a href="/" class="home-link">
+                <i class="fas fa-chevron-left"></i>
+                Back to Home
+            </a>
+            <div class="suggested-links">
+                <h2>You might be interested in:</h2>
+                <ul>
+                    <li><a href="/#services">AI Services</a></li>
+                    <li><a href="/#about-me">About Me</a></li>
+                    <li><a href="/#projects">Projects</a></li>
+                    <li><a href="/#skills">Skills & Expertise</a></li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="footer-content">
+        <div class="container footer-content">
             <p>&copy; <script>document.write(new Date().getFullYear());</script> Islam Kassem | @elcaiseri</p>
+            <div class="footer-icons">
+                <a href="mailto:kassem@elcaiseri.com" title="Email Me" aria-label="Send email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn Profile" target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/elcaiseri" title="GitHub Profile" target="_blank" rel="noopener" aria-label="Visit GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://elcaiseri.medium.com" title="Medium Blog" target="_blank" rel="noopener" aria-label="Read My Blog on Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle Profile" target="_blank" rel="noopener" aria-label="Visit Kaggle Profile"><i class="fab fa-kaggle"></i></a>
+            </div>
         </div>
     </footer>
     <script src="scripts/script.js"></script>
