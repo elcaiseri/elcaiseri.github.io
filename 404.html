@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Islam Kassem</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .error-code {
+            font-size: 8em;
+            color: var(--accent-color);
+            margin: 0;
+            line-height: 1;
+        }
+        .error-message {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+        }
+        .home-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Islam Kassem</h1>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <main>
+        <section class="error-container">
+            <h1 class="error-code">404</h1>
+            <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
+            <a href="/" class="home-link">Back to Home</a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> Islam Kassem | @elcaiseri</p>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

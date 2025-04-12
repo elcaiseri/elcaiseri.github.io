@@ -61,35 +61,87 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-    // ✅ Toggle Dark Mode
-    const themeToggle = document.getElementById("theme-toggle");
-
-    // Check Local Storage for Theme Preference
-    const storedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    if (storedTheme) {
-        document.body.classList.toggle("dark-mode", storedTheme === "dark");
-    } else {
-        document.body.classList.toggle("dark-mode", systemPrefersDark);
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference or use system preference
+    const currentTheme = localStorage.getItem('theme') || 
+        (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
     }
 
-    // Set Correct Icon
-    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+    });
 
-    // Handle Theme Toggle
-    themeToggle.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-        
-        // Save User Preference
-        if (document.body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            themeToggle.textContent = "☀️";
-        } else {
-            localStorage.setItem("theme", "light");
-            themeToggle.textContent = "🌙";
+    // Add intersection observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(section);
+    });
+
+    // Add fade-in class for animation
+    const style = document.createElement('style');
+    style.textContent = `
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
-    });  
+    `;
+    document.head.appendChild(style);
+
+    // Scroll to top functionality with footer awareness
+    const scrollTopBtn = document.getElementById('scroll-top');
+    const footer = document.querySelector('footer');
+    
+    const updateScrollButtonPosition = () => {
+        const footerRect = footer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+        
+        // Show/hide button based on scroll position
+        if (scrollY > 200) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+        
+        // Adjust button position when near footer
+        if (footerRect.top <= viewportHeight) {
+            const bottomOffset = viewportHeight - footerRect.top + 20;
+            scrollTopBtn.style.bottom = `${bottomOffset}px`;
+        } else {
+            scrollTopBtn.style.bottom = null;
+        }
+    };
+
+    // Listen for scroll and resize events
+    window.addEventListener('scroll', updateScrollButtonPosition);
+    window.addEventListener('resize', updateScrollButtonPosition);
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
 });
