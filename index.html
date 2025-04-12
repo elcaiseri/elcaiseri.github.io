@@ -47,32 +47,133 @@
 </head>
 <body>
     <header>
-        <h1>Islam Kassem</h1>
-        <button id="theme-toggle" title="Toggle Dark Mode">🌙</button>
+        <div class="container">
+            <h1>Islam Kassem</h1>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
-    <main>
+    <main class="container">
         <section id="profile-photo">
-            <img src="assets/profile-photo-white-bg.webp" alt="Islam Kassem" width="256">
-            <div class="jobtitle"><p>AI / ML Engineer</p></div>
+            <img src="assets/profile-photo-white-bg.webp" 
+                 alt="Islam Kassem - AI/ML Engineer and Data Scientist" 
+                 width="256" 
+                 height="256"
+                 loading="eager"
+                 fetchpriority="high">
+            <div class="jobtitle" aria-label="Job Title"><p>AI / ML Engineer</p></div>
             <div class="contact-icons" id="contact-information">
-                <a href="https://www.upwork.com/services/consultation/development-it-eslam-1473193876755525632?ref=project_share&tier=1" class="button" target="_blank">Book a Consultation</a>
+                <a href="https://www.upwork.com/services/consultation/development-it-eslam-1473193876755525632?ref=project_share&tier=1" 
+                   class="button" 
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Book a Consultation on Upwork">Book a Consultation</a>
             </div>
         </section>
         <section id="about-me">
             <h2>About Me</h2>
-            <p><strong>AI and Machine Learning Engineer</strong> with a solid academic background, holding a <strong>Master’s in Data Science</strong> and expertise in <strong>NLP, Deep Learning, LLMs, and Data Science</strong>. As a <strong>Top-Rated Upwork freelancer</strong>, I specialize in developing <strong>scalable machine learning models</strong>, optimizing algorithms, and feature engineering to drive impactful, AI-driven solutions. A <strong>Kaggle Master and Competitions Expert</strong> ranked in the <strong>top 1%</strong>, I have deep expertise in <strong>model benchmarking and AI competitions</strong>, leveraging data-driven innovation to transform complex data into actionable insights and deliver measurable results for businesses.</p>
+            <p><strong>AI and Machine Learning Engineer</strong> specializing in LLMs, Deep Learning, and Computer Vision. Currently pursuing a <strong>Master's in Data Science</strong> while ranking as a <strong>Kaggle Master (top 1%)</strong> and maintaining <strong>Top-Rated status on Upwork</strong>. Expert in developing scalable ML solutions, from fine-tuning state-of-the-art models to deploying production-ready systems. Passionate about turning complex AI challenges into practical business solutions.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>Master's in Data Science</h3>
+                        <span class="education-year">2024 - 2025</span>
+                    </div>
+                    <p class="institution">Cairo University - Faculty of Graduate Studies for Statistical Research</p>
+                    <p class="education-details">Advanced statistical research in data science with focus on machine learning, statistical modeling, and big data analytics. Applied AI/ML techniques to real-world problems, achieving a GPA of 3.6/4.0.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>B.Sc. in Electronics & Communications Engineering</h3>
+                        <span class="education-year">2016 - 2021</span>
+                    </div>
+                    <p class="institution">Port Said University - Faculty of Engineering</p>
+                    <p class="education-details">Strong foundation in mathematics, signal processing, and problem-solving - key skills that complement my AI/ML expertise. Combined engineering principles with computational thinking to develop innovative solutions.</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Large Language Models</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Science</h3>
+                    <ul>
+                        <li>Statistical Analysis</li>
+                        <li>Feature Engineering</li>
+                        <li>Data Visualization</li>
+                        <li>Predictive Modeling</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>PyTorch / TensorFlow</li>
+                        <li>Scikit-learn</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Large Language Models Expert</h3>
+                    <p>Specialized in fine-tuning and deploying LLMs for various business applications. Expertise in prompt engineering and RAG implementations for enhanced model performance.</p>
+                    <div class="project-tags">
+                        <span>LLMs</span>
+                        <span>NLP</span>
+                        <span>RAG</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Computer Vision Solutions</h3>
+                    <p>Developed state-of-the-art computer vision models for object detection and image segmentation, achieving top performance in Kaggle competitions.</p>
+                    <div class="project-tags">
+                        <span>Computer Vision</span>
+                        <span>Deep Learning</span>
+                        <span>PyTorch</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>MLOps & Model Deployment</h3>
+                    <p>Implemented end-to-end MLOps pipelines for model training, validation, and deployment. Expertise in cloud platforms and containerization.</p>
+                    <div class="project-tags">
+                        <span>MLOps</span>
+                        <span>Docker</span>
+                        <span>Cloud</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <footer>
-        <div class="footer-content">
+        <div class="container footer-content">
             <p>&copy; <script>document.write(new Date().getFullYear());</script> Islam Kassem | @elcaiseri</p>
             <div class="footer-icons">
-                <!-- <a href="tel:+201202462195" title="Phone"><i class="fas fa-phone"></i></a> -->
-                <a href="mailto:kassem@elcaiseri.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/elcaiseri" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://elcaiseri.medium.com" title="Medium" target="_blank"><i class="fab fa-medium"></i></a>
-                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="mailto:kassem@elcaiseri.com" title="Email Me" aria-label="Send email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn Profile" target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/elcaiseri" title="GitHub Profile" target="_blank" rel="noopener" aria-label="Visit GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://elcaiseri.medium.com" title="Medium Blog" target="_blank" rel="noopener" aria-label="Read My Blog on Medium"><i class="fab fa-medium" aria-hidden="true"></i></a>
+                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle Profile" target="_blank" rel="noopener" aria-label="Visit Kaggle Profile"><i class="fab fa-kaggle" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>
