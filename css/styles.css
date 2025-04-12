@@ -2,18 +2,25 @@
    Base Configuration & Variables
    ============================= */
 :root {
-    --bg-color: #f4f4f4;
-    --text-color: #333;
+    /* Light theme */
+    --bg-color: #fafafa;
+    --text-color: #2c3e50;
     --section-bg: #ffffff;
-    --header-bg: linear-gradient(to right, #4CAF50, #1DA1F2);
-    --footer-bg: linear-gradient(to right, #0A84FF, #3DDC84);
+    --header-bg: linear-gradient(135deg, #4CAF50, #1DA1F2);
+    --footer-bg: linear-gradient(135deg, #0A84FF, #3DDC84);
     --accent-color: #3DDC84;
     --link-color: #1a73e8;
-    --border-color: rgba(0, 0, 0, 0.1);
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --shadow-color: rgba(0, 0, 0, 0.06);
     --card-bg: #ffffff;
-    --card-hover-bg: #f8f8f8;
+    --card-hover-bg: #f8f9fa;
     --skill-border: #4CAF50;
+    
+    /* Shared properties */
+    --transition-speed: 400ms;
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    --surface-shadow: 0 2px 8px var(--shadow-color);
+    --surface-shadow-hover: 0 4px 16px var(--shadow-color);
     --container-width-xl: 1200px;
     --container-width-lg: 960px;
     --container-width-md: 720px;
@@ -43,7 +50,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color var(--transition-speed) var(--transition-timing),
+                color var(--transition-speed) var(--transition-timing);
 }
 
 /* Container System */
@@ -79,17 +87,19 @@ video {
    Dark Mode
    ============================= */
 body.dark-mode {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --section-bg: linear-gradient(to bottom, #181818, #222222);
-    --header-bg: linear-gradient(to right, #0a3d62, #1a5276);
-    --footer-bg: linear-gradient(to right, #1b1b1b, #2b2b2b);
-    --accent-color: #4FC3F7;
-    --link-color: #4FC3F7;
+    /* Dark theme with improved contrast and depth */
+    --bg-color: #111827;
+    --text-color: #e2e8f0;
+    --section-bg: #1a1f2e;
+    --header-bg: linear-gradient(135deg, #065f46, #0c4a6e);
+    --footer-bg: linear-gradient(135deg, #1f2937, #065f46);
+    --accent-color: #34d399;
+    --link-color: #60d9fa;
     --border-color: rgba(255, 255, 255, 0.08);
-    --shadow-color: rgba(255, 255, 255, 0.07);
-    --card-bg: #1e1e1e;
-    --card-hover-bg: #2a2a2a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(30, 41, 59, 0.8);
+    --card-hover-bg: rgba(30, 41, 59, 0.95);
+    --skill-border: #34d399;
 }
 
 /* =============================
@@ -129,15 +139,21 @@ header .container {
     right: 20px;
     z-index: 100;
     color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all var(--transition-speed) var(--transition-timing);
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #theme-toggle:hover {
-    transform: rotate(180deg);
-    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotate(180deg) scale(1.1);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 #theme-toggle .fa-sun {
@@ -164,10 +180,18 @@ section {
     padding: var(--section-spacing-desktop);
     background: var(--section-bg);
     border-radius: 8px;
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: var(--surface-shadow);
     flex: 1;
     border: 1px solid var(--border-color);
-    transition: margin 0.3s ease, padding 0.3s ease;
+    transition: all var(--transition-speed) var(--transition-timing);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+section:hover {
+    box-shadow: var(--surface-shadow-hover);
+    border-color: var(--accent-color);
+    background: var(--card-hover-bg);
 }
 
 h2 {
@@ -200,7 +224,7 @@ h2 {
 
 .jobtitle p {
     margin: 0;
-    background: linear-gradient(135deg, var(--accent-color) 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--skill-border) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -284,14 +308,17 @@ h2 {
     background: var(--card-bg);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px var(--shadow-color);
+    box-shadow: var(--surface-shadow);
     border-left: 4px solid var(--skill-border);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all var(--transition-speed) var(--transition-timing);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px var(--shadow-color);
+    box-shadow: var(--surface-shadow-hover);
+    border-color: var(--accent-color);
+    background: var(--card-hover-bg);
 }
 
 .skill-category h3 {
@@ -333,13 +360,15 @@ h2 {
     background: var(--card-bg);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px var(--shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--surface-shadow);
+    transition: all var(--transition-speed) var(--transition-timing);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px var(--shadow-color);
+    box-shadow: var(--surface-shadow-hover);
+    border-color: var(--accent-color);
     background: var(--card-hover-bg);
 }
 
@@ -378,14 +407,17 @@ h2 {
     background: var(--card-bg);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px var(--shadow-color);
+    box-shadow: var(--surface-shadow);
     border-left: 4px solid var(--accent-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all var(--transition-speed) var(--transition-timing);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px var(--shadow-color);
+    box-shadow: var(--surface-shadow-hover);
+    border-color: var(--accent-color);
+    background: var(--card-hover-bg);
 }
 
 .education-header {
@@ -462,13 +494,15 @@ h2 {
     background: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--surface-shadow);
+    transition: all var(--transition-speed) var(--transition-timing);
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
     border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .service-card::before {
@@ -485,7 +519,7 @@ h2 {
 
 .service-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--surface-shadow-hover);
 }
 
 .service-card:hover::before {
@@ -694,20 +728,22 @@ h2 {
 }
 
 /* Dark mode adjustments for services */
-body.dark-mode .service-card {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+body.dark-mode .service-card,
+body.dark-mode .project-card,
+body.dark-mode .education-card,
+body.dark-mode .skill-category {
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-body.dark-mode .service-card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-body.dark-mode .service-features li::before {
-    background: rgba(79, 195, 247, 0.1);
-}
-
-body.dark-mode .service-link:hover {
-    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+body.dark-mode .service-card:hover,
+body.dark-mode .project-card:hover,
+body.dark-mode .education-card:hover,
+body.dark-mode .skill-category:hover {
+    background: rgba(45, 45, 45, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color);
 }
 
 /* =============================
