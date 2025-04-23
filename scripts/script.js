@@ -3,42 +3,111 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ✅ Add Schema Markup (JSON-LD) Dynamically
     const schemaMarkup = {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Islam Kassem",
-        "alternateName": "Eslam Kassem",
-        "birthDate": "1998-07-15",
-        "gender": "Male",
-        "nationality": "Egyptian",
-        "jobTitle": "AI / ML Engineer",
-        "description": "Islam Kassem is an AI / ML Engineer passionate about extracting patterns and trends from data to drive impactful insights. I specialize in building and scaling machine learning models to solve real-world problems.",
-        "email": "kassem@elcaiseri.com",
-        "url": "https://elcaiseri.com",
-        "sameAs": [
-            "https://github.com/elcaiseri",
-            "https://www.linkedin.com/in/elcaiseri",
-            "https://x.com/elcaiseri",
-            "https://elcaiseri.medium.com",
-            "https://www.kaggle.com/elcaiseri",
-            "https://linktr.ee/elcaiseri"
-        ],
-        "worksFor": [
-            {
-                "@type": "Organization",
-                "name": "Upwork",
-                "sameAs": "https://www.upwork.com",
-                "description": "Top-rated freelancer delivering AI-driven solutions in data science and deep learning."
+      "@context": "https://schema.org",
+      "@type": ["Person", "ProfessionalService"],
+      "name": "Islam Kassem",
+      "alternateName": ["Eslam Kassem", "إسلام قاسم", "elcaiseri"],
+      "birthDate": "1998-07-15",
+      "gender": "Male",
+      "nationality": "Egyptian",
+      "jobTitle": "AI / ML Engineer",
+      "description": "Islam Kassem is an AI / ML Engineer passionate about extracting patterns and trends from data to drive impactful insights. I specialize in building and scaling machine learning models to solve real-world problems.",
+      "email": "kassem@elcaiseri.com",
+      "url": "https://elcaiseri.com",
+      "image": "https://elcaiseri.com/assets/profile-photo-white-bg.webp",
+      "sameAs": [
+        "https://github.com/elcaiseri",
+        "https://www.linkedin.com/in/elcaiseri",
+        "https://x.com/elcaiseri",
+        "https://elcaiseri.medium.com",
+        "https://www.kaggle.com/elcaiseri",
+        "https://linktr.ee/elcaiseri"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Upwork",
+          "sameAs": "https://www.upwork.com",
+          "description": "Top-rated freelancer delivering AI-driven solutions in data science and deep learning."
+        },
+        {
+          "@type": "Organization",
+          "name": "Kaggle",
+          "sameAs": "https://www.kaggle.com",
+          "description": "Kaggle Master and Competitions Expert, ranking in the top 1% globally."
+        }
+      ],
+      "knowsAbout": [
+        "AI", "Machine Learning", "Deep Learning", "Python", "Data Science", "Cloud Computing"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "AI Engineer",
+        "occupationLocation": { "@type": "Country", "name": "Egypt" },
+        "skills": ["Artificial Intelligence", "Machine Learning", "LLMs", "Deep Learning", "Computer Vision"]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Consulting",
+            "description": "Strategic AI consulting to help businesses leverage cutting-edge machine learning solutions",
+            "serviceType": "AI Consultation",
+            "provider": {
+              "@type": "Person",
+              "name": "Islam Kassem"
             },
-            {
-                "@type": "Organization",
-                "name": "Kaggle",
-                "sameAs": "https://www.kaggle.com",
-                "description": "Kaggle Master and Competitions Expert, ranking in the top 1% globally."
-            }
-        ],
-        "knowsAbout": [
-            "AI", "Machine Learning", "Deep Learning", "Python", "Data Science", "Cloud Computing"
-        ]
+            "serviceOutput": [
+              "AI strategy development",
+              "Technical architecture design",
+              "MLOps implementation",
+              "Performance optimization"
+            ],
+            "url": "https://www.upwork.com/services/consultation/development-it-eslam-1911179815419426935"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "LLM Development",
+            "description": "Expert implementation of Large Language Models for specific business needs",
+            "serviceType": "AI Development",
+            "provider": {
+              "@type": "Person",
+              "name": "Islam Kassem"
+            },
+            "serviceOutput": [
+              "Custom LLM fine-tuning and deployment",
+              "RAG system development",
+              "Prompt engineering optimization",
+              "LLM performance evaluation"
+            ],
+            "url": "https://www.upwork.com/services/product/development-it-expert-llm-development-custom-agents-for-your-business-1911170560924671655"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Computer Vision Solutions",
+            "description": "State-of-the-art computer vision solutions for complex visual analysis tasks",
+            "serviceType": "Computer Vision Development",
+            "provider": {
+              "@type": "Person",
+              "name": "Islam Kassem"
+            },
+            "serviceOutput": [
+              "Object detection & recognition",
+              "Image segmentation",
+              "Visual search systems",
+              "Video analysis"
+            ],
+            "url": "https://www.upwork.com/services/product/development-it-advanced-computer-vision-detection-segmentation-and-video-analysis-1911175625290925476"
+          }
+        }
+      ]
     };
 
     function addSchemaToHead(schema) {
