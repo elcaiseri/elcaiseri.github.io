@@ -1,0 +1,118 @@
+/* ============================= 
+   Optimized CSS - Mobile First Approach
+   ============================= */
+
+/* Remove unused CSS and optimize for performance */
+.hidden { display: none !important; }
+
+/* Service link improvements for better contrast */
+.service-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: var(--accent-color);
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.95rem; /* Better readability */
+    border: 2px solid var(--accent-color); /* Better contrast */
+}
+
+.service-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 125, 45, 0.4);
+    background: #1f5f1f; /* Darker on hover for better contrast */
+}
+
+/* Dark mode service link */
+body.dark-mode .service-link {
+    background: var(--accent-color);
+    color: #0f172a; /* Dark text on light background for better contrast */
+    border-color: var(--accent-color);
+}
+
+body.dark-mode .service-link:hover {
+    background: #0891b2; /* Darker cyan on hover */
+    box-shadow: 0 5px 15px rgba(34, 211, 238, 0.4);
+}
+
+/* Improved footer contrast */
+.footer-icons a {
+    font-size: var(--footer-icon-size);
+    color: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--footer-icon-padding);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15); /* Better contrast */
+    backdrop-filter: blur(5px);
+    min-width: calc(var(--footer-icon-size) + 2 * var(--footer-icon-padding));
+    min-height: calc(var(--footer-icon-size) + 2 * var(--footer-icon-padding));
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Add border for better definition */
+}
+
+.footer-icons a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Font loading optimization */
+@font-face {
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Cinzel Regular'), local('Cinzel-Regular'),
+         url('https://fonts.gstatic.com/s/cinzel/v15/8vIJ7wMr0my-WxlCxLjy.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Cinzel Bold'), local('Cinzel-Bold'),
+         url('https://fonts.gstatic.com/s/cinzel/v15/8vIK7wMr0my-WxlCxPbpRKI.woff2') format('woff2');
+}
+
+/* Critical rendering optimization */
+.above-fold {
+    contain: layout style paint;
+}
+
+/* Lazy loading optimization */
+.lazy-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
+}
+
+/* Image optimization */
+img {
+    content-visibility: auto;
+    contain-intrinsic-size: 256px 256px;
+}
+
+/* Caching headers for static assets */
+.cache-long {
+    /* This class serves as documentation for cache headers */
+    /* Actual caching is handled by server configuration */
+}

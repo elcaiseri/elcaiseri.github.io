@@ -5,10 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - Islam Kassem</title>
     <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap">
+    <meta name="description" content="404 - Page not found on Islam Kassem's website. Navigate back to explore AI/ML services, projects, and expertise.">
+    
+    <!-- Open Graph for 404 page -->
+    <meta property="og:title" content="Page Not Found - Islam Kassem">
+    <meta property="og:description" content="This page doesn't exist, but you can explore my AI/ML expertise, services, and projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elcaiseri.com/404.html">
+    <meta property="og:site_name" content="Islam Kassem">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://elcaiseri.com/404.html">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+    
+    <!-- Load CSS asynchronously -->
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
     <style>
+        /* Critical CSS for 404 page */
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #1a202c;
+            --section-bg: #ffffff;
+            --header-bg: linear-gradient(135deg, #4CAF50, #1DA1F2);
+            --footer-bg: linear-gradient(135deg, #0A84FF, #3DDC84);
+            --accent-color: #2d7d2d;
+            --border-color: rgba(0, 0, 0, 0.12);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --card-bg: #ffffff;
+            --card-hover-bg: #f8f9fa;
+            --skill-border: #2d7d2d;
+            --transition-speed: 400ms;
+            --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+            --surface-shadow: 0 2px 8px var(--shadow-color);
+            --surface-shadow-hover: 0 4px 16px var(--shadow-color);
+        }
+
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --text-color: #f1f5f9;
+            --section-bg: #1e293b;
+            --header-bg: linear-gradient(135deg, #065f46, #0c4a6e);
+            --footer-bg: linear-gradient(135deg, #1f2937, #065f46);
+            --accent-color: #22d3ee;
+            --border-color: rgba(255, 255, 255, 0.12);
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --card-bg: rgba(30, 41, 59, 0.9);
+            --card-hover-bg: rgba(51, 65, 85, 0.95);
+            --skill-border: #22d3ee;
+        }
+
+        body {
+            font-family: 'Cinzel', serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color var(--transition-speed) var(--transition-timing), color var(--transition-speed) var(--transition-timing);
+        }
+
+        .container, main {
+            width: 95%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        main { flex: 1; }
+
+        header {
+            background: var(--header-bg);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+
+        header h1 { margin: 0; font-size: 2rem; }
+
+        header .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            z-index: 100;
+            color: white;
+            transition: all var(--transition-speed) var(--transition-timing);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #theme-toggle .fa-sun { display: none; }
+        #theme-toggle .fa-moon { display: block; }
+        body.dark-mode #theme-toggle .fa-sun { display: block; }
+        body.dark-mode #theme-toggle .fa-moon { display: none; }
+
+        footer {
+            background: var(--footer-bg);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+
+        .footer-icons a {
+            font-size: 24px;
+            color: #fff;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            min-width: calc(24px + 2 * 8px);
+            min-height: calc(24px + 2 * 8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-icons a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .container, main, .footer-content {
+                width: 96%;
+                padding: 0 10px;
+            }
+            
+            header h1 { font-size: 1.5rem; }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-icons {
+                gap: 15px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.3rem; }
+            
+            #theme-toggle {
+                width: 35px;
+                height: 35px;
+                top: 10px;
+                right: 10px;
+            }
+
+            .footer-icons {
+                gap: 8px;
+                margin-top: 8px;
+            }
+            
+            .footer-icons a { font-size: 20px; }
+        }
+
         .error-container {
             text-align: center;
             padding: 50px 20px;
@@ -22,6 +223,7 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             transition: all var(--transition-speed) var(--transition-timing);
+            contain: layout style paint;
         }
 
         .error-container:hover {
@@ -42,7 +244,7 @@
         }
 
         .error-code {
-            font-size: 8em;
+            font-size: clamp(4rem, 8vw, 8rem);
             background: linear-gradient(135deg, var(--accent-color), var(--skill-border));
             -webkit-background-clip: text;
             background-clip: text;
@@ -51,6 +253,7 @@
             line-height: 1;
             position: relative;
             font-family: 'Cinzel', serif;
+            font-weight: 700;
         }
 
         .error-code::after {
@@ -66,10 +269,11 @@
         }
 
         .error-message {
-            font-size: 1.5em;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
             margin: 20px 0;
             color: var(--text-color);
             font-family: 'Cinzel', serif;
+            font-weight: 600;
         }
 
         .error-description {
@@ -77,6 +281,7 @@
             opacity: 0.8;
             margin: 15px 0;
             line-height: 1.6;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
         }
 
         .home-link {
@@ -85,18 +290,29 @@
             gap: 8px;
             margin-top: 30px;
             padding: 12px 24px;
-            background: linear-gradient(135deg, var(--accent-color) 30%, var(--skill-border) 100%);
+            background: var(--accent-color);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             transition: all var(--transition-speed) var(--transition-timing);
             font-weight: bold;
             font-family: 'Cinzel', serif;
+            border: 2px solid var(--accent-color);
         }
 
         .home-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(61, 220, 132, 0.3);
+            box-shadow: 0 4px 12px rgba(45, 125, 45, 0.3);
+            background: #1f5f1f;
+        }
+
+        body.dark-mode .home-link {
+            color: #0f172a;
+        }
+
+        body.dark-mode .home-link:hover {
+            background: #0891b2;
+            box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
         }
 
         .home-link i {
@@ -127,7 +343,7 @@
 
         .suggested-links h2 {
             color: var(--accent-color);
-            font-size: 1.3em;
+            font-size: 1.3rem;
             margin-bottom: 15px;
             font-family: 'Cinzel', serif;
             background: linear-gradient(135deg, var(--accent-color), var(--skill-border));
@@ -140,10 +356,9 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 15px;
-            justify-content: center;
         }
 
         .suggested-links a {
@@ -158,11 +373,14 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            text-align: left;
+            min-height: 44px;
         }
 
         .suggested-links a::before {
             content: '▹';
             color: var(--accent-color);
+            font-weight: bold;
         }
 
         .suggested-links a:hover {
@@ -172,38 +390,60 @@
             background: var(--card-hover-bg);
         }
 
-        @media (max-width: 768px) {
-            .error-code {
-                font-size: 6em;
-            }
-            
-            .error-message {
-                font-size: 1.3em;
-            }
-        }
-
         @media (max-width: 480px) {
-            .error-code {
-                font-size: 4em;
-            }
-            
-            .error-message {
-                font-size: 1.1em;
-            }
-
             .suggested-links ul {
-                flex-direction: column;
-                align-items: stretch;
+                grid-template-columns: 1fr;
             }
 
             .suggested-links a {
-                padding: 10px 16px;
+                padding: 14px 16px;
+                justify-content: flex-start;
             }
         }
 
-        @media (hover: none) and (pointer: coarse) {
-            .suggested-links a {
-                padding: 14px 20px;
+        /* Performance optimizations */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .error-container {
+                animation: none;
+            }
+        }
+
+        /* Loading state */
+        .loading-fade {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out 0.2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Focus improvements for accessibility */
+        .home-link:focus,
+        .suggested-links a:focus,
+        #theme-toggle:focus {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --accent-color: #000000;
+                --text-color: #000000;
+                --border-color: #000000;
+            }
+            
+            body.dark-mode {
+                --accent-color: #ffffff;
+                --text-color: #ffffff;
+                --border-color: #ffffff;
             }
         }
     </style>
@@ -218,23 +458,23 @@
             </button>
         </div>
     </header>
-    <main>
+    <main class="loading-fade">
         <br>
         <section class="error-container">
-            <h1 class="error-code">404</h1>
+            <h1 class="error-code" aria-label="Error 404">404</h1>
             <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
-            <p class="error-description">The page might have been moved, deleted, or never existed. Let's get you back on track!</p>
-            <a href="/" class="home-link">
-                <i class="fas fa-chevron-left"></i>
+            <p class="error-description">The page might have been moved, deleted, or the URL was mistyped. Let's get you back on track to explore my AI/ML expertise!</p>
+            <a href="/" class="home-link" aria-label="Return to homepage">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
                 Back to Home
             </a>
             <div class="suggested-links">
-                <h2>You might be interested in:</h2>
-                <ul>
-                    <li><a href="/#services">AI Services</a></li>
-                    <li><a href="/#about-me">About Me</a></li>
-                    <li><a href="/#projects">Projects</a></li>
-                    <li><a href="/#skills">Skills & Expertise</a></li>
+                <h2>Explore my expertise:</h2>
+                <ul role="list">
+                    <li><a href="/#services" aria-label="View AI and ML services">AI Consulting & LLM Development</a></li>
+                    <li><a href="/#about-me" aria-label="Learn about my background">About My Experience</a></li>
+                    <li><a href="/#projects" aria-label="View featured projects">Featured AI Projects</a></li>
+                    <li><a href="/#skills" aria-label="View technical skills">Skills & Technologies</a></li>
                 </ul>
             </div>
         </section>
@@ -251,6 +491,6 @@
             </div>
         </div>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
