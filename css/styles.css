@@ -2,19 +2,19 @@
    Base Configuration & Variables
    ============================= */
 :root {
-    /* Light theme */
+    /* Light theme - Improved contrast for WCAG 2.1 AA */
     --bg-color: #fafafa;
-    --text-color: #2c3e50;
+    --text-color: #1a202c; /* Improved contrast from #2c3e50 */
     --section-bg: #ffffff;
     --header-bg: linear-gradient(135deg, #4CAF50, #1DA1F2);
     --footer-bg: linear-gradient(135deg, #0A84FF, #3DDC84);
-    --accent-color: #3DDC84;
-    --link-color: #1a73e8;
-    --border-color: rgba(0, 0, 0, 0.08);
-    --shadow-color: rgba(0, 0, 0, 0.06);
+    --accent-color: #2d7d2d; /* Improved contrast from #3DDC84 */
+    --link-color: #0d47a1; /* Improved contrast from #1a73e8 */
+    --border-color: rgba(0, 0, 0, 0.12); /* Slightly stronger */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Slightly stronger */
     --card-bg: #ffffff;
     --card-hover-bg: #f8f9fa;
-    --skill-border: #4CAF50;
+    --skill-border: #2d7d2d; /* Matching accent color */
     
     /* Shared properties */
     --transition-speed: 400ms;
@@ -88,18 +88,18 @@ video {
    ============================= */
 body.dark-mode {
     /* Dark theme with improved contrast and depth */
-    --bg-color: #111827;
-    --text-color: #e2e8f0;
-    --section-bg: #1a1f2e;
+    --bg-color: #0f172a; /* Darker background */
+    --text-color: #f1f5f9; /* Better contrast */
+    --section-bg: #1e293b; /* Better contrast */
     --header-bg: linear-gradient(135deg, #065f46, #0c4a6e);
     --footer-bg: linear-gradient(135deg, #1f2937, #065f46);
-    --accent-color: #34d399;
-    --link-color: #60d9fa;
-    --border-color: rgba(255, 255, 255, 0.08);
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --card-bg: rgba(30, 41, 59, 0.8);
-    --card-hover-bg: rgba(30, 41, 59, 0.95);
-    --skill-border: #34d399;
+    --accent-color: #22d3ee; /* Better contrast in dark mode */
+    --link-color: #7dd3fc; /* Better contrast */
+    --border-color: rgba(255, 255, 255, 0.12); /* Stronger border */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    --card-bg: rgba(30, 41, 59, 0.9); /* Better opacity */
+    --card-hover-bg: rgba(51, 65, 85, 0.95); /* Better hover state */
+    --skill-border: #22d3ee; /* Matching accent */
 }
 
 /* =============================
@@ -139,7 +139,7 @@ header .container {
     right: 20px;
     z-index: 100;
     color: white;
-    transition: all var(--transition-speed) var(--transition-timing);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,25 +151,92 @@ header .container {
 }
 
 #theme-toggle:hover {
-    transform: rotate(180deg) scale(1.1);
+    transform: scale(1.05);
     background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-#theme-toggle .fa-sun {
-    display: none;
+#theme-toggle:hover .toggle-track {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-#theme-toggle .fa-moon {
-    display: block;
+#theme-toggle:hover .toggle-thumb {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode #theme-toggle .fa-sun {
-    display: block;
+#theme-toggle:active {
+    transform: scale(0.95);
 }
 
-body.dark-mode #theme-toggle .fa-moon {
-    display: none;
+/* Glowing effect when toggling */
+.toggle-track {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-mode .toggle-track {
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.toggle-thumb {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Icon animations */
+.toggle-thumb i {
+    transition: all 0.3s ease;
+}
+
+.toggle-thumb .fa-sun {
+    animation: sunRotate 0.5s ease-in-out;
+}
+
+.toggle-thumb .fa-moon {
+    animation: moonGlow 0.5s ease-in-out;
+}
+
+@keyframes sunRotate {
+    0% { transform: rotate(0deg); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: rotate(180deg); opacity: 1; }
+}
+
+@keyframes moonGlow {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Label fade animation */
+.toggle-label {
+    transition: all 0.3s ease;
+}
+
+.toggle-label .light-label,
+.toggle-label .dark-label {
+    transition: opacity 0.3s ease;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    #theme-toggle,
+    .toggle-track,
+    .toggle-thumb,
+    .toggle-thumb i,
+    .toggle-label {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Focus styles for keyboard accessibility */
+#theme-toggle:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+#theme-toggle:focus:not(:focus-visible) {
+    outline: none;
 }
 
 /* =============================
@@ -903,11 +970,16 @@ footer {
 /* Touch optimization */
 @media (hover: none) and (pointer: coarse) {
     .contact-icons a,
-    .footer-icons a,
-    #theme-toggle {
+    .footer-icons a {
         min-height: 44px;
         min-width: 44px;
         padding: 12px;
+    }
+    
+    #theme-toggle {
+        min-height: 44px;
+        min-width: 60px;
+        padding: 10px;
     }
 
     .project-card,
