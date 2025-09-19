@@ -1,21 +1,27 @@
-/* ============================= 
+/* =============================
    Base Configuration & Variables
    ============================= */
 :root {
     /* Light theme - Improved contrast for WCAG 2.1 AA */
     --bg-color: #fafafa;
-    --text-color: #1a202c; /* Improved contrast from #2c3e50 */
+    --text-color: #1a202c;
+    /* Improved contrast from #2c3e50 */
     --section-bg: #ffffff;
     --header-bg: linear-gradient(135deg, #4CAF50, #1DA1F2);
     --footer-bg: linear-gradient(135deg, #0A84FF, #3DDC84);
-    --accent-color: #2d7d2d; /* Improved contrast from #3DDC84 */
-    --link-color: #0d47a1; /* Improved contrast from #1a73e8 */
-    --border-color: rgba(0, 0, 0, 0.12); /* Slightly stronger */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Slightly stronger */
+    --accent-color: #2d7d2d;
+    /* Improved contrast from #3DDC84 */
+    --link-color: #0d47a1;
+    /* Improved contrast from #1a73e8 */
+    --border-color: rgba(0, 0, 0, 0.12);
+    /* Slightly stronger */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    /* Slightly stronger */
     --card-bg: #ffffff;
     --card-hover-bg: #f8f9fa;
-    --skill-border: #2d7d2d; /* Matching accent color */
-    
+    --skill-border: #2d7d2d;
+    /* Matching accent color */
+
     /* Shared properties */
     --transition-speed: 400ms;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,6 +40,16 @@
     --footer-icon-gap-tablet: 15px;
     --footer-icon-gap-mobile: 8px;
     --footer-icon-padding: 8px;
+
+    /* Responsive sizing for circular elements */
+    --profile-photo-size: min(256px, 80vw);
+    --profile-photo-size-small: min(200px, 75vw);
+    --circular-button-size: clamp(40px, 8vw, 48px);
+    --circular-button-size-touch: max(44px, 10vw);
+    --circular-button-size-small: max(36px, 8vw);
+    --theme-toggle-size: clamp(40px, 8vw, 48px);
+    --theme-toggle-size-mobile: max(36px, 8vw);
+    --theme-toggle-size-touch: max(44px, 10vw);
 }
 
 /* Core Layout */
@@ -51,17 +67,21 @@ body {
     flex-direction: column;
     min-height: 100vh;
     transition: background-color var(--transition-speed) var(--transition-timing),
-                color var(--transition-speed) var(--transition-timing);
+        color var(--transition-speed) var(--transition-timing);
+    /* Safe area support for mobile devices */
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
 }
 
 /* Container System */
-.container, 
+.container,
 main.container,
 .footer-content {
     width: 95%;
     max-width: none;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 max(15px, env(safe-area-inset-left, 15px));
+    padding-right: max(15px, env(safe-area-inset-right, 15px));
 }
 
 main {
@@ -77,10 +97,22 @@ main {
     overflow-wrap: break-word;
 }
 
-img, 
+img,
 video {
     max-width: 100%;
     height: auto;
+}
+
+/* Performance optimizations for circular elements */
+#profile-photo img,
+#profile-photo video,
+.footer-icons a,
+#scroll-top,
+#theme-toggle {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* =============================
@@ -88,18 +120,28 @@ video {
    ============================= */
 body.dark-mode {
     /* Dark theme with improved contrast and depth */
-    --bg-color: #0f172a; /* Darker background */
-    --text-color: #f1f5f9; /* Better contrast */
-    --section-bg: #1e293b; /* Better contrast */
+    --bg-color: #0f172a;
+    /* Darker background */
+    --text-color: #f1f5f9;
+    /* Better contrast */
+    --section-bg: #1e293b;
+    /* Better contrast */
     --header-bg: linear-gradient(135deg, #065f46, #0c4a6e);
     --footer-bg: linear-gradient(135deg, #1f2937, #065f46);
-    --accent-color: #22d3ee; /* Better contrast in dark mode */
-    --link-color: #7dd3fc; /* Better contrast */
-    --border-color: rgba(255, 255, 255, 0.12); /* Stronger border */
-    --shadow-color: rgba(0, 0, 0, 0.4); /* Stronger shadow */
-    --card-bg: rgba(30, 41, 59, 0.9); /* Better opacity */
-    --card-hover-bg: rgba(51, 65, 85, 0.95); /* Better hover state */
-    --skill-border: #22d3ee; /* Matching accent */
+    --accent-color: #22d3ee;
+    /* Better contrast in dark mode */
+    --link-color: #7dd3fc;
+    /* Better contrast */
+    --border-color: rgba(255, 255, 255, 0.12);
+    /* Stronger border */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    /* Stronger shadow */
+    --card-bg: rgba(30, 41, 59, 0.9);
+    /* Better opacity */
+    --card-hover-bg: rgba(51, 65, 85, 0.95);
+    /* Better hover state */
+    --skill-border: #22d3ee;
+    /* Matching accent */
 }
 
 /* =============================
@@ -130,13 +172,13 @@ header .container {
     background: none;
     border: 2px solid currentColor;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
+    width: var(--theme-toggle-size);
+    height: var(--theme-toggle-size);
+    padding: 8px;
     cursor: pointer;
     position: fixed;
-    top: 15px;
-    right: 20px;
+    top: max(15px, env(safe-area-inset-top, 15px));
+    right: max(20px, env(safe-area-inset-right, 20px));
     z-index: 100;
     color: white;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -148,6 +190,9 @@ header .container {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1;
+    min-width: var(--theme-toggle-size);
+    min-height: var(--theme-toggle-size);
 }
 
 #theme-toggle:hover {
@@ -196,15 +241,35 @@ body.dark-mode .toggle-track {
 }
 
 @keyframes sunRotate {
-    0% { transform: rotate(0deg); opacity: 0; }
-    50% { opacity: 0.5; }
-    100% { transform: rotate(180deg); opacity: 1; }
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
 }
 
 @keyframes moonGlow {
-    0% { transform: scale(0.8); opacity: 0; }
-    50% { opacity: 0.5; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Label fade animation */
@@ -219,6 +284,7 @@ body.dark-mode .toggle-track {
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
+
     #theme-toggle,
     .toggle-track,
     .toggle-thumb,
@@ -270,11 +336,17 @@ h2 {
 /* =============================
    Profile Photo
    ============================= */
-#profile-photo img, #profile-photo video {
+#profile-photo img,
+#profile-photo video {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
     border: 4px solid var(--accent-color);
+    width: var(--profile-photo-size);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    max-width: 256px;
 }
 
 .jobtitle {
@@ -314,7 +386,7 @@ h2 {
         font-size: 1.3em;
         margin: 12px 0;
     }
-    
+
     .jobtitle::after {
         width: 50px;
         height: 2px;
@@ -330,22 +402,28 @@ h2 {
     align-items: center;
     gap: 15px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .contact-icons a {
-    font-size: 24px;
+    font-size: clamp(16px, 4vw, 24px);
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     text-decoration: none;
     text-align: center;
-    display: inline-block;
-    border-radius: 5px;
-    transition: opacity 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    white-space: nowrap;
 }
 
 .contact-icons a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
+    transform: translateY(-2px);
 }
 
 /* =============================
@@ -547,7 +625,7 @@ h2 {
     }
 }
 
-/* ============================= 
+/* =============================
    Services Section
    ============================= */
 .services-grid {
@@ -688,7 +766,7 @@ h2 {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.7s ease;
 }
 
@@ -757,7 +835,7 @@ h2 {
     .consulting-card {
         transform: scale(1);
     }
-    
+
     .consulting-card:hover {
         transform: translateY(-8px) scale(1.02);
     }
@@ -770,7 +848,7 @@ h2 {
         gap: var(--section-spacing-tablet);
         padding: var(--section-spacing-tablet) 0;
     }
-    
+
     .service-card {
         padding: 25px;
     }
@@ -780,15 +858,15 @@ h2 {
     .service-card {
         padding: 20px;
     }
-    
+
     .service-card h3 {
         font-size: 1.3em;
     }
-    
+
     .service-card h3 i {
         padding: 10px;
     }
-    
+
     .service-features li {
         padding-left: 30px;
     }
@@ -852,8 +930,11 @@ footer {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    width: calc(var(--footer-icon-size) + 2 * var(--footer-icon-padding));
+    height: calc(var(--footer-icon-size) + 2 * var(--footer-icon-padding));
     min-width: calc(var(--footer-icon-size) + 2 * var(--footer-icon-padding));
     min-height: calc(var(--footer-icon-size) + 2 * var(--footer-icon-padding));
+    aspect-ratio: 1;
 }
 
 .footer-icons a:hover {
@@ -862,7 +943,7 @@ footer {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* ============================= 
+/* =============================
    Responsive Design System
    ============================= */
 @media (max-width: 1200px) {
@@ -879,6 +960,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     .container,
     main.container,
     .footer-content {
@@ -907,11 +989,6 @@ footer {
         margin-top: 10px;
     }
 
-    #profile-photo img, 
-    #profile-photo video {
-        width: 180px;
-    }
-
     #about-me p {
         font-size: 1.1em;
         padding: 15px;
@@ -919,6 +996,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     .container,
     main.container,
     .footer-content {
@@ -936,24 +1014,20 @@ footer {
     }
 
     #theme-toggle {
-        width: 35px;
-        height: 35px;
-        top: 10px;
-        right: 10px;
+        width: var(--theme-toggle-size-mobile);
+        height: var(--theme-toggle-size-mobile);
+        top: max(10px, env(safe-area-inset-top, 10px));
+        right: max(10px, env(safe-area-inset-right, 10px));
+        padding: 6px;
     }
 
     .footer-icons {
         gap: var(--footer-icon-gap-mobile);
         margin-top: 8px;
     }
-    
+
     .footer-icons a {
         font-size: var(--footer-icon-size-mobile);
-    }
-
-    #profile-photo img, 
-    #profile-photo video {
-        width: 140px;
     }
 
     .project-card,
@@ -969,17 +1043,24 @@ footer {
 
 /* Touch optimization */
 @media (hover: none) and (pointer: coarse) {
+
     .contact-icons a,
     .footer-icons a {
         min-height: 44px;
         min-width: 44px;
-        padding: 12px;
-    }
-    
-    #theme-toggle {
-        min-height: 44px;
-        min-width: 60px;
+        width: 44px;
+        height: 44px;
         padding: 10px;
+        aspect-ratio: 1;
+    }
+
+    #theme-toggle {
+        min-height: var(--theme-toggle-size-touch);
+        min-width: var(--theme-toggle-size-touch);
+        width: var(--theme-toggle-size-touch);
+        height: var(--theme-toggle-size-touch);
+        padding: 10px;
+        aspect-ratio: 1;
     }
 
     .project-card,
@@ -999,6 +1080,9 @@ footer {
     .footer-icons a {
         min-height: 44px;
         min-width: 44px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
     }
 }
 
@@ -1007,14 +1091,16 @@ footer {
     html {
         scroll-behavior: auto;
     }
-    
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-    
+
     .project-card:hover,
     .skill-category:hover {
         transform: none !important;
@@ -1028,19 +1114,20 @@ footer {
     right: 20px;
     background: var(--accent-color);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: var(--circular-button-size);
+    height: var(--circular-button-size);
     border-radius: 50%;
     border: none;
     cursor: pointer;
     display: none;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: clamp(1em, 2.5vw, 1.2em);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     z-index: 1000;
     margin-bottom: env(safe-area-inset-bottom, 0);
+    aspect-ratio: 1;
 }
 
 #scroll-top:hover {
@@ -1056,10 +1143,11 @@ footer {
 /* Touch optimization for scroll button */
 @media (hover: none) and (pointer: coarse) {
     #scroll-top {
-        width: 44px;
-        height: 44px;
+        width: var(--circular-button-size-touch);
+        height: var(--circular-button-size-touch);
         bottom: max(25px, calc(100vh - 100vh + 25px));
         right: 25px;
+        font-size: clamp(1em, 3vw, 1.1em);
     }
 }
 
@@ -1068,9 +1156,47 @@ footer {
     #scroll-top {
         bottom: max(15px, calc(100vh - 100vh + 15px));
         right: 15px;
-        width: 36px;
-        height: 36px;
-        font-size: 1em;
+        width: var(--circular-button-size-small);
+        height: var(--circular-button-size-small);
+        font-size: clamp(0.9em, 2.5vw, 1em);
+    }
+
+    .contact-icons {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .contact-icons a {
+        padding: 10px 16px;
+        font-size: clamp(14px, 3.5vw, 18px);
+        border-radius: 22px;
     }
 }
 
+/* Extra small screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+
+    #profile-photo img,
+    #profile-photo video {
+        width: var(--profile-photo-size-small);
+        border-width: 3px;
+    }
+
+    .footer-icons {
+        gap: 8px;
+    }
+
+    .footer-icons a {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .contact-icons a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
