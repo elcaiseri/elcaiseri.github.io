@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated: 2025-09-26 -->
+<!-- Notes:
+ - Only one <urlset> root element (previous diff had two).
+ - Avoid fragment URLs (#about, #projects); search engines ignore fragments in sitemaps.
+ - Only one <lastmod> per <url>.
+ - Include PDFs only if you want them indexed.
+ - changefreq/priority are optional and mostly advisory.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-          https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Root (highest priority) -->
+  <!-- Homepage -->
   <url>
     <loc>https://kassem.dev/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kassem.dev/assets/profile-photo-white-bg.webp</image:loc>
+      <image:title>Islam Kassem - AI/ML Engineer</image:title>
+      <image:caption>Professional profile photo of Islam Kassem</image:caption>
+    </image:image>
   </url>
 
   <!-- Resume landing page -->
@@ -21,7 +31,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- PDF asset (keep only if you want it indexed) -->
+  <!-- Resume PDF (keep only if indexing desired) -->
   <url>
     <loc>https://kassem.dev/resume/Islam_Kassem_AI_ML_Engineer_Resume.pdf</loc>
     <lastmod>2025-09-26</lastmod>
@@ -29,7 +39,7 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Blog page for Islam Kassem -->
+  <!-- Blog index -->
   <url>
     <loc>https://kassem.dev/blog/</loc>
     <lastmod>2025-09-26</lastmod>
@@ -37,13 +47,14 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Example future pages (uncomment when live) -->
+  <!-- (Add individual blog post URLs here; automate generation if using Jekyll) -->
   <!--
   <url>
-    <loc>https://kassem.dev/projects/</loc>
-    <lastmod>2025-09-26</lastmod>
+    <loc>https://kassem.dev/blog/example-post-slug/</loc>
+    <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   -->
+
 </urlset>
