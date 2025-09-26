@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islam Kassem Blog | AI & Machine Learning Articles by Kaggle Master</title>
+    <meta name="description"
+        content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer. Insights on LLMs, Deep Learning, Computer Vision, and MLOps from industry expert.">
+    <meta name="keywords"
+        content="Islam Kassem blog, AI articles, Machine Learning blog, Kaggle Master blog, LLM articles, Deep Learning tutorials, Computer Vision, MLOps, Data Science blog">
+    <meta name="author" content="Islam Kassem">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kassem.dev/blog/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Islam Kassem Blog | AI & Machine Learning Articles">
+    <meta property="og:description"
+        content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer. Expert insights on LLMs, Deep Learning, and Computer Vision.">
+    <meta property="og:image" content="https://kassem.dev/assets/profile-photo-white-bg.webp">
+    <meta property="og:url" content="https://kassem.dev/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Islam Kassem Blog">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@elcaiseri">
+    <meta name="twitter:creator" content="@elcaiseri">
+    <meta name="twitter:title" content="Islam Kassem Blog | AI & Machine Learning Articles">
+    <meta name="twitter:description"
+        content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer.">
+    <meta name="twitter:image" content="https://kassem.dev/assets/profile-photo-white-bg.webp">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap">
+    </noscript>
+
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Islam Kassem - AI & ML Blog",
+      "description": "AI and Machine Learning insights by Islam Kassem, Kaggle Master and expert AI/ML Engineer",
+      "url": "https://kassem.dev/blog/",
+      "author": {
+        "@type": "Person",
+        "name": "Islam Kassem",
+        "url": "https://kassem.dev",
+        "sameAs": [
+          "https://www.linkedin.com/in/elcaiseri",
+          "https://github.com/elcaiseri",
+          "https://www.kaggle.com/elcaiseri",
+          "https://elcaiseri.medium.com"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Islam Kassem"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-sun" id="sun-icon"></i>
+        <i class="fas fa-moon" id="moon-icon" style="display: none;"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <h1><a href="/" style="text-decoration: none; color: inherit;">Islam Kassem</a></h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="/resume/">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <div style="text-align: center;">
+                <h1>AI & Machine Learning Blog by Islam Kassem</h1>
+            </div>
+
+            <div class="blog-posts">
+                <h2>Latest Articles by Islam Kassem</h2>
+
+                <!-- Loading state -->
+                <div id="medium-loading" class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p>Loading latest AI & ML articles by Islam Kassem...</p>
+                </div>
+
+                <!-- Refresh button -->
+                <div class="articles-header" id="articles-header" style="display: none;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 style="margin: 0; color: #4CAF50;">
+                            <i class="fab fa-medium"></i> Latest from Islam Kassem's Medium
+                        </h3>
+                        <button id="refresh-articles" class="refresh-btn" title="Refresh Articles">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Medium articles container -->
+                <div id="medium-articles" class="medium-articles-container" style="display: none;">
+                    <!-- Articles will be loaded here dynamically -->
+                </div>
+
+                <!-- Fallback content -->
+                <article class="blog-post" id="medium-fallback" style="display: none;">
+                    <h3>Read More on Medium</h3>
+                    <p>For the latest AI and Machine Learning articles by <strong>Islam Kassem</strong>, visit the
+                        official Medium blog:</p>
+                    <a href="https://elcaiseri.medium.com" target="_blank" rel="noopener noreferrer" class="blog-link">
+                        🔗 Islam Kassem's Medium Blog - AI & ML Insights
+                    </a>
+                    <p><em>Topics covered include: Large Language Models (LLMs), Deep Learning architectures, Computer
+                            Vision applications, MLOps best practices, and Data Science methodologies.</em></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer style="content-visibility: auto; contain-intrinsic-size: 100px;">
+        <div class="container footer-content">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear());</script>
+                Islam Kassem — Machine Learning Engineer | Kaggle Master | kassem.dev | @elcaiseri
+            </p>
+            <div class="footer-icons">
+                <a href="mailto:iqasem4444@gmail.com" title="Email Me" aria-label="Send email"><i
+                        class="fas fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn Profile" target="_blank"
+                    rel="noopener noreferrer" aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin"
+                        aria-hidden="true"></i></a>
+                <a href="https://github.com/elcaiseri" title="GitHub Profile" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://elcaiseri.medium.com" title="Medium Blog" target="_blank" rel="noopener noreferrer"
+                    aria-label="Read My Blog on Medium"><i class="fab fa-medium" aria-hidden="true"></i></a>
+                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle Profile" target="_blank"
+                    rel="noopener noreferrer" aria-label="Visit Kaggle Profile"><i class="fab fa-kaggle"
+                        aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Styles moved to external stylesheet /css/styles.css -->
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- Enhanced JavaScript for Islam Kassem's Blog -->
+    <script src="blog.js" defer></script>
+</body>
+
+</html>
