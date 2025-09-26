@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Specify the location of the sitemap
-Sitemap: https://elcaiseri.com/sitemap.xml
+Sitemap: https://kassem.dev/sitemap.xml

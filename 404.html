@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - Islam Kassem</title>
     <meta name="robots" content="noindex">
-    <meta name="description" content="404 - Page not found on Islam Kassem's website. Navigate back to explore AI/ML services, projects, and expertise.">
-    
+    <meta name="description"
+        content="404 - Page not found on Islam Kassem's website. Navigate back to explore AI/ML services, projects, and expertise.">
+
     <!-- Open Graph for 404 page -->
     <meta property="og:title" content="Page Not Found - Islam Kassem">
-    <meta property="og:description" content="This page doesn't exist, but you can explore my AI/ML expertise, services, and projects.">
+    <meta property="og:description"
+        content="This page doesn't exist, but you can explore my AI/ML expertise, services, and projects.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://elcaiseri.com/404.html">
+    <meta property="og:url" content="https://kassem.dev/404.html">
     <meta property="og:site_name" content="Islam Kassem">
-    
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://elcaiseri.com/404.html">
-    
+    <link rel="canonical" href="https://kassem.dev/404.html">
+
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
-    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap">
+    </noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </noscript>
+
     <!-- Load CSS asynchronously -->
     <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="css/styles.css">
+    </noscript>
     <style>
         /* Critical CSS for 404 page */
         :root {
@@ -72,13 +83,16 @@
             transition: background-color var(--transition-speed) var(--transition-timing), color var(--transition-speed) var(--transition-timing);
         }
 
-        .container, main {
+        .container,
+        main {
             width: 95%;
             margin: 0 auto;
             padding: 0 15px;
         }
 
-        main { flex: 1; }
+        main {
+            flex: 1;
+        }
 
         header {
             background: var(--header-bg);
@@ -88,7 +102,10 @@
             box-shadow: 0 2px 4px var(--shadow-color);
         }
 
-        header h1 { margin: 0; font-size: 2rem; }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
 
         header .container {
             position: relative;
@@ -119,10 +136,21 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        #theme-toggle .fa-sun { display: none; }
-        #theme-toggle .fa-moon { display: block; }
-        body.dark-mode #theme-toggle .fa-sun { display: block; }
-        body.dark-mode #theme-toggle .fa-moon { display: none; }
+        #theme-toggle .fa-sun {
+            display: none;
+        }
+
+        #theme-toggle .fa-moon {
+            display: block;
+        }
+
+        body.dark-mode #theme-toggle .fa-sun {
+            display: block;
+        }
+
+        body.dark-mode #theme-toggle .fa-moon {
+            display: none;
+        }
 
         footer {
             background: var(--footer-bg);
@@ -174,13 +202,18 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
-            .container, main, .footer-content {
+
+            .container,
+            main,
+            .footer-content {
                 width: 96%;
                 padding: 0 10px;
             }
-            
-            header h1 { font-size: 1.5rem; }
-            
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
             .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -193,8 +226,10 @@
         }
 
         @media (max-width: 480px) {
-            header h1 { font-size: 1.3rem; }
-            
+            header h1 {
+                font-size: 1.3rem;
+            }
+
             #theme-toggle {
                 width: 35px;
                 height: 35px;
@@ -206,8 +241,10 @@
                 gap: 8px;
                 margin-top: 8px;
             }
-            
-            .footer-icons a { font-size: 20px; }
+
+            .footer-icons a {
+                font-size: 20px;
+            }
         }
 
         .error-container {
@@ -237,6 +274,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -403,12 +441,15 @@
 
         /* Performance optimizations */
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
-            
+
             .error-container {
                 animation: none;
             }
@@ -421,7 +462,9 @@
         }
 
         @keyframes fadeIn {
-            to { opacity: 1; }
+            to {
+                opacity: 1;
+            }
         }
 
         /* Focus improvements for accessibility */
@@ -439,7 +482,7 @@
                 --text-color: #000000;
                 --border-color: #000000;
             }
-            
+
             body.dark-mode {
                 --accent-color: #ffffff;
                 --text-color: #ffffff;
@@ -448,6 +491,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -463,7 +507,8 @@
         <section class="error-container">
             <h1 class="error-code" aria-label="Error 404">404</h1>
             <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
-            <p class="error-description">The page might have been moved, deleted, or the URL was mistyped. Let's get you back on track to explore my AI/ML expertise!</p>
+            <p class="error-description">The page might have been moved, deleted, or the URL was mistyped. Let's get you
+                back on track to explore my AI/ML expertise!</p>
             <a href="/" class="home-link" aria-label="Return to homepage">
                 <i class="fas fa-chevron-left" aria-hidden="true"></i>
                 Back to Home
@@ -471,7 +516,8 @@
             <div class="suggested-links">
                 <h2>Explore my expertise:</h2>
                 <ul role="list">
-                    <li><a href="/#services" aria-label="View AI and ML services">AI Consulting & LLM Development</a></li>
+                    <li><a href="/#services" aria-label="View AI and ML services">AI Consulting & LLM Development</a>
+                    </li>
                     <li><a href="/#about-me" aria-label="Learn about my background">About My Experience</a></li>
                     <li><a href="/#projects" aria-label="View featured projects">Featured AI Projects</a></li>
                     <li><a href="/#skills" aria-label="View technical skills">Skills & Technologies</a></li>
@@ -481,16 +527,24 @@
     </main>
     <footer>
         <div class="container footer-content">
-            <p>&copy; <script>document.write(new Date().getFullYear());</script> Islam Kassem | @elcaiseri</p>
+            <p>&copy;
+                <script>document.write(new Date().getFullYear());</script> Islam Kassem | @elcaiseri
+            </p>
             <div class="footer-icons">
-                <a href="mailto:kassem@elcaiseri.com" title="Email Me" aria-label="Send email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn Profile" target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/elcaiseri" title="GitHub Profile" target="_blank" rel="noopener" aria-label="Visit GitHub Profile"><i class="fab fa-github"></i></a>
-                <a href="https://elcaiseri.medium.com" title="Medium Blog" target="_blank" rel="noopener" aria-label="Read My Blog on Medium"><i class="fab fa-medium"></i></a>
-                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle Profile" target="_blank" rel="noopener" aria-label="Visit Kaggle Profile"><i class="fab fa-kaggle"></i></a>
+                <a href="mailto:iqasem4444@gmail.com" title="Email Me" aria-label="Send email"><i
+                        class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn Profile" target="_blank" rel="noopener"
+                    aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/elcaiseri" title="GitHub Profile" target="_blank" rel="noopener"
+                    aria-label="Visit GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://elcaiseri.medium.com" title="Medium Blog" target="_blank" rel="noopener"
+                    aria-label="Read My Blog on Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle Profile" target="_blank" rel="noopener"
+                    aria-label="Visit Kaggle Profile"><i class="fab fa-kaggle"></i></a>
             </div>
         </div>
     </footer>
     <script src="scripts/script.js" defer></script>
 </body>
+
 </html>
