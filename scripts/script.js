@@ -130,22 +130,70 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Theme toggle functionality
+  // Enhanced theme toggle functionality - by Islam Kassem
   const themeToggle = document.getElementById('theme-toggle');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const body = document.body;
 
   // Check for saved theme preference or use system preference
   const currentTheme = localStorage.getItem('theme') ||
     (prefersDarkScheme.matches ? 'dark' : 'light');
 
   if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
+    body.classList.add('dark-mode');
   }
 
+  // Icon management
+  const sunIcon = document.getElementById('sun-icon');
+  const moonIcon = document.getElementById('moon-icon');
+
+  function updateIcons(isDark) {
+    if (sunIcon && moonIcon) {
+      if (isDark) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline';
+      } else {
+        sunIcon.style.display = 'inline';
+        moonIcon.style.display = 'none';
+      }
+    }
+  }
+
+  // Initialize icons based on current theme
+  updateIcons(body.classList.contains('dark-mode'));
+
   themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    const theme = isDark ? 'dark' : 'light';
+
     localStorage.setItem('theme', theme);
+    updateIcons(isDark);
+
+    // Add visual feedback for theme toggle
+    themeToggle.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      themeToggle.style.transform = 'scale(1)';
+    }, 150);
+
+    // Update theme color meta tag dynamically
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.content = isDark ? '#065f46' : '#4CAF50';
+    }
+  });
+
+  // Listen for system theme changes
+  prefersDarkScheme.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      if (e.matches) {
+        body.classList.add('dark-mode');
+        updateIcons(true);
+      } else {
+        body.classList.remove('dark-mode');
+        updateIcons(false);
+      }
+    }
   });
 
   // Add intersection observer for fade-in animations
@@ -214,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ✅ Enhanced SEO and Name Recognition Features - by Islam Kassem
-  
+
   // Add contact information dynamically with proper titles
   const contactContainer = document.getElementById('contact-information');
   if (contactContainer) {
@@ -260,16 +308,16 @@ document.addEventListener('DOMContentLoaded', function () {
       link.href = contact.href;
       link.title = contact.title;
       link.setAttribute('aria-label', contact.label);
-      
+
       if (contact.external) {
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
       }
-      
+
       const icon = document.createElement('i');
       icon.className = contact.icon;
       icon.setAttribute('aria-hidden', 'true');
-      
+
       link.appendChild(icon);
       contactContainer.appendChild(link);
     });
@@ -277,11 +325,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add enhanced meta description updates for better SEO
   const originalMetaDescription = document.querySelector('meta[name="description"]').getAttribute('content');
-  
+
   // Track service clicks with better attribution
   const serviceLinks = document.querySelectorAll('.service-link');
   serviceLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       // Add "by Islam Kassem" attribution to external links
       const url = new URL(this.href);
       if (!url.searchParams.has('ref')) {
