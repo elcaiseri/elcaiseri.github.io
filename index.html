@@ -89,6 +89,87 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!-- Structured Data (Schema.org) for Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Islam Kassem",
+      "alternateName": ["Eslam Kassem", "elcaiseri"],
+      "url": "https://kassem.dev",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://kassem.dev/assets/profile-photo-white-bg.webp",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/elcaiseri",
+        "https://github.com/elcaiseri",
+        "https://www.kaggle.com/elcaiseri",
+        "https://elcaiseri.medium.com",
+        "https://twitter.com/elcaiseri"
+      ],
+      "jobTitle": "AI & Machine Learning Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance AI Consultant"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Cairo University",
+          "department": "Faculty of Graduate Studies for Statistical Research"
+        },
+        {
+          "@type": "EducationalOrganization", 
+          "name": "Port Said University",
+          "department": "Faculty of Engineering"
+        }
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning", 
+        "Large Language Models",
+        "Deep Learning",
+        "Computer Vision",
+        "Natural Language Processing",
+        "MLOps",
+        "Data Science",
+        "Python Programming"
+      ],
+      "description": "Islam Kassem is an AI and Machine Learning Engineer, Kaggle Master (Top 1%), and Top-Rated Upwork freelancer specializing in LLMs, Deep Learning, and Computer Vision. Expert in developing scalable AI solutions and MLOps.",
+      "email": "iqasem4444@gmail.com",
+      "award": [
+        "Kaggle Master - Top 1%",
+        "Upwork Top-Rated Freelancer"
+      ]
+    }
+    </script>
+
+    <!-- Additional structured data for professional profile -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Islam Kassem - AI & ML Engineering Services",
+      "url": "https://kassem.dev",
+      "description": "Professional AI and Machine Learning engineering services including LLM development, computer vision solutions, and AI consulting.",
+      "provider": {
+        "@type": "Person",
+        "name": "Islam Kassem"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "AI Consulting",
+        "LLM Development", 
+        "Computer Vision Solutions",
+        "Machine Learning Engineering",
+        "MLOps Implementation"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -165,11 +246,11 @@
             </div>
         </section>
         <section id="about-me" class="lazy-section" style="content-visibility: auto; contain-intrinsic-size: 200px;">
-            <h2>About Me</h2>
-            <p><strong>AI and Machine Learning Engineer</strong> and <strong>Master of Data Science</strong> with a
+            <h2>About Islam Kassem</h2>
+            <p><strong>Islam Kassem</strong> is an <strong>AI and Machine Learning Engineer</strong> and <strong>Master of Data Science</strong> with a
                 strong focus on delivering business-driven AI solutions. As a <strong>Kaggle Master (Top 1%)</strong>
-                and <strong>Top-Rated freelancer on Upwork</strong>, I specialize in LLMs, Deep Learning, and Computer
-                Vision. I help businesses turn complex data challenges into scalable, production-ready systems that
+                and <strong>Top-Rated freelancer on Upwork</strong>, Islam Kassem specializes in LLMs, Deep Learning, and Computer
+                Vision. Islam helps businesses turn complex data challenges into scalable, production-ready systems that
                 drive real value.</p>
         </section>
         <section id="education" class="lazy-section" style="content-visibility: auto; contain-intrinsic-size: 350px;">
@@ -240,7 +321,7 @@
         <div class="container footer-content">
             <p>&copy;
                 <script>document.write(new Date().getFullYear());</script>
-                Islam Kassem | @elcaiseri
+                Islam Kassem — Machine Learning Engineer | Kaggle Master | kassem.dev | @elcaiseri
             </p>
             <div class="footer-icons">
                 <a href="mailto:iqasem4444@gmail.com" title="Email Me" aria-label="Send email"><i
@@ -259,6 +340,19 @@
         </div>
     </footer>
     <script src="scripts/script.js" defer></script>
+
+    <!-- Service Worker Registration for better SEO and performance -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                    console.log('Islam Kassem Portfolio SW registered successfully');
+                }, function (err) {
+                    console.log('Islam Kassem Portfolio SW registration failed: ', err);
+                });
+            });
+        }
+    </script>
 
 </body>
 

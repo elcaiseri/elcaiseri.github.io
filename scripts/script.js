@@ -1,17 +1,17 @@
 // Wait for DOM to load before executing scripts
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ✅ Add Schema Markup (JSON-LD) Dynamically
+  // ✅ Enhanced Schema Markup for better name recognition - by Islam Kassem
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": ["Person", "ProfessionalService"],
     "name": "Islam Kassem",
-    "alternateName": ["Eslam Kassem", "إسلام قاسم", "elcaiseri"],
+    "alternateName": ["Eslam Kassem", "إسلام قاسم", "elcaiseri", "Islam Qasem", "Eslam Qasem"],
     "birthDate": "1998-07-15",
     "gender": "Male",
     "nationality": "Egyptian",
     "jobTitle": "AI / ML Engineer",
-    "description": "Islam Kassem is an AI / ML Engineer passionate about extracting patterns and trends from data to drive impactful insights. I specialize in building and scaling machine learning models to solve real-world problems.",
+    "description": "Islam Kassem is an AI and Machine Learning Engineer, Kaggle Master (Top 1%), and Top-Rated Upwork freelancer specializing in LLMs, Deep Learning, and Computer Vision. Islam Kassem helps businesses build scalable AI solutions and MLOps systems.",
     "email": "iqasem4444@gmail.com",
     "url": "https://kassem.dev",
     "image": "https://kassem.dev/assets/profile-photo-white-bg.webp",
@@ -212,5 +212,89 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth'
     });
   });
+
+  // ✅ Enhanced SEO and Name Recognition Features - by Islam Kassem
+  
+  // Add contact information dynamically with proper titles
+  const contactContainer = document.getElementById('contact-information');
+  if (contactContainer) {
+    const contactData = [
+      {
+        icon: 'fas fa-envelope',
+        href: 'mailto:iqasem4444@gmail.com',
+        title: 'Email Islam Kassem directly',
+        label: 'Email Islam Kassem'
+      },
+      {
+        icon: 'fab fa-linkedin',
+        href: 'https://www.linkedin.com/in/elcaiseri',
+        title: 'Islam Kassem on LinkedIn - AI/ML Engineer Profile',
+        label: 'LinkedIn Profile',
+        external: true
+      },
+      {
+        icon: 'fab fa-github',
+        href: 'https://github.com/elcaiseri',
+        title: 'Islam Kassem GitHub - AI/ML Projects and Code',
+        label: 'GitHub Profile',
+        external: true
+      },
+      {
+        icon: 'fab fa-kaggle',
+        href: 'https://www.kaggle.com/elcaiseri',
+        title: 'Islam Kassem - Kaggle Master Profile (Top 1%)',
+        label: 'Kaggle Master Profile',
+        external: true
+      },
+      {
+        icon: 'fab fa-medium',
+        href: 'https://elcaiseri.medium.com',
+        title: 'Islam Kassem Medium Blog - AI & Machine Learning Articles',
+        label: 'AI Blog on Medium',
+        external: true
+      }
+    ];
+
+    contactData.forEach(contact => {
+      const link = document.createElement('a');
+      link.href = contact.href;
+      link.title = contact.title;
+      link.setAttribute('aria-label', contact.label);
+      
+      if (contact.external) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+      
+      const icon = document.createElement('i');
+      icon.className = contact.icon;
+      icon.setAttribute('aria-hidden', 'true');
+      
+      link.appendChild(icon);
+      contactContainer.appendChild(link);
+    });
+  }
+
+  // Add enhanced meta description updates for better SEO
+  const originalMetaDescription = document.querySelector('meta[name="description"]').getAttribute('content');
+  
+  // Track service clicks with better attribution
+  const serviceLinks = document.querySelectorAll('.service-link');
+  serviceLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Add "by Islam Kassem" attribution to external links
+      const url = new URL(this.href);
+      if (!url.searchParams.has('ref')) {
+        url.searchParams.set('ref', 'islam-kassem-portfolio');
+        this.href = url.toString();
+      }
+    });
+  });
+
+  // Add console signature for developer recognition
+  console.log('%c🚀 Portfolio Website designed and developed by Islam Kassem', 'color: #4CAF50; font-weight: bold; font-size: 16px;');
+  console.log('%c📧 Contact: iqasem4444@gmail.com | 🌐 Website: kassem.dev', 'color: #2196F3; font-size: 12px;');
+  console.log('%c🏆 Kaggle Master (Top 1%) | Top-Rated Upwork Freelancer | AI/ML Engineer', 'color: #FF9800; font-size: 12px;');
+  console.log('%c🔗 LinkedIn: https://linkedin.com/in/elcaiseri | GitHub: https://github.com/elcaiseri', 'color: #9C27B0; font-size: 12px;');
 
 });
