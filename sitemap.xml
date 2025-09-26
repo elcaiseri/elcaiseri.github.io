@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main index page -->
+<!-- Generated: 2025-09-26 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+          https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Root (highest priority) -->
   <url>
     <loc>https://kassem.dev/</loc>
-    <lastmod>2025-09-26</lastmod> <!-- Update this date whenever the page content changes -->
+    <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Resume landing page -->
   <url>
     <loc>https://kassem.dev/resume</loc>
-    <lastmod>2025-09-26</lastmod> <!-- Update this date whenever the page content changes -->
+    <lastmod>2025-09-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- PDF asset (keep only if you want it indexed) -->
   <url>
     <loc>https://kassem.dev/resume/Islam_Kassem_AI_ML_Engineer_Resume_4.pdf</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Example future pages (uncomment when live) -->
+  <!--
+  <url>
+    <loc>https://kassem.dev/blog/</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://kassem.dev/projects/</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
 </urlset>
