@@ -1,7 +1,7 @@
 // Service Worker for Islam Kassem's Portfolio - kassem.dev
 // Developed by Islam Kassem
 
-const CACHE_NAME = 'islam-kassem-portfolio-v1.0';
+const CACHE_NAME = 'islam-kassem-portfolio-v1.1';
 const urlsToCache = [
     '/',
     '/index.html',
