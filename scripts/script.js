@@ -339,6 +339,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Clean up any existing service workers for better SEO
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      for (let registration of registrations) {
+        registration.unregister().then(function () {
+          console.log('Service Worker unregistered for better SEO');
+        });
+      }
+    });
+  }
+
   // Add console signature for developer recognition
   console.log('%c🚀 Portfolio Website designed and developed by Islam Kassem', 'color: #4CAF50; font-weight: bold; font-size: 16px;');
   console.log('%c📧 Contact: iqasem4444@gmail.com | 🌐 Website: kassem.dev', 'color: #2196F3; font-size: 12px;');
