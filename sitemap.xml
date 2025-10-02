@@ -50,8 +50,8 @@
   <!-- OpenFPL Scout AI -->
   <url>
     <loc>https://kassem.dev/fpl/</loc>
-    <lastmod>2025-01-31</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://kassem.dev/assets/profile-photo-white-bg.webp</image:loc>
