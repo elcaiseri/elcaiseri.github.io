@@ -47,4 +47,17 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- OpenFPL Scout AI -->
+  <url>
+    <loc>https://kassem.dev/fpl/</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kassem.dev/assets/profile-photo-white-bg.webp</image:loc>
+      <image:title>OpenFPL Scout AI - AI-Powered Fantasy Premier League Team Optimizer</image:title>
+      <image:caption>AI-powered FPL scout using machine learning to predict player performance</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
