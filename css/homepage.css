@@ -1,16 +1,18 @@
 /* ==============================================
    HOMEPAGE CSS - Homepage-specific styles
+   Saudi Vision 2030 Branded
    ============================================== */
 
-/* Hero Section */
+/* Hero Section - Saudi Vision 2030 Gradient */
 .hero-section {
-    background: var(--header-bg);
+    background: linear-gradient(135deg, #009639 0%, #007A2E 40%, #005A22 70%, #1B263B 100%);
     padding: var(--space-4xl) 0;
     color: #ffffff;
     position: relative;
     overflow: hidden;
 }
 
+/* Geometric pattern overlay inspired by Saudi Vision 2030 */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -18,8 +20,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-    opacity: 0.5;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.08)"/></svg>');
+    opacity: 0.8;
 }
 
 .hero-content {
@@ -38,12 +43,18 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.3);
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     margin-bottom: var(--space-lg);
     backdrop-filter: blur(10px);
+    font-weight: var(--font-weight-medium);
+}
+
+.hero-badge i {
+    color: var(--accent-secondary);
 }
 
 .hero-section h1 {
@@ -119,11 +130,12 @@
     display: flex;
     align-items: center;
     gap: var(--space-xs);
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, #009639 0%, #007A2E 100%);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
+    box-shadow: 0 4px 12px rgba(0, 150, 57, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -294,9 +306,10 @@
     display: flex;
     align-items: flex-start;
     gap: var(--space-lg);
-    background: rgba(45, 125, 45, 0.1);
+    background: linear-gradient(135deg, rgba(0, 150, 57, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    border: 1px solid rgba(0, 150, 57, 0.2);
     padding: var(--space-xl);
-    border-radius: var(--radius-lg);
+    border-radius: 12px;
     margin-top: var(--space-3xl);
 }
 
@@ -315,7 +328,8 @@
 }
 
 body.dark-mode .process-guarantee {
-    background: rgba(34, 211, 238, 0.1);
+    background: linear-gradient(135deg, rgba(0, 179, 71, 0.15) 0%, rgba(255, 215, 0, 0.08) 100%);
+    border-color: rgba(0, 179, 71, 0.3);
 }
 
 /* About Section */
@@ -546,7 +560,7 @@ body.dark-mode .process-guarantee {
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--accent-color);
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
@@ -556,7 +570,7 @@ body.dark-mode .process-guarantee {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(45, 125, 45, 0.1);
+    background: rgba(0, 150, 57, 0.1);
     border-radius: var(--radius-full);
     margin: 0 auto var(--space-lg);
     font-size: 1.5rem;
@@ -564,7 +578,7 @@ body.dark-mode .process-guarantee {
 }
 
 body.dark-mode .contact-option-icon {
-    background: rgba(34, 211, 238, 0.1);
+    background: rgba(0, 179, 71, 0.15);
 }
 
 .contact-option h3 {
@@ -659,17 +673,96 @@ body.dark-mode .contact-option-icon {
     }
 }
 
-/* Final CTA Section */
+/* Final CTA Section - Saudi Vision 2030 */
 .final-cta-section {
     padding: var(--space-4xl) 0;
-    background: var(--header-bg);
+    background: linear-gradient(135deg, #009639 0%, #007A2E 40%, #005A22 70%, #1B263B 100%);
     text-align: center;
     color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.final-cta-content {
+    position: relative;
+    z-index: 1;
 }
 
 .final-cta-content h2 {
     color: #ffffff;
     margin-bottom: var(--space-md);
+}
+
+.final-cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-xl);
+    font-size: var(--font-size-lg);
+}
+
+.final-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+/* CTA buttons on hero/final sections - ensure contrast */
+.final-cta-section .btn-primary {
+    background: var(--accent-secondary);
+    color: #1B263B;
+    border: 2px solid var(--accent-secondary);
+}
+
+.final-cta-section .btn-primary:hover {
+    background: #E6C200;
+    color: #1B263B;
+}
+
+.final-cta-section .btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.final-cta-section .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+}
+
+/* Hero Section Buttons - High Contrast */
+.hero-section .btn-primary {
+    background: var(--accent-secondary);
+    color: #1B263B;
+    border: 2px solid var(--accent-secondary);
+}
+
+.hero-section .btn-primary:hover {
+    background: #E6C200;
+    color: #1B263B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.hero-section .btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-section .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .final-cta-content p {

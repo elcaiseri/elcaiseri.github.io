@@ -1,27 +1,31 @@
 /* Critical CSS for above-the-fold content */
 :root {
-    --bg-color: #fafafa;
-    --text-color: #1a202c; /* Improved contrast from #2c3e50 */
-    --section-bg: #ffffff;
-    --header-bg: linear-gradient(135deg, #4CAF50, #1DA1F2);
-    --accent-color: #2d7d2d; /* Improved contrast from #3DDC84 */
-    --border-color: rgba(0, 0, 0, 0.08);
-    --shadow-color: rgba(0, 0, 0, 0.06);
-    --card-bg: #ffffff;
-    --transition-speed: 400ms;
+    /* Saudi Vision 2030 - Light Theme */
+    --bg-color: #FFFFFF;
+    --text-color: #1B263B;             /* Dark navy for text */
+    --section-bg: #FFFFFF;
+    --header-bg: linear-gradient(135deg, #009639 0%, #007A2E 50%, #005A22 100%);
+    --accent-color: #009639;           /* Saudi Green */
+    --accent-secondary: #FFD700;       /* Gold */
+    --border-color: rgba(27, 38, 59, 0.08);
+    --shadow-color: rgba(27, 38, 59, 0.06);
+    --card-bg: #FFFFFF;
+    --transition-speed: 300ms;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
     --surface-shadow: 0 2px 8px var(--shadow-color);
 }
 
 body.dark-mode {
-    --bg-color: #111827;
-    --text-color: #e2e8f0;
-    --section-bg: #1a1f2e;
-    --header-bg: linear-gradient(135deg, #065f46, #0c4a6e);
-    --accent-color: #22d3ee; /* Better contrast in dark mode */
-    --border-color: rgba(255, 255, 255, 0.08);
+    /* Saudi Vision 2030 - Dark Theme */
+    --bg-color: #0D1B2A;               /* Deep navy background */
+    --text-color: #F5F5F5;             /* Light text */
+    --section-bg: #1B263B;
+    --header-bg: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #009639 100%);
+    --accent-color: #00B347;           /* Brighter green for dark mode */
+    --accent-secondary: #FFD700;       /* Gold */
+    --border-color: rgba(245, 245, 245, 0.08);
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --card-bg: rgba(30, 41, 59, 0.8);
+    --card-bg: rgba(27, 38, 59, 0.9);
 }
 
 html {
@@ -29,7 +33,7 @@ html {
 }
 
 body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
     padding: 0;
     background: var(--bg-color);
@@ -120,14 +124,14 @@ header .container {
 
 #theme-toggle .fa-sun {
     display: block;
-    color: #fbbf24;
+    color: #FFD700;                     /* Saudi Gold */
     opacity: 1;
     transform: rotate(0deg);
 }
 
 #theme-toggle .fa-moon {
     display: none;
-    color: #6366f1;
+    color: #1E90FF;                     /* Accent Blue */
     opacity: 0;
     transform: rotate(180deg);
 }
@@ -178,25 +182,25 @@ body.dark-mode #theme-toggle .fa-moon {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
-    border: 4px solid var(--accent-color);
+    border: 4px solid var(--accent-color);   /* Saudi Green border */
     width: 256px;
     height: 256px;
 }
 
 .jobtitle {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--accent-color);              /* Saudi Green text */
     text-align: center;
     margin: 15px 0;
     padding: 10px;
     position: relative;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.5px;
 }
 
 .jobtitle p {
     margin: 0;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #00B347 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -1,36 +1,46 @@
 /* ==============================================
    COMPONENTS CSS - Reusable UI Components
+   Saudi Vision 2030 Branded
    ============================================== */
 
-/* Buttons */
+/* Buttons - Saudi Vision 2030 Styled */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-lg);
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-size: var(--font-size-base);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: 6px;                /* 6px rounded corners per brand guidelines */
     cursor: pointer;
     transition: all var(--transition-speed) var(--transition-timing);
+    letter-spacing: 0.01em;
 }
 
+/* Primary Button - Saudi Green */
 .btn-primary {
     background: var(--accent-color);
-    color: white;
+    color: var(--text-on-primary);
+    box-shadow: 0 2px 4px rgba(0, 150, 57, 0.15), 0 1px 2px rgba(0, 150, 57, 0.1);
 }
 
 .btn-primary:hover {
     background: var(--accent-hover);
-    color: white;
+    color: var(--text-on-primary);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 16px rgba(0, 150, 57, 0.2), 0 4px 8px rgba(0, 150, 57, 0.15);
 }
 
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 150, 57, 0.2);
+}
+
+/* Secondary Button - Gold Accent */
 .btn-secondary {
     background: transparent;
     color: var(--text-color);
@@ -38,11 +48,26 @@
 }
 
 .btn-secondary:hover {
-    background: var(--card-hover-bg);
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+    background: rgba(255, 215, 0, 0.1);
+    border-color: var(--accent-secondary);
+    color: var(--text-color);
 }
 
+/* Gold Button Variant */
+.btn-gold {
+    background: var(--accent-secondary);
+    color: #1B263B;
+    box-shadow: 0 2px 4px rgba(255, 215, 0, 0.2);
+}
+
+.btn-gold:hover {
+    background: var(--accent-secondary-hover);
+    color: #1B263B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.25);
+}
+
+/* Outline Button - Green Bordered */
 .btn-outline {
     background: transparent;
     color: var(--accent-color);
@@ -51,36 +76,45 @@
 
 .btn-outline:hover {
     background: var(--accent-color);
-    color: white;
+    color: var(--text-on-primary);
 }
 
+/* Button Sizes */
 .btn-lg {
     padding: var(--space-md) var(--space-xl);
     font-size: var(--font-size-lg);
+    border-radius: 6px;
 }
 
 .btn-xl {
     padding: var(--space-lg) var(--space-2xl);
     font-size: var(--font-size-xl);
+    border-radius: 8px;
 }
 
 .btn-block {
     width: 100%;
 }
 
-/* Cards */
+/* Button Focus State for Accessibility */
+.btn:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 2px;
+}
+
+/* Cards - Saudi Vision 2030 Styled */
 .card {
     background: var(--card-bg);
-    border-radius: var(--radius-lg);
+    border-radius: 12px;
     padding: var(--space-xl);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px var(--shadow-color), 0 1px 3px var(--shadow-color);
     border: 1px solid var(--border-color);
     transition: all var(--transition-speed) var(--transition-timing);
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 12px 24px var(--shadow-color), 0 4px 8px var(--shadow-color);
 }
 
 .card-featured {
@@ -95,16 +129,16 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--accent-color);
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+    border-radius: 12px 12px 0 0;
 }
 
-/* Service Cards */
+/* Service Cards - Saudi Vision 2030 Styled */
 .service-card {
     background: var(--card-bg);
-    border-radius: var(--radius-lg);
+    border-radius: 12px;
     padding: var(--space-xl);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px var(--shadow-color);
     border: 1px solid var(--border-color);
     transition: all var(--transition-speed);
     display: flex;
@@ -113,7 +147,8 @@
 
 .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 12px 24px var(--shadow-color);
+    border-color: rgba(0, 150, 57, 0.3);
 }
 
 .service-card.featured {
@@ -128,8 +163,8 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--accent-color);
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+    border-radius: 12px 12px 0 0;
 }
 
 .service-header {
@@ -146,12 +181,13 @@
 }
 
 .service-badge {
-    background: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #00B347 100%);
     color: white;
     font-size: var(--font-size-sm);
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-full);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
+    box-shadow: 0 2px 4px rgba(0, 150, 57, 0.2);
 }
 
 .service-description {
@@ -251,16 +287,18 @@
 }
 
 .tech-tag {
-    background: rgba(45, 125, 45, 0.1);
+    background: rgba(0, 150, 57, 0.1);
     color: var(--accent-color);
     padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-sm);
+    border-radius: 6px;
     font-size: var(--font-size-sm);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
+    border: 1px solid rgba(0, 150, 57, 0.2);
 }
 
 body.dark-mode .tech-tag {
-    background: rgba(34, 211, 238, 0.1);
+    background: rgba(0, 179, 71, 0.15);
+    border-color: rgba(0, 179, 71, 0.3);
 }
 
 .results-grid {
@@ -302,14 +340,14 @@ body.dark-mode .tech-tag {
 /* Testimonial Cards */
 .testimonial-card {
     background: var(--card-bg);
-    border-radius: var(--radius-lg);
+    border-radius: 12px;
     padding: var(--space-xl);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px var(--shadow-color);
     border: 1px solid var(--border-color);
 }
 
 .testimonial-rating {
-    color: #f59e0b;
+    color: var(--accent-secondary);    /* Gold stars */
     margin-bottom: var(--space-md);
 }
 
@@ -373,15 +411,15 @@ body.dark-mode .tech-tag {
     align-items: center;
     gap: var(--space-xs);
     padding: var(--space-xs) var(--space-md);
-    background: rgba(45, 125, 45, 0.1);
+    background: rgba(0, 150, 57, 0.1);
     color: var(--accent-color);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 
 body.dark-mode .badge {
-    background: rgba(34, 211, 238, 0.1);
+    background: rgba(0, 179, 71, 0.15);
 }
 
 /* Forms */

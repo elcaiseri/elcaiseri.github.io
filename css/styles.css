@@ -1,26 +1,22 @@
 /* =============================
    Base Configuration & Variables
+   Saudi Vision 2030 Brand Update
    ============================= */
 :root {
-    /* Light theme - Improved contrast for WCAG 2.1 AA */
-    --bg-color: #fafafa;
-    --text-color: #1a202c;
-    /* Improved contrast from #2c3e50 */
-    --section-bg: #ffffff;
-    --header-bg: linear-gradient(135deg, #4CAF50, #1DA1F2);
-    --footer-bg: linear-gradient(135deg, #0A84FF, #3DDC84);
-    --accent-color: #2d7d2d;
-    /* Improved contrast from #3DDC84 */
-    --link-color: #0d47a1;
-    /* Improved contrast from #1a73e8 */
-    --border-color: rgba(0, 0, 0, 0.12);
-    /* Slightly stronger */
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    /* Slightly stronger */
-    --card-bg: #ffffff;
-    --card-hover-bg: #f8f9fa;
-    --skill-border: #2d7d2d;
-    /* Matching accent color */
+    /* Light Theme - Saudi Vision 2030 Inspired */
+    --bg-color: #FFFFFF;
+    --text-color: #1B263B;             /* Dark navy for WCAG AA compliance */
+    --section-bg: #FFFFFF;
+    --header-bg: linear-gradient(135deg, #009639 0%, #007A2E 50%, #005A22 100%);
+    --footer-bg: linear-gradient(135deg, #1B263B 0%, #0D1B2A 100%);
+    --accent-color: #009639;           /* Saudi Green */
+    --accent-secondary: #FFD700;       /* Gold */
+    --link-color: #1E90FF;             /* Accent blue */
+    --border-color: rgba(27, 38, 59, 0.12);
+    --shadow-color: rgba(27, 38, 59, 0.1);
+    --card-bg: #FFFFFF;
+    --card-hover-bg: #F5F5F5;
+    --skill-border: #009639;           /* Saudi Green */
 
     /* Shared properties */
     --transition-speed: 400ms;
@@ -73,7 +69,7 @@ html {
 }
 
 body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
     padding: 0;
     background: var(--bg-color);
@@ -136,32 +132,23 @@ video {
 }
 
 /* =============================
-   Dark Mode
+   Dark Mode - Saudi Vision 2030
    ============================= */
 body.dark-mode {
-    /* Dark theme with improved contrast and depth */
-    --bg-color: #0f172a;
-    /* Darker background */
-    --text-color: #f1f5f9;
-    /* Better contrast */
-    --section-bg: #1e293b;
-    /* Better contrast */
-    --header-bg: linear-gradient(135deg, #065f46, #0c4a6e);
-    --footer-bg: linear-gradient(135deg, #1f2937, #065f46);
-    --accent-color: #22d3ee;
-    /* Better contrast in dark mode */
-    --link-color: #7dd3fc;
-    /* Better contrast */
-    --border-color: rgba(255, 255, 255, 0.12);
-    /* Stronger border */
+    /* Dark theme with Saudi Vision 2030 colors */
+    --bg-color: #0D1B2A;               /* Deep navy background */
+    --text-color: #F5F5F5;             /* Light text for contrast */
+    --section-bg: #1B263B;             /* Slightly lighter navy */
+    --header-bg: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #009639 100%);
+    --footer-bg: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%);
+    --accent-color: #00B347;           /* Brighter green for dark mode */
+    --accent-secondary: #FFD700;       /* Gold stays the same */
+    --link-color: #1E90FF;             /* Accent blue */
+    --border-color: rgba(245, 245, 245, 0.12);
     --shadow-color: rgba(0, 0, 0, 0.4);
-    /* Stronger shadow */
-    --card-bg: rgba(30, 41, 59, 0.9);
-    /* Better opacity */
-    --card-hover-bg: rgba(51, 65, 85, 0.95);
-    /* Better hover state */
-    --skill-border: #22d3ee;
-    /* Matching accent */
+    --card-bg: rgba(27, 38, 59, 0.95);
+    --card-hover-bg: rgba(39, 55, 77, 0.98);
+    --skill-border: #00B347;           /* Saudi Green */
 }
 
 /* =============================
