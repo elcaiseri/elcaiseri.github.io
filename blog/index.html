@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islam Kassem Blog | AI & Machine Learning Articles by Kaggle Master</title>
-    <meta name="description"
-        content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer. Insights on LLMs, Deep Learning, Computer Vision, and MLOps from industry expert.">
-    <meta name="keywords"
-        content="Islam Kassem blog, AI articles, Machine Learning blog, Kaggle Master blog, LLM articles, Deep Learning tutorials, Computer Vision, MLOps, Data Science blog">
+    <title>Blog | Islam Kassem | AI & Machine Learning Articles</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer. Insights on LLMs, Deep Learning, Computer Vision, and MLOps from industry expert.">
+    <meta name="keywords" content="Islam Kassem blog, AI articles, Machine Learning blog, Kaggle Master blog, LLM articles, Deep Learning tutorials, Computer Vision, MLOps">
     <meta name="author" content="Islam Kassem">
     <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://kassem.dev/blog/">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Islam Kassem Blog | AI & Machine Learning Articles">
-    <meta property="og:description"
-        content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer. Expert insights on LLMs, Deep Learning, and Computer Vision.">
-    <meta property="og:image" content="https://kassem.dev/assets/profile-photo-white-bg.webp">
+    <meta property="og:description" content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master. Expert insights on LLMs, Deep Learning, and Computer Vision.">
     <meta property="og:url" content="https://kassem.dev/blog/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Islam Kassem Blog">
+    <meta property="og:image" content="https://kassem.dev/assets/profile-photo-white-bg.webp">
 
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@elcaiseri">
     <meta name="twitter:creator" content="@elcaiseri">
-    <meta name="twitter:title" content="Islam Kassem Blog | AI & Machine Learning Articles">
-    <meta name="twitter:description"
-        content="Read AI and Machine Learning articles by Islam Kassem, Kaggle Master and AI/ML Engineer.">
-    <meta name="twitter:image" content="https://kassem.dev/assets/profile-photo-white-bg.webp">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/homepage.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/utilities.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous">
 
     <!-- Google Fonts: Inter & Poppins for Saudi Vision 2030 Brand -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Structured Data for Blog -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -68,129 +62,162 @@
           "https://www.kaggle.com/elcaiseri",
           "https://elcaiseri.medium.com"
         ]
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Islam Kassem"
       }
     }
     </script>
 </head>
-
 <body>
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-sun" id="sun-icon"></i>
-        <i class="fas fa-moon" id="moon-icon" style="display: none;"></i>
-    </button>
-
+    <!-- Navigation -->
     <header>
-        <div class="container">
-            <h1><a href="/" style="text-decoration: none; color: inherit;">Islam Kassem</a></h1>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/services/">Services</a>
-                <a href="/case-studies/">Case Studies</a>
-                <a href="/about/">About</a>
-            </nav>
-        </div>
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <a href="/">Islam Kassem</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/case-studies/">Case Studies</a></li>
+                <li><a href="/process/">Process</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/" class="nav-cta">Book Discovery Call</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
     </header>
 
-    <main class="container">
-        <section>
-            <div style="text-align: center;">
-                <h1>AI & Machine Learning Blog by Islam Kassem</h1>
-                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
-                    Kaggle Master sharing insights on AI, ML, and Data Science
-                </p>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="/">Home</a>
+                    <span>/</span>
+                    <span>Blog</span>
+                </nav>
+                <h1>AI & Machine Learning Insights</h1>
+                <p>Deep dives into LLMs, Computer Vision, MLOps, and advanced AI techniques from industry experience.</p>
+            </div>
+        </section>
 
+        <!-- Blog Content Section -->
+        <section>
+            <div class="container">
                 <!-- Medium Blog CTA -->
-                <div
-                    style="background: linear-gradient(135deg, #00ab6c, #00d084); padding: 2rem; border-radius: 15px; margin: 2rem 0; box-shadow: 0 4px 15px rgba(0, 171, 108, 0.3);">
-                    <h2 style="color: white; margin: 0 0 1rem 0; font-size: 1.5rem;">
-                        <i class="fab fa-medium" style="margin-right: 0.5rem;"></i>
-                        Read My Latest Articles on Medium
-                    </h2>
-                    <p style="color: rgba(255,255,255,0.9); margin: 0 0 1.5rem 0; font-size: 1.1rem;">
-                        Deep dives into Large Language Models, Computer Vision, MLOps, and cutting-edge AI research
-                    </p>
-                    <a href="https://elcaiseri.medium.com" target="_blank" rel="noopener noreferrer"
-                        style="display: inline-block; background: white; color: #00ab6c; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.2);"
-                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.3)'"
-                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.2)'">
-                        🚀 Visit elcaiseri.medium.com
+                <div style="background: linear-gradient(135deg, rgba(0, 150, 57, 0.1), rgba(0, 150, 57, 0.05)); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--accent); text-align: center;">
+                    <h2 style="color: var(--accent); margin-top: 0;">Read on Medium</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">I share detailed technical articles and insights on AI, Machine Learning, and Data Science on Medium.</p>
+                    <a href="https://elcaiseri.medium.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                        <i class="fab fa-medium"></i> Visit Medium Profile
                     </a>
                 </div>
-            </div>
 
-            <div class="blog-posts">
-                <!-- Loading state -->
-                <div id="medium-loading" class="loading-container">
-                    <div class="loading-spinner"></div>
-                    <p>Loading latest AI & ML articles by Islam Kassem...</p>
-                </div>
+                <!-- Topics Covered -->
+                <div style="margin-bottom: 3rem;">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Topics Covered</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <!-- Large Language Models -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-robot" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>Large Language Models</h3>
+                            <p style="color: var(--text-secondary);">Exploring LLM architectures, fine-tuning techniques, prompt engineering, and real-world LLM deployment strategies for production systems.</p>
+                        </div>
 
-                <!-- Refresh button -->
-                <div class="articles-header" id="articles-header" style="display: none;">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                        <h3 style="margin: 0; color: #4CAF50;">
-                            <i class="fab fa-medium"></i> Latest from Islam Kassem's Medium
-                        </h3>
-                        <button id="refresh-articles" class="refresh-btn" title="Refresh Articles">
-                            <i class="fas fa-sync-alt"></i> Refresh
-                        </button>
+                        <!-- Deep Learning -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>Deep Learning</h3>
+                            <p style="color: var(--text-secondary);">Neural networks, transformers, optimization techniques, and advanced deep learning methodologies for solving complex AI problems.</p>
+                        </div>
+
+                        <!-- Computer Vision -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-eye" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>Computer Vision</h3>
+                            <p style="color: var(--text-secondary);">Image processing, object detection, segmentation, and vision transformers for practical computer vision applications.</p>
+                        </div>
+
+                        <!-- MLOps -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-cogs" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>MLOps & Deployment</h3>
+                            <p style="color: var(--text-secondary);">Model serving, containerization, monitoring, and best practices for deploying machine learning systems at scale.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Dynamic Medium articles container -->
-                <div id="medium-articles" class="medium-articles-container" style="display: none;">
-                    <!-- Articles will be loaded here dynamically -->
-                </div>
-
-                <!-- Fallback content -->
-                <article class="blog-post" id="medium-fallback" style="display: none;">
-                    <h3>Read More on Medium</h3>
-                    <p>For the latest AI and Machine Learning articles by <strong>Islam Kassem</strong>, visit the
-                        official Medium blog:</p>
-                    <a href="https://elcaiseri.medium.com" target="_blank" rel="noopener noreferrer" class="blog-link">
-                        🔗 Islam Kassem's Medium Blog - AI & ML Insights
-                    </a>
-                    <p><em>Topics covered include: Large Language Models (LLMs), Deep Learning architectures, Computer
-                            Vision applications, MLOps best practices, and Data Science methodologies.</em></p>
-                </article>
+        <!-- CTA Section -->
+        <section class="bg-section">
+            <div class="container text-center">
+                <h2>Have an AI Project?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Let's discuss how I can help implement AI solutions for your organization.</p>
+                <a href="/contact/" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check"></i> Book Discovery Call
+                </a>
             </div>
         </section>
     </main>
 
-    <footer style="content-visibility: auto; contain-intrinsic-size: 100px;">
+    <!-- Footer -->
+    <footer>
         <div class="container footer-content">
-            <p>&copy;
-                <script>document.write(new Date().getFullYear());</script>
-                Islam Kassem — Machine Learning Engineer | Kaggle Master | kassem.dev | @elcaiseri
-            </p>
-            <div class="footer-icons">
-                <a href="mailto:iqasem4444@gmail.com" title="Email Me" aria-label="Send email"><i
-                        class="fas fa-envelope" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn Profile" target="_blank"
-                    rel="noopener noreferrer" aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin"
-                        aria-hidden="true"></i></a>
-                <a href="https://github.com/elcaiseri" title="GitHub Profile" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visit GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
-                <a href="https://elcaiseri.medium.com" title="Medium Blog" target="_blank" rel="noopener noreferrer"
-                    aria-label="Read My Blog on Medium"><i class="fab fa-medium" aria-hidden="true"></i></a>
-                <a href="https://www.kaggle.com/elcaiseri" title="Kaggle Profile" target="_blank"
-                    rel="noopener noreferrer" aria-label="Visit Kaggle Profile"><i class="fab fa-kaggle"
-                        aria-hidden="true"></i></a>
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>Islam Kassem</h3>
+                    <p>Enterprise AI Consultant</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/elcaiseri" title="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:iqasem4444@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="/services/ai-consulting">AI Consulting</a></li>
+                            <li><a href="/services/llm-development">LLM Development</a></li>
+                            <li><a href="/services/computer-vision">Computer Vision</a></li>
+                            <li><a href="/services/mlops">MLOps</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/about/">About</a></li>
+                            <li><a href="/case-studies/">Case Studies</a></li>
+                            <li><a href="/process/">Process</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Islam Kassem. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Styles moved to external stylesheet /css/styles.css -->
-    <link rel="stylesheet" href="blog.css">
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Enhanced JavaScript for Islam Kassem's Blog -->
-    <script src="blog.js" defer></script>
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/analytics.js" defer></script>
 </body>
-
 </html>
