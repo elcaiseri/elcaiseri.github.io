@@ -230,16 +230,16 @@ h2 {
         width: 96%;
         padding: 0 10px;
     }
-    
+
     header h1 {
         font-size: 1.5rem;
     }
-    
+
     #profile-photo img, #profile-photo video {
         width: 180px;
         height: 180px;
     }
-    
+
     .jobtitle {
         font-size: 1.3rem;
     }
@@ -249,16 +249,16 @@ h2 {
     header h1 {
         font-size: 1.3rem;
     }
-    
+
     #profile-photo img, #profile-photo video {
         width: 140px;
         height: 140px;
     }
-    
+
     .jobtitle {
         font-size: 1.2rem;
     }
-    
+
     #theme-toggle {
         width: 45px;
         height: 45px;
@@ -266,7 +266,7 @@ h2 {
         right: 10px;
         padding: 10px;
     }
-    
+
     #theme-toggle i {
         font-size: 14px;
     }

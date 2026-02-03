@@ -9,22 +9,22 @@
     --primary-gold: #FFD700;           /* Gold - Highlights & secondary CTAs */
     --primary-gold-hover: #E6C200;     /* Deeper gold for hover */
     --primary-green-hover: #007A2E;    /* Darker green for hover */
-    
+
     /* Background Colors */
     --bg-color: #FFFFFF;
     --bg-secondary: #F5F5F5;           /* Light gray background */
     --section-bg: #FFFFFF;
-    
+
     /* Text Colors - WCAG AA Compliant */
     --text-color: #1B263B;             /* Dark navy - Primary text */
     --text-muted: #4A5568;             /* Secondary text */
     --text-on-primary: #FFFFFF;        /* Text on green/gold buttons */
     --text-on-dark: #FFFFFF;           /* Text on dark backgrounds */
-    
+
     /* Header & Footer - Saudi Vision 2030 Gradient */
     --header-bg: linear-gradient(135deg, #009639 0%, #007A2E 50%, #005A22 100%);
     --footer-bg: linear-gradient(135deg, #1B263B 0%, #0D1B2A 100%);
-    
+
     /* Accent & Interactive */
     --accent-color: #009639;
     --accent-hover: #007A2E;
@@ -32,19 +32,19 @@
     --accent-secondary-hover: #E6C200;
     --link-color: #1E90FF;             /* Accent blue for links */
     --link-hover: #0066CC;
-    
+
     /* Borders & Shadows */
     --border-color: rgba(27, 38, 59, 0.12);
     --shadow-color: rgba(27, 38, 59, 0.1);
-    
+
     /* Card Colors */
     --card-bg: #FFFFFF;
     --card-hover-bg: #F5F5F5;
     --card-border: rgba(0, 150, 57, 0.15);
-    
+
     /* Skill & Badge */
     --skill-border: #009639;
-    
+
     /* Status Colors */
     --success-color: #009639;
     --warning-color: #FFD700;
@@ -104,17 +104,17 @@ body.dark-mode {
     --bg-color: #0D1B2A;               /* Deep navy - Main background */
     --bg-secondary: #1B263B;           /* Dark gray - Secondary bg */
     --section-bg: #1B263B;
-    
+
     /* Text Colors - WCAG AA Compliant */
     --text-color: #F5F5F5;             /* Light text */
     --text-muted: #A0AEC0;             /* Muted text */
     --text-on-primary: #FFFFFF;
     --text-on-dark: #F5F5F5;
-    
+
     /* Header & Footer */
     --header-bg: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #009639 100%);
     --footer-bg: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%);
-    
+
     /* Accent & Interactive - Green stays prominent */
     --accent-color: #00B347;           /* Brighter green for dark mode */
     --accent-hover: #009639;
@@ -122,19 +122,19 @@ body.dark-mode {
     --accent-secondary-hover: #E6C200;
     --link-color: #1E90FF;
     --link-hover: #4DA6FF;
-    
+
     /* Borders & Shadows */
     --border-color: rgba(245, 245, 245, 0.12);
     --shadow-color: rgba(0, 0, 0, 0.4);
-    
+
     /* Card Colors */
     --card-bg: rgba(27, 38, 59, 0.95);
     --card-hover-bg: rgba(39, 55, 77, 0.98);
     --card-border: rgba(0, 179, 71, 0.2);
-    
+
     /* Skill & Badge */
     --skill-border: #00B347;
-    
+
     /* Status Colors */
     --success-color: #00B347;
     --warning-color: #FFD700;

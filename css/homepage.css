@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 30%),
         radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.08)"/></svg>');
