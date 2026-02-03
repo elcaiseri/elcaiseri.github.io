@@ -1,63 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated: 2025-09-26 -->
-<!-- Notes:
- - Only one <urlset> root element (previous diff had two).
- - Avoid fragment URLs (#about, #projects); search engines ignore fragments in sitemaps.
- - Only one <lastmod> per <url>.
- - Include PDFs only if you want them indexed.
- - changefreq/priority are optional and mostly advisory.
--->
+<!-- Generated: 2025-02-03 -->
+<!-- Islam Kassem - Enterprise AI Consulting Sitemap -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Homepage -->
   <url>
     <loc>https://kassem.dev/</loc>
-    <lastmod>2025-10-01</lastmod>
+    <lastmod>2025-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://kassem.dev/assets/profile-photo-white-bg.webp</image:loc>
-      <image:title>Islam Kassem - AI/ML Engineer</image:title>
+      <image:loc>https://kassem.dev/assets/images/profile-photo-white-bg.webp</image:loc>
+      <image:title>Islam Kassem - Enterprise AI Consultant</image:title>
       <image:caption>Professional profile photo of Islam Kassem</image:caption>
     </image:image>
   </url>
 
-  <!-- Resume landing page -->
+  <!-- Services Section -->
   <url>
-    <loc>https://kassem.dev/resume/</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://kassem.dev/services/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://kassem.dev/services/ai-consulting</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kassem.dev/services/llm-development</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kassem.dev/services/computer-vision</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kassem.dev/services/mlops</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Resume PDF (keep only if indexing desired) -->
+  <!-- Case Studies -->
   <url>
-    <loc>https://kassem.dev/resume/Islam_Kassem_AI_ML_Engineer_Resume.pdf</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Blog index -->
-  <url>
-    <loc>https://kassem.dev/blog/</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://kassem.dev/case-studies/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- OpenFPL Scout AI -->
+  <!-- Process -->
   <url>
-    <loc>https://kassem.dev/fpl/</loc>
-    <lastmod>2025-10-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://kassem.dev/process/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://kassem.dev/assets/profile-photo-white-bg.webp</image:loc>
-      <image:title>OpenFPL Scout AI - AI-Powered Fantasy Premier League Team Optimizer</image:title>
-      <image:caption>AI-powered FPL scout using machine learning to predict player performance</image:caption>
-    </image:image>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://kassem.dev/about/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://kassem.dev/contact/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://kassem.dev/blog/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Projects -->
+  <url>
+    <loc>https://kassem.dev/projects/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kassem.dev/projects/fpl/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Resume -->
+  <url>
+    <loc>https://kassem.dev/resume/</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
