@@ -167,14 +167,14 @@ color: #1B263B;
     --primary-gold: #FFD700;
     --primary-green-hover: #007A2E;
     --primary-gold-hover: #E6C200;
-    
+
     /* Light Mode */
     --bg-color: #FFFFFF;
     --text-color: #1B263B;
     --text-muted: #4A5568;
     --accent-color: #009639;
     --accent-secondary: #FFD700;
-    
+
     /* Typography */
     --font-heading: 'Poppins', sans-serif;
     --font-secondary: 'Inter', sans-serif;
