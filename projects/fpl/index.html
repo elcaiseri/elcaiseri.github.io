@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPL AI Manager | AI-Powered Fantasy Premier League Optimization</title>
+    <title>OpenFPL Scout AI | Fantasy Premier League AI Tool by Islam Kassem</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="AI-powered Fantasy Premier League optimization tool. Get data-driven transfer recommendations and team suggestions powered by machine learning.">
-    <meta name="keywords" content="FPL, Fantasy Premier League, AI, machine learning, football, optimization, team selection">
+    <meta name="description" content="OpenFPL Scout AI - Advanced ML-powered Fantasy Premier League scout using XGBoost and CatBoost models to predict player performance and optimize FPL team selection.">
+    <meta name="keywords" content="OpenFPL Scout AI, Fantasy Premier League AI, FPL predictions, FPL optimizer, ML FPL tool, Islam Kassem project">
     <meta name="author" content="Islam Kassem">
+    <meta name="robots" content="index, follow">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://kassem.dev/projects/fpl/">
+    <link rel="canonical" href="https://kassem.dev/fpl/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="OpenFPL Scout AI | Fantasy Premier League AI Tool">
+    <meta property="og:description" content="Advanced ML-powered Fantasy Premier League scout using machine learning models to predict player performance and optimize team selection.">
+    <meta property="og:url" content="https://kassem.dev/fpl/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kassem.dev/assets/images/profile-photo-white-bg.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@elcaiseri">
+    <meta name="twitter:creator" content="@elcaiseri">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
@@ -26,8 +39,33 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter & Poppins for Saudi Vision 2030 Brand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "OpenFPL Scout AI",
+      "description": "AI-powered Fantasy Premier League scout using machine learning models to predict player performance and optimize team selection",
+      "url": "https://kassem.dev/fpl/",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Islam Kassem",
+        "url": "https://kassem.dev"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -64,108 +102,80 @@
                     <span>/</span>
                     <a href="/projects/">Projects</a>
                     <span>/</span>
-                    <span>FPL AI Manager</span>
+                    <span>OpenFPL Scout AI</span>
                 </nav>
-                <h1><i class="fas fa-futbol"></i> FPL AI Manager</h1>
-                <p>AI-Powered Fantasy Premier League Team Optimization</p>
+                <h1>OpenFPL Scout AI</h1>
+                <p>Advanced machine learning-powered tool for Fantasy Premier League player performance prediction and team optimization.</p>
             </div>
         </section>
 
-        <!-- Project Overview -->
+        <!-- Project Content Section -->
         <section>
             <div class="container">
-                <div class="two-col">
-                    <div>
-                        <h2>About This Project</h2>
-                        <p>
-                            FPL AI Manager is an AI-powered assistant that helps Fantasy Premier League players
-                            make data-driven decisions. Using machine learning models trained on historical data,
-                            it provides:
-                        </p>
-                        <ul class="check-list">
-                            <li>Optimized team suggestions based on expected points</li>
-                            <li>Smart transfer recommendations</li>
-                            <li>Captain and vice-captain picks</li>
-                            <li>Gameweek strategy optimization</li>
-                            <li>Chip timing suggestions (Wildcard, Triple Captain, etc.)</li>
-                        </ul>
+                <!-- Project Overview -->
+                <div style="background: linear-gradient(135deg, rgba(0, 150, 57, 0.1), rgba(0, 150, 57, 0.05)); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--accent);">
+                    <h2 style="color: var(--accent); margin-top: 0;">Advanced FPL Optimization Tool</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">OpenFPL Scout AI leverages machine learning models (XGBoost, CatBoost) trained on historical player data to predict performance and provide data-driven insights for Fantasy Premier League team selection and optimization.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://openfpl-scout-ai-186049008266.europe-west1.run.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket"></i> Launch Live Demo
+                        </a>
+                        <a href="https://github.com/elcaiseri" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
                     </div>
-                    <div>
-                        <div class="card">
-                            <h3>Technology Stack</h3>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">scikit-learn</span>
-                                <span class="tech-tag">XGBoost</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">GitHub Actions</span>
-                            </div>
+                </div>
+
+                <!-- Project Highlights -->
+                <div style="margin-bottom: 3rem;">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Project Highlights</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <!-- ML-Powered Predictions -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>ML-Powered Predictions</h3>
+                            <p style="color: var(--text-secondary);">Advanced machine learning models (XGBoost, CatBoost) trained on historical player performance data to predict future FPL points.</p>
+                        </div>
+
+                        <!-- Real-time Insights -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-chart-line" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>Real-time Insights</h3>
+                            <p style="color: var(--text-secondary);">Live player performance metrics, injury reports, and price trends to make informed FPL decisions every gameweek.</p>
+                        </div>
+
+                        <!-- Optimization Engine -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-cogs" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>Optimization Engine</h3>
+                            <p style="color: var(--text-secondary);">Intelligent squad and formation optimization suggestions based on budget constraints and predicted player performance.</p>
+                        </div>
+
+                        <!-- Open Source -->
+                        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px;">
+                            <i class="fas fa-code-branch" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h3>Open Source</h3>
+                            <p style="color: var(--text-secondary);">Fully open-source project available on GitHub. Contributions welcome from the FPL and ML community.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Tech Stack -->
+                <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px; margin-bottom: 3rem;">
+                    <h3 style="text-align: center; margin-top: 0;">Tech Stack</h3>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem;">Python • XGBoost • CatBoost • Pandas • FastAPI • Docker • Cloud Run</p>
+                </div>
             </div>
         </section>
 
-        <!-- Features -->
+        <!-- CTA Section -->
         <section class="bg-section">
-            <div class="container">
-                <div class="section-intro">
-                    <span class="section-label">Features</span>
-                    <h2>What It Does</h2>
-                </div>
-                <div class="grid grid-3">
-                    <div class="card">
-                        <i class="fas fa-chart-line text-accent fs-2xl mb-3"></i>
-                        <h3>Points Prediction</h3>
-                        <p>ML models predict expected points for each player based on form, fixtures, and historical performance.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-exchange-alt text-accent fs-2xl mb-3"></i>
-                        <h3>Transfer Optimization</h3>
-                        <p>Identifies highest-value transfers considering budget, team balance, and upcoming fixtures.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-users text-accent fs-2xl mb-3"></i>
-                        <h3>Team Selection</h3>
-                        <p>Optimal starting XI and bench order for each gameweek based on predicted points.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Link to Project -->
-        <section>
             <div class="container text-center">
-                <h2>View the Project</h2>
-                <p class="mb-4">The FPL AI Manager is open source and available on GitHub.</p>
-                <div class="flex gap-md justify-center flex-wrap">
-                    <a href="https://github.com/elcaiseri/fpl-ai-manager" class="btn btn-primary btn-lg"
-                       target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                    <a href="/" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-home"></i> Back to Home
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="final-cta-section">
-            <div class="container">
-                <div class="final-cta-content">
-                    <h2>Interested in Custom AI Projects?</h2>
-                    <p>I build custom AI solutions for businesses across various domains.</p>
-                    <div class="final-cta-buttons">
-                        <a href="/contact/" class="btn btn-primary btn-xl">
-                            <i class="fas fa-calendar-check"></i> Let's Discuss Your Project
-                        </a>
-                        <a href="/case-studies/" class="btn btn-secondary btn-xl">
-                            <i class="fas fa-chart-bar"></i> View Case Studies
-                        </a>
-                    </div>
-                </div>
+                <h2>Interested in AI Projects?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Let's discuss how AI can solve your challenges and create competitive advantages for your business.</p>
+                <a href="/contact/" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check"></i> Book Discovery Call
+                </a>
             </div>
         </section>
     </main>
@@ -204,7 +214,7 @@
                         <ul>
                             <li><a href="/about/">About</a></li>
                             <li><a href="/case-studies/">Case Studies</a></li>
-                            <li><a href="/contact/">Contact</a></li>
+                            <li><a href="/process/">Process</a></li>
                         </ul>
                     </div>
                 </div>
@@ -215,10 +225,12 @@
         </div>
     </footer>
 
-    <button id="scroll-top" aria-label="Scroll to top">
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Scripts -->
     <script src="/js/main.js" defer></script>
     <script src="/js/analytics.js" defer></script>
 </body>
