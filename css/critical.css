@@ -93,87 +93,44 @@ header .container {
     background: none;
     border: none;
     cursor: pointer;
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    z-index: 100;
     transition: all var(--transition-speed) var(--transition-timing);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    padding: 8px;
     border-radius: 50%;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 #theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
     transform: scale(1.05);
 }
 
 #theme-toggle i {
     font-size: 16px;
     transition: all var(--transition-speed) var(--transition-timing);
-    position: absolute;
 }
 
 #theme-toggle .fa-sun {
-    display: block;
-    color: #FFD700;                     /* Saudi Gold */
+    display: inline;
     opacity: 1;
-    transform: rotate(0deg);
 }
 
 #theme-toggle .fa-moon {
     display: none;
-    color: #1E90FF;                     /* Accent Blue */
     opacity: 0;
-    transform: rotate(180deg);
-}
-
-/* Dark mode styles */
-body.dark-mode #theme-toggle {
-    background: rgba(0, 0, 0, 0.15);
-}
-
-body.dark-mode #theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.25);
 }
 
 body.dark-mode #theme-toggle .fa-sun {
     display: none;
     opacity: 0;
-    transform: rotate(-180deg);
 }
 
 body.dark-mode #theme-toggle .fa-moon {
-    display: block;
-    opacity: 1;
-    transform: rotate(0deg);
-}
-
-/* Theme Toggle Hover Effect */
-#theme-toggle::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: -1;
-}
-
-#theme-toggle:hover::after {
+    display: inline;
     opacity: 1;
 }
 

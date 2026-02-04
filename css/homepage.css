@@ -138,6 +138,24 @@
     box-shadow: 0 4px 12px rgba(0, 150, 57, 0.3);
 }
 
+/* Dark Mode Hero Styles */
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 30%, #009639 70%, #007A2E 100%);
+}
+
+body.dark-mode .hero-badge {
+    background: rgba(0, 150, 57, 0.2);
+    border: 1px solid rgba(0, 150, 57, 0.3);
+}
+
+body.dark-mode .hero-image img {
+    border: 4px solid rgba(0, 150, 57, 0.4);
+}
+
+body.dark-mode .hero-image-badge {
+    background: linear-gradient(135deg, #00B347 0%, #009639 100%);
+}
+
 @media (max-width: 768px) {
     .hero-content {
         grid-template-columns: 1fr;
