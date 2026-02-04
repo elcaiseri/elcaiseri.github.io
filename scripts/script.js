@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "description": "Islam Kassem is an AI and Machine Learning Engineer, Kaggle Master (Top 1%), and Top-Rated Upwork freelancer specializing in LLMs, Deep Learning, and Computer Vision. Islam Kassem helps businesses build scalable AI solutions and MLOps systems.",
     "email": "iqasem4444@gmail.com",
     "url": "https://kassem.dev",
-    "image": "https://kassem.dev/assets/profile-photo-white-bg.webp",
+    "image": "https://kassem.dev/assets/images/profile-photo-white-bg.webp",
     "sameAs": [
       "https://github.com/elcaiseri",
       "https://www.linkedin.com/in/elcaiseri",
