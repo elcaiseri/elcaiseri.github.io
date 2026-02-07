@@ -53,7 +53,7 @@
           "label": "Units/Hour Processed"
         },
         {
-          "metric": "$1.2M",
+          "metric": "Significant",
           "label": "Annual Savings"
         }
       ],
@@ -79,7 +79,7 @@
           "label": "Extraction Accuracy"
         },
         {
-          "metric": "$500K",
+          "metric": "Substantial",
           "label": "Annual Labor Savings"
         },
         {
