@@ -480,7 +480,7 @@ body.dark-mode .badge {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: var(--space-xl);
+    gap: var(--space-md);
     margin: 0;
     padding: 0;
     align-items: center;
