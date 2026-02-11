@@ -291,11 +291,14 @@ function initNumberCountUp() {
 }
 
 function animateNumber(element) {
-    const text = element.textContent;
-    const match = text.match(/^([\d.]+)(\D*)$/);
-
+    const text = element.textContent.trim();
+    
+    // Only animate simple numeric values with optional single-character suffixes
+    // Skip ranges (e.g., "40-70%"), fractions (e.g., "24/7"), inequalities (e.g., "< 30s")
+    const match = text.match(/^([\d.]+)([%+xKM]?)$/);
+    
     if (!match) return;
-
+    
     const targetValue = parseFloat(match[1]);
     const suffix = match[2] || '';
     const isDecimal = text.includes('.');
