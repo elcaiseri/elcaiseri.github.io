@@ -1334,22 +1334,27 @@ section {
    ============================================== */
 
 .final-cta-section {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--link-color) 100%);
-    color: white;
     padding: 5rem 2rem;
+    background: #ffffff;
     text-align: center;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .final-cta-content h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1rem;
-    color: white;
+    color: var(--text-color);
 }
 
 .final-cta-content p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.95;
+    color: var(--text-muted);
 }
 
 .final-cta-buttons {
@@ -1359,25 +1364,68 @@ section {
     flex-wrap: wrap;
 }
 
+/* Light Mode - CTA buttons */
 .final-cta-section .btn-primary {
-    background: white;
-    color: var(--accent-color);
+    background: var(--accent-color);
+    color: #ffffff;
+    border: 2px solid var(--accent-color);
 }
 
 .final-cta-section .btn-primary:hover {
-    background: var(--bg-color);
-    color: var(--link-color);
+    background: var(--accent-hover);
+    color: #ffffff;
+    border-color: var(--accent-hover);
 }
 
 .final-cta-section .btn-secondary {
     background: transparent;
-    color: white;
-    border-color: white;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
 }
 
 .final-cta-section .btn-secondary:hover {
-    background: white;
-    color: var(--accent-color);
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+/* Dark Mode - Final CTA Section */
+body.dark-mode .final-cta-section {
+    background: linear-gradient(135deg, #009639 0%, #007A2E 40%, #005A22 70%, #1B263B 100%);
+    color: #ffffff;
+    border-top: none;
+    border-bottom: none;
+}
+
+body.dark-mode .final-cta-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .final-cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode .final-cta-section .btn-primary {
+    background: var(--accent-secondary);
+    color: #1B263B;
+    border: 2px solid var(--accent-secondary);
+}
+
+body.dark-mode .final-cta-section .btn-primary:hover {
+    background: #E6C200;
+    color: #1B263B;
+    border-color: #E6C200;
+}
+
+body.dark-mode .final-cta-section .btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .final-cta-section .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
 }
 
 /* ==============================================
