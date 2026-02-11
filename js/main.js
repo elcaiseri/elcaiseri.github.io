@@ -21,9 +21,17 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
+        // Set initial ARIA attributes
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-controls', navMenu.id || 'nav-menu');
+        if (!navMenu.id) {
+            navMenu.id = 'nav-menu';
+        }
+
         navToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-            animateHamburger(navToggle, navMenu.classList.contains('active'));
+            const isActive = navMenu.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isActive.toString());
+            animateHamburger(navToggle, isActive);
         });
 
         // Close menu when clicking on a link
@@ -31,6 +39,7 @@ function initNavigation() {
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
                 animateHamburger(navToggle, false);
             });
         });
@@ -39,6 +48,7 @@ function initNavigation() {
         document.addEventListener('click', function (e) {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
                 animateHamburger(navToggle, false);
             }
         });
