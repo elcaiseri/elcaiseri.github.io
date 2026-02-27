@@ -50,10 +50,10 @@
     --warning-color: #FFD700;
     --error-color: #DC2626;
 
-    /* Typography - Modern Sans-Serif for Vision 2030 */
-    --font-primary: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    --font-heading: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography - Modern Serif for Vision 2030 */
+    --font-primary: 'Cinzel', serif;
+    --font-secondary: 'Cinzel', serif;
+    --font-heading: 'Cinzel', serif;
     --font-size-base: 16px;
     --font-size-sm: 0.875rem;
     --font-size-lg: 1.125rem;
