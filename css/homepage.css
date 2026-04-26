@@ -805,6 +805,56 @@ body.dark-mode .final-cta-section .btn-secondary:hover {
     border-color: #ffffff;
 }
 
+/* -----------------------------------------------
+   Achievements Section - Homepage
+   ----------------------------------------------- */
+
+.achievements-section {
+    padding: var(--space-4xl) 0;
+    background: var(--bg-color);
+}
+
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.achievements-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    line-height: var(--line-height-base);
+    margin-bottom: 0;
+}
+
+.achievements-list li i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.15em;
+}
+
+/* Service Card as Link */
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.service-card-link h3,
+.service-card-link p {
+    color: inherit;
+}
+
 /* Hero Section Buttons - High Contrast */
 .hero-section .btn-primary {
     background: var(--accent-secondary);
