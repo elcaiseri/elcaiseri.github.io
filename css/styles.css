@@ -479,12 +479,17 @@ h3 {
 }
 
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -494,7 +499,7 @@ h3 {
     scroll-behavior: auto;
   }
 
-  .reveal,
+  .js .reveal,
   .button,
   .contact-link,
   .project-links a,
