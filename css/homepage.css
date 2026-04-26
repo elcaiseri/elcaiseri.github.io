@@ -850,9 +850,27 @@ body.dark-mode .final-cta-section .btn-secondary:hover {
     cursor: pointer;
 }
 
+.service-card-link:hover,
+.service-card-link:focus-visible {
+    border-color: rgba(0, 150, 57, 0.4);
+    box-shadow: 0 12px 24px var(--shadow-color);
+    transform: translateY(-4px);
+}
+
+.service-card-link:focus-visible {
+    outline: 3px solid var(--accent-secondary);
+    outline-offset: 2px;
+}
+
 .service-card-link h3,
 .service-card-link p {
     color: inherit;
+}
+
+/* Hero title role label */
+.hero-title-role {
+    opacity: 0.9;
+    font-weight: 400;
 }
 
 /* Hero Section Buttons - High Contrast */
