@@ -179,7 +179,43 @@ body.dark-mode .hero-image-badge {
     }
 }
 
-/* Trust Section */
+/* Achievements Section */
+.achievements-section {
+    padding: var(--space-4xl) 0;
+}
+
+.achievements-list {
+    max-width: 720px;
+    margin: var(--space-3xl) auto 0;
+}
+
+.achievements-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievements-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+}
+
+.achievements-list li:last-child {
+    border-bottom: none;
+}
+
+.achievements-list li i {
+    color: var(--accent-color);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+
 .trust-section {
     padding: var(--space-4xl) 0;
     background: var(--section-bg);
