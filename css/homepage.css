@@ -71,23 +71,6 @@
     line-height: 1.7;
 }
 
-.hero-value-props {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-xl);
-}
-
-.value-prop {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    font-size: var(--font-size-sm);
-}
-
-.value-prop i {
-    color: rgba(255, 255, 255, 0.8);
-}
 
 .hero-cta-group {
     display: flex;
@@ -162,15 +145,7 @@ body.dark-mode .hero-image-badge {
         text-align: center;
     }
 
-    .hero-value-props {
-        justify-content: center;
-    }
-
     .hero-cta-group {
-        justify-content: center;
-    }
-
-    .hero-trust-bar {
         justify-content: center;
     }
 
