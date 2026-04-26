@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islam Kassem — Enterprise AI Consultant | LLM, Computer Vision & MLOps</title>
+    <title>Islam Kassem — Enterprise AI Consultant</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Islam Kassem — Kaggle Master (Top 1%) and enterprise AI consultant. Production-ready LLM systems, computer vision, and MLOps for startups and Fortune 500 companies. 47+ projects. 5.0 rating.">
-    <meta name="keywords" content="enterprise AI consulting, AI consultant, LLM development, RAG systems, computer vision solutions, MLOps consulting, AI strategy, production AI systems, Kaggle Master">
+    <!-- SEO -->
+    <meta name="description" content="Islam Kassem — Kaggle Master (Top 1%) and enterprise AI consultant. 47+ production AI projects. LLM systems, computer vision, and MLOps for startups and Fortune 500 companies.">
+    <meta name="keywords" content="enterprise AI consulting, AI consultant, LLM development, RAG systems, computer vision, MLOps, Kaggle Master">
     <meta name="author" content="Islam Kassem">
     <meta name="robots" content="index, follow">
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://kassem.dev/">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Islam Kassem — Enterprise AI Consultant">
-    <meta property="og:description" content="Kaggle Master (Top 1%). Production-ready LLM systems, computer vision, and AI strategies for startups and enterprises globally.">
+    <meta property="og:description" content="Kaggle Master (Top 1%). Production-ready LLM, computer vision, and AI strategy for startups and enterprises globally.">
     <meta property="og:image" content="https://kassem.dev/assets/images/profile-photo-white-bg.webp">
     <meta property="og:url" content="https://kassem.dev">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@elcaiseri">
     <meta name="twitter:title" content="Islam Kassem — Enterprise AI Consultant">
-    <meta name="twitter:description" content="Kaggle Master (Top 1%). Production-ready AI systems for enterprises. LLM development, computer vision, MLOps.">
+    <meta name="twitter:description" content="Kaggle Master (Top 1%). 47+ production AI projects. LLM, computer vision, MLOps.">
     <meta name="twitter:image" content="https://kassem.dev/assets/images/profile-photo-white-bg.webp">
 
     <!-- Favicon -->
@@ -34,20 +32,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
 
-    <!-- Google Fonts: Cinzel Serif for brand identity -->
+    <!-- Brand font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <!-- Single standalone stylesheet — no shared CSS dependencies -->
+    <link rel="stylesheet" href="css/landing.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -57,7 +48,7 @@
       "name": "Islam Kassem — Enterprise AI Consulting",
       "url": "https://kassem.dev",
       "logo": "https://kassem.dev/assets/images/profile-photo-white-bg.webp",
-      "description": "Enterprise AI consulting specializing in production-ready LLM systems, computer vision, and AI strategy for startups and Fortune 500 companies.",
+      "description": "Enterprise AI consulting: production-ready LLM systems, computer vision, and AI strategy for startups and Fortune 500 companies.",
       "founder": {
         "@type": "Person",
         "name": "Islam Kassem",
@@ -72,256 +63,130 @@
         ]
       },
       "areaServed": "Worldwide",
-      "serviceType": [
-        "Enterprise AI Consulting",
-        "LLM Development",
-        "Computer Vision Solutions",
-        "MLOps Consulting"
-      ]
+      "serviceType": ["Enterprise AI Consulting","LLM Development","Computer Vision Solutions","MLOps Consulting"]
     }
     </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav class="nav-container">
-            <div class="nav-brand">
-                <a href="/">Islam Kassem</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/contact/" class="nav-cta">Book Discovery Call</a></li>
-            </ul>
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
-        </nav>
+    <!-- Nav -->
+    <header class="lp-header">
+        <div class="lp-wrap">
+            <nav class="lp-nav" aria-label="Main navigation">
+                <a href="/" class="lp-logo">Islam Kassem</a>
+                <ul class="lp-nav-links">
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/contact/" class="lp-nav-cta">Book a Call</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>Islam Kassem <span class="hero-title-role">— Enterprise AI Consultant</span></h1>
-                    <p class="hero-subtitle">
-                        Enterprise AI consultant helping companies deploy production-ready LLM systems,
-                        computer vision, and AI strategies that generate measurable business results.
+        <!-- Hero -->
+        <section class="lp-hero" aria-label="Introduction">
+            <div class="lp-wrap lp-hero-inner">
+                <div class="lp-hero-text">
+                    <h1>
+                        Islam Kassem
+                        <span class="lp-role">Enterprise AI Consultant</span>
+                    </h1>
+                    <p class="lp-intro">
+                        I help companies deploy production-ready LLM systems, computer vision,
+                        and AI strategies that generate measurable business results.
                     </p>
-                    <div class="hero-cta-group">
-                        <a href="/contact/" class="btn btn-primary btn-lg">
-                            <i class="fas fa-calendar-check"></i> Schedule Free Strategy Call
-                        </a>
-                        <a href="/services/" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-briefcase"></i> View Services
-                        </a>
+                    <div class="lp-ctas">
+                        <a href="/contact/" class="lp-btn-primary">Schedule a Free Call</a>
+                        <a href="/services/" class="lp-btn-outline">View Services</a>
                     </div>
-                    <div class="hero-trust-bar">
-                        <span class="trust-item"><i class="fas fa-star"></i> 5.0 Rating</span>
-                        <span class="trust-separator">•</span>
-                        <span class="trust-item"><i class="fas fa-users"></i> 25+ Enterprise Clients</span>
-                        <span class="trust-separator">•</span>
-                        <span class="trust-item"><i class="fas fa-globe"></i> MENA &amp; Global</span>
+                    <div class="lp-trust" aria-label="Trust indicators">
+                        <span>5.0 Rating</span>
+                        <span class="lp-trust-sep">·</span>
+                        <span>25+ Enterprise Clients</span>
+                        <span class="lp-trust-sep">·</span>
+                        <span>MENA &amp; Global</span>
                     </div>
                 </div>
-
-                <div class="hero-image">
+                <div class="lp-photo">
                     <picture>
                         <source media="(max-width: 480px)"
-                            srcset="assets/images/profile-photo-140.png 1x, assets/images/profile-photo-256.png 2x" type="image/png">
-                        <source media="(max-width: 768px)"
-                            srcset="assets/images/profile-photo-180.png 1x, assets/images/profile-photo-256.png 2x" type="image/png">
+                            srcset="assets/images/profile-photo-140.png 1x, assets/images/profile-photo-256.png 2x"
+                            type="image/png">
                         <img src="assets/images/profile-photo-256.png"
                             srcset="assets/images/profile-photo-256.png 1x, assets/images/profile-photo-512.png 2x"
-                            alt="Islam Kassem — Enterprise AI Consultant" width="256" height="256" loading="eager">
+                            alt="Islam Kassem — Enterprise AI Consultant"
+                            width="190" height="190" loading="eager">
                     </picture>
-                    <div class="hero-image-badge">
-                        <i class="fab fa-kaggle"></i>
-                        <span>Kaggle Master</span>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Achievements Section -->
-        <section class="achievements-section">
-            <div class="container">
-                <div class="section-intro">
-                    <h2>Key Achievements</h2>
-                </div>
-                <ul class="achievements-list">
-                    <li>
-                        <i class="fas fa-trophy"></i>
-                        <span><strong>Kaggle Master — Top 1%</strong> globally among 14M+ data scientists; 5× gold medalist in computer vision &amp; NLP competitions.</span>
+        <!-- Achievements -->
+        <section class="lp-achievements" aria-label="Key achievements">
+            <div class="lp-wrap">
+                <h2 class="lp-section-title">Key Achievements</h2>
+                <ul class="lp-list">
+                    <li><strong>Kaggle Master — Top 1%</strong> globally among 14M+ data scientists; 5&times; gold medalist in computer vision &amp; NLP.</li>
+                    <li><strong>47+ AI projects delivered</strong> for startups, Series B companies, and Fortune 500 enterprises across MENA and globally.</li>
+                    <li><strong>Up to 40% cost reduction</strong> achieved for clients through production-grade AI automation.</li>
+                    <li><strong>Top-Rated Plus on Upwork</strong> — 5.0/5.0 rating, 100% Job Success Score.</li>
+                    <li><strong>M.Sc. Data Science</strong>, Cairo University — research focus on production ML systems.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="lp-services" aria-label="Services">
+            <div class="lp-wrap">
+                <h2 class="lp-section-title">Services</h2>
+                <ul class="lp-service-list">
+                    <li class="lp-service-item">
+                        <a href="/services/ai-consulting">AI Strategy &amp; Consulting</a>
+                        — Strategic roadmap to implement AI and identify high-ROI opportunities.
                     </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span><strong>47+ AI projects delivered</strong> for startups, Series B companies, and Fortune 500 enterprises across MENA and globally.</span>
+                    <li class="lp-service-item">
+                        <a href="/services/llm-development">LLM &amp; RAG Development</a>
+                        — Custom LLM solutions that automate operations and unlock insights from your data.
                     </li>
-                    <li>
-                        <i class="fas fa-chart-line"></i>
-                        <span><strong>Up to 40% operational cost reduction</strong> achieved for clients through production-grade AI automation and optimization.</span>
+                    <li class="lp-service-item">
+                        <a href="/services/computer-vision">Computer Vision</a>
+                        — Visual intelligence for quality control and automation at enterprise scale.
                     </li>
-                    <li>
-                        <i class="fas fa-star"></i>
-                        <span><strong>Top-Rated Plus on Upwork</strong> with a 5.0/5.0 rating and 100% Job Success Score from enterprise clients.</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-graduation-cap"></i>
-                        <span><strong>M.Sc. Data Science</strong>, Cairo University — with research focus on production ML systems and statistical modeling.</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-rocket"></i>
-                        <span><strong>90-day AI implementation framework</strong> — from strategy to deployed, monitored production systems with measurable ROI.</span>
+                    <li class="lp-service-item">
+                        <a href="/services/mlops">MLOps &amp; Production Systems</a>
+                        — Deploy, monitor, and scale AI models reliably in production.
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="services-section bg-section">
-            <div class="container">
-                <div class="section-intro">
-                    <h2>Services</h2>
-                    <p>Production-ready AI systems built to solve real business challenges and accelerate growth.</p>
-                </div>
-
-                <div class="services-grid">
-                    <a href="/services/ai-consulting" class="service-card featured service-card-link">
-                        <div class="service-header">
-                            <i class="fas fa-brain service-icon"></i>
-                            <h3>AI Strategy &amp; Consulting</h3>
-                            <span class="service-badge">Most Popular</span>
-                        </div>
-                        <p class="service-description">
-                            Strategic roadmap to implement AI across your organization — identify high-ROI opportunities, reduce risks, and build lasting competitive advantage.
-                        </p>
-                    </a>
-
-                    <a href="/services/llm-development" class="service-card service-card-link">
-                        <div class="service-header">
-                            <i class="fas fa-robot service-icon"></i>
-                            <h3>LLM &amp; RAG System Development</h3>
-                        </div>
-                        <p class="service-description">
-                            Custom large language model solutions that automate operations, enhance customer experience, and unlock insights from your proprietary data.
-                        </p>
-                    </a>
-
-                    <a href="/services/computer-vision" class="service-card service-card-link">
-                        <div class="service-header">
-                            <i class="fas fa-eye service-icon"></i>
-                            <h3>Computer Vision Solutions</h3>
-                        </div>
-                        <p class="service-description">
-                            Advanced visual intelligence for quality control, automation, and actionable insights from images and video at enterprise scale.
-                        </p>
-                    </a>
-
-                    <a href="/services/mlops" class="service-card service-card-link">
-                        <div class="service-header">
-                            <i class="fas fa-cogs service-icon"></i>
-                            <h3>MLOps &amp; Production Systems</h3>
-                        </div>
-                        <p class="service-description">
-                            End-to-end infrastructure to deploy, monitor, and scale AI models in production with enterprise-grade reliability and observability.
-                        </p>
-                    </a>
-                </div>
-
-                <div class="text-center mt-5">
-                    <a href="/services/" class="btn btn-outline btn-lg">
-                        <i class="fas fa-arrow-right"></i> Explore All Services
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="final-cta-section">
-            <div class="container">
-                <div class="final-cta-content">
-                    <h2>Ready to Work Together?</h2>
-                    <p>Schedule a free 30-minute discovery call to explore how AI can drive results for your organization.</p>
-                    <div class="final-cta-buttons">
-                        <a href="/contact/" class="btn btn-primary btn-lg">
-                            <i class="fas fa-calendar-check"></i> Book Free Strategy Call
-                        </a>
-                        <a href="/about/" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-user"></i> About Me
-                        </a>
-                    </div>
-                </div>
+        <!-- CTA -->
+        <section class="lp-cta-section" aria-label="Contact">
+            <div class="lp-wrap">
+                <h2 class="lp-section-title">Ready to build something?</h2>
+                <p>Free 30-minute strategy call. No commitment.</p>
+                <a href="/contact/" class="lp-btn-green">Book a Free Call</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <h3>Islam Kassem</h3>
-                    <p>Enterprise AI Consultant</p>
-                    <p>Kaggle Master &bull; Top-Rated Plus on Upwork</p>
-                    <p style="font-style: italic; margin-top: 0.5rem; opacity: 0.8;">@elcaiseri</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/elcaiseri" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/elcaiseri" title="GitHub" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.kaggle.com/elcaiseri" title="Kaggle" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-kaggle"></i>
-                        </a>
-                        <a href="mailto:iqasem4444@gmail.com" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="/services/ai-consulting">AI Consulting</a></li>
-                            <li><a href="/services/llm-development">LLM Development</a></li>
-                            <li><a href="/services/computer-vision">Computer Vision</a></li>
-                            <li><a href="/services/mlops">MLOps</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="/case-studies/">Case Studies</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li><a href="/about/">About</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Islam Kassem. All rights reserved.</p>
-            </div>
+    <footer class="lp-footer">
+        <div class="lp-wrap">
+            <p>
+                &copy; 2026 Islam Kassem
+                <span class="lp-footer-sep">|</span>
+                <a href="https://www.linkedin.com/in/elcaiseri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="lp-footer-sep">·</span>
+                <a href="https://github.com/elcaiseri" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span class="lp-footer-sep">·</span>
+                <a href="mailto:iqasem4444@gmail.com">Email</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Scroll to Top -->
-    <button id="scroll-top" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="js/main.js" defer></script>
+    <!-- Analytics only (no UI logic required) -->
     <script src="js/analytics.js" defer></script>
 </body>
 </html>

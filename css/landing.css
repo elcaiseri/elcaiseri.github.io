@@ -1,0 +1,298 @@
+/* =============================================================
+   landing.css — Homepage only. Fully self-contained.
+   Does NOT share/depend on any other CSS file in the project.
+   Brand: Islam Kassem · Saudi Vision 2030 palette
+   ============================================================= */
+
+/* --- Brand tokens (hardcoded for self-containment) --- */
+:root {
+    --lp-green:      #009639;
+    --lp-green-dark: #007A2E;
+    --lp-green-deep: #005A22;
+    --lp-gold:       #FFD700;
+    --lp-gold-dark:  #E6C200;
+    --lp-navy:       #1B263B;
+    --lp-navy-dark:  #0D1B2A;
+    --lp-text:       #1B263B;
+    --lp-muted:      #4A5568;
+    --lp-bg:         #ffffff;
+    --lp-bg-alt:     #F7F7F7;
+    --lp-font:       'Cinzel', serif;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+    font-family: var(--lp-font);
+    background: var(--lp-bg);
+    color: var(--lp-text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    font-size: 1rem;
+}
+img { max-width: 100%; height: auto; display: block; }
+a   { color: inherit; text-decoration: none; }
+ul  { list-style: none; padding: 0; margin: 0; }
+
+/* --- Container --- */
+.lp-wrap {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===================== NAV ===================== */
+.lp-header {
+    background: linear-gradient(135deg, var(--lp-green) 0%, var(--lp-green-dark) 50%, var(--lp-green-deep) 100%);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.875rem 0;
+}
+.lp-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.lp-logo {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+.lp-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    flex-wrap: wrap;
+}
+.lp-nav-links a {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+.lp-nav-links a:hover { color: #fff; }
+.lp-nav-cta {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.lp-nav-cta:hover { background: rgba(255, 255, 255, 0.3); }
+
+/* ===================== HERO ===================== */
+.lp-hero {
+    background: linear-gradient(135deg, var(--lp-green) 0%, var(--lp-green-dark) 40%, var(--lp-green-deep) 70%, var(--lp-navy) 100%);
+    color: #fff;
+    padding: 5rem 0 4rem;
+}
+.lp-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+}
+.lp-hero h1 {
+    font-size: clamp(1.875rem, 5vw, 2.625rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+}
+.lp-role {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: 1.25rem;
+}
+.lp-intro {
+    font-size: 0.9375rem;
+    opacity: 0.9;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+.lp-ctas {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+}
+.lp-btn-primary {
+    display: inline-block;
+    background: var(--lp-gold);
+    color: var(--lp-navy);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: var(--lp-font);
+    transition: background 0.2s, transform 0.15s;
+}
+.lp-btn-primary:hover { background: var(--lp-gold-dark); transform: translateY(-1px); }
+.lp-btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: var(--lp-font);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    transition: background 0.2s;
+}
+.lp-btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
+.lp-trust {
+    font-size: 0.8125rem;
+    opacity: 0.8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.lp-trust-sep { opacity: 0.5; }
+.lp-photo img {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    object-fit: cover;
+}
+
+/* ===================== ACHIEVEMENTS ===================== */
+.lp-achievements {
+    padding: 4rem 0;
+    background: var(--lp-bg);
+}
+.lp-section-title {
+    font-size: clamp(1.25rem, 3vw, 1.625rem);
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+    color: var(--lp-text);
+}
+.lp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    max-width: 700px;
+}
+.lp-list li {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--lp-text);
+}
+.lp-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--lp-green);
+    font-weight: 700;
+}
+
+/* ===================== SERVICES ===================== */
+.lp-services {
+    padding: 4rem 0;
+    background: var(--lp-bg-alt);
+}
+.lp-service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    max-width: 700px;
+}
+.lp-service-item {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--lp-text);
+}
+.lp-service-item::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--lp-green);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+.lp-service-item a {
+    color: var(--lp-green);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+.lp-service-item a:hover { color: var(--lp-green-dark); }
+
+/* ===================== CTA ===================== */
+.lp-cta-section {
+    padding: 4rem 0;
+    background: var(--lp-bg);
+    text-align: center;
+}
+.lp-cta-section .lp-section-title {
+    margin-bottom: 0.75rem;
+}
+.lp-cta-section p {
+    color: var(--lp-muted);
+    margin-bottom: 1.75rem;
+    font-size: 0.9375rem;
+}
+.lp-cta-section .lp-btn-green {
+    display: inline-block;
+    background: var(--lp-green);
+    color: #fff;
+    padding: 0.875rem 2.25rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-family: var(--lp-font);
+    font-size: 0.9375rem;
+    transition: background 0.2s, transform 0.15s;
+}
+.lp-cta-section .lp-btn-green:hover { background: var(--lp-green-dark); transform: translateY(-1px); }
+
+/* ===================== FOOTER ===================== */
+.lp-footer {
+    background: linear-gradient(135deg, var(--lp-navy) 0%, var(--lp-navy-dark) 100%);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.8125rem;
+}
+.lp-footer a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.lp-footer a:hover { color: #fff; }
+.lp-footer-sep { margin: 0 0.5rem; opacity: 0.4; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 600px) {
+    .lp-hero { padding: 3rem 0 2.5rem; }
+    .lp-hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .lp-photo { order: -1; display: flex; justify-content: center; }
+    .lp-intro  { max-width: 100%; margin-left: auto; margin-right: auto; }
+    .lp-ctas   { justify-content: center; }
+    .lp-trust  { justify-content: center; }
+    .lp-list, .lp-service-list { max-width: 100%; }
+}
+
+/* Accessibility — focus */
+a:focus-visible {
+    outline: 2px solid var(--lp-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
