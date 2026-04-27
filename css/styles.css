@@ -539,13 +539,35 @@ h3 {
   }
 
   .topbar {
-    position: static;
-    align-items: start;
-    flex-direction: column;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.75rem 0;
+    gap: 0.5rem;
+  }
+
+  .brand {
+    font-size: 0.88rem;
   }
 
   .nav {
-    gap: 0.75rem;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+  }
+
+  .nav a:hover,
+  .nav a:focus-visible {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--accent-strong);
   }
 
   .section {
@@ -570,5 +592,44 @@ h3 {
   .hero-panel,
   .contact-card {
     border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0.65rem 0;
+    gap: 0.35rem;
+  }
+
+  .brand {
+    font-size: 0.84rem;
+    flex: 1 0 100%;
+  }
+
+  .nav {
+    flex-basis: 100%;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.55rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
   }
 }
