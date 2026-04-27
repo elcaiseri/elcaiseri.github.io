@@ -1,6 +1,4 @@
-# Allow all web crawlers access to the site
 User-agent: *
 Allow: /
 
-# Specify the location of the sitemap
 Sitemap: https://kassem.dev/sitemap.xml
