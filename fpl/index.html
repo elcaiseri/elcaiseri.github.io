@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPL Scout AI | Islam Kassem</title>
+  <meta name="description" content="FPL Scout AI app embedded on kassem.dev.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kassem.dev/fpl/">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      background: #f6f8f4;
+      color: #112114;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(17, 33, 20, 0.14);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #214625;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .frame-wrap {
+      padding: 0.5rem;
+      min-height: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 68px - 1rem);
+      border: 1px solid rgba(17, 33, 20, 0.14);
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .fallback {
+      margin: 1rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        padding: 0.65rem 0.75rem;
+      }
+
+      .brand {
+        font-size: 0.9rem;
+      }
+
+      .links a {
+        font-size: 0.85rem;
+      }
+
+      iframe {
+        height: calc(100vh - 78px - 1rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">FPL Scout AI</div>
+    <nav class="links" aria-label="Page links">
+      <a href="/">Home</a>
+      <a href="https://openfpl-scout-ai-186049008266.europe-west1.run.app/" target="_blank" rel="noopener noreferrer">Open in New Tab</a>
+    </nav>
+  </header>
+
+  <main class="frame-wrap">
+    <iframe
+      src="https://openfpl-scout-ai-186049008266.europe-west1.run.app/"
+      title="FPL Scout AI"
+      loading="eager"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="clipboard-read; clipboard-write"
+    ></iframe>
+    <noscript>
+      <p class="fallback">
+        JavaScript is required to use this page. Open the app directly at
+        <a href="https://openfpl-scout-ai-186049008266.europe-west1.run.app/">openfpl-scout-ai-186049008266.europe-west1.run.app</a>.
+      </p>
+    </noscript>
+  </main>
+</body>
+</html>
