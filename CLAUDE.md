@@ -29,7 +29,7 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 | `credentials/` | Education and Kaggle Master status |
 | `resume/` | Resume page + PDF download |
 | `contact/` | Contact form and social links |
-| `open-fpl/` | OpenFPL Scout AI project page |
+| `open-fpl/` | Legacy path — redirects to the OpenFPL Scout AI app at `openfpl.kassem.dev` |
 | `css/styles.css` | Single stylesheet; uses CSS custom properties for theming |
 | `js/main.js` | IntersectionObserver for scroll-reveal animations |
 
