@@ -31,7 +31,7 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 | `contact/` | Contact form and social links |
 | `open-fpl/` | Legacy path — redirects to the OpenFPL Scout AI app at `openfpl.kassem.dev` |
 | `assets/profile/` | Profile photo derivatives: `-portrait-{400,640,900,1145}.{jpg,webp}` for the hero `<picture>`, plus 1:1 / 4:3 / 16:9 crops referenced by the Person structured data |
-| `assets/social-preview.png` | 1200×630 Open Graph / Twitter card image |
+| `assets/social-card.png` | 1200×630 Open Graph / Twitter card image |
 | `css/styles.css` | Single stylesheet; uses CSS custom properties for theming |
 | `js/main.js` | IntersectionObserver for scroll-reveal animations |
 
