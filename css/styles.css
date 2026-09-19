@@ -19,10 +19,12 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background:
@@ -116,8 +118,8 @@ li {
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
   gap: 1.5rem;
   align-items: stretch;
-  min-height: calc(100vh - 5rem);
-  padding-top: 5rem;
+  min-height: min(calc(100vh - 5rem), 860px);
+  padding-top: 3rem;
 }
 
 .hero-copy,
@@ -165,15 +167,20 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.7rem, 7vw, 5.8rem);
+  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
   letter-spacing: -0.045em;
-  max-width: 11ch;
+  max-width: 14ch;
+}
+
+.section-heading h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+  max-width: 22ch;
 }
 
 h2 {
-  font-size: clamp(1.9rem, 4vw, 3.15rem);
-  letter-spacing: -0.04em;
-  max-width: 14ch;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  letter-spacing: -0.035em;
+  max-width: 24ch;
 }
 
 h3 {
@@ -281,7 +288,8 @@ h3 {
   min-height: 140px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.6rem;
 }
 
 .stat-value {
@@ -358,10 +366,33 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.project-grid > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+}
+
+.project-card p,
+.credential-card p,
+.timeline-item p {
+  margin: 0;
+}
+
+.credential-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.project-card .tag-list.compact {
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.project-card .project-links {
+  margin-top: 0;
 }
 
 .project-topline {
@@ -468,7 +499,7 @@ h3 {
   content: "";
   position: absolute;
   left: 0.72rem;
-  top: 1.5rem;
+  top: 1.72rem;
   width: 0.62rem;
   height: 0.62rem;
   border-radius: 50%;
@@ -480,8 +511,8 @@ h3 {
   margin: 0 0 0.5rem;
 }
 
-.timeline-item h3 + p {
-  margin-bottom: 0;
+.timeline-item h3 {
+  margin-bottom: 0.45rem;
 }
 
 .timeline-item ul {
@@ -490,7 +521,42 @@ h3 {
 }
 
 .credentials-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.about-layout .about-portrait {
+  position: sticky;
+  top: 6rem;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.about-copy p {
+  margin: 0 0 1.1rem;
+  font-size: 1.04rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.section-intro {
+  max-width: 65ch;
+  margin: 0 0 2.5rem;
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
 }
 
 .about-portrait {
@@ -601,13 +667,22 @@ h3 {
   .hero,
   .skills-grid,
   .project-grid,
-  .credentials-grid,
   .contact-section,
   .about-grid {
     grid-template-columns: 1fr;
   }
 
-  .about-portrait {
+  .credentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait,
+  .about-layout .about-portrait {
+    position: static;
     grid-row: auto;
     max-height: 380px;
   }
@@ -617,18 +692,15 @@ h3 {
     padding-top: 2rem;
   }
 
-  h1 {
-    max-width: 13ch;
-  }
-
+  h1,
   h2 {
-    max-width: 18ch;
+    max-width: none;
   }
 }
 
 @media (max-width: 720px) {
   .site-shell {
-    width: min(100% - 1rem, 100%);
+    width: calc(100% - 2rem);
   }
 
   .topbar {
@@ -668,12 +740,19 @@ h3 {
     padding: 3.5rem 0;
   }
 
-  .hero-panel {
+  .credentials-grid {
     grid-template-columns: 1fr;
   }
 
   .profile-card {
-    min-height: 420px;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    max-height: 460px;
+  }
+
+  .stat-card {
+    min-height: 0;
+    gap: 0.5rem;
   }
 
   .stat-card,
@@ -703,6 +782,7 @@ h3 {
 
   .nav {
     flex-basis: 100%;
+    justify-content: flex-start;
     gap: 0.4rem;
     flex-wrap: nowrap;
     overflow-x: auto;

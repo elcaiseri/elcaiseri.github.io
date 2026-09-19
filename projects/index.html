@@ -62,8 +62,8 @@
 					{ "@type": "ListItem", "position": 3, "name": "Semantic Resume–Role Matching", "description": "Dense retrieval with sentence-transformers, FAISS, and re-ranking for candidate-to-role matching in government hiring workflows." },
 					{ "@type": "ListItem", "position": 4, "name": "Video Interview Intelligence", "description": "Interview analysis combining facial recognition, sentiment analysis, document processing, and fraud detection." },
 					{ "@type": "ListItem", "position": 5, "name": "Fashion Visual Search & Recommendations", "description": "Visual search on transformer embeddings with FAISS retrieval, CNN auto-tagging, and recommendation pipelines." },
-					{ "@type": "ListItem", "position": 6, "name": "OpenFPL Scout AI", "url": "https://openfpl.kassem.dev/", "description": "AI-powered Fantasy Premier League scout using XGBoost, time-series feature engineering, and live official FPL data to forecast player points and optimize squad selection." },
-					{ "@type": "ListItem", "position": 7, "name": "Open-Source LangChain MCP Work", "url": "https://github.com/elcaiseri", "description": "LangChain MCP adapter contributions and PyTorch/NLP Kaggle notebooks for the ML community." }
+					{ "@type": "ListItem", "position": 6, "name": "OpenFPL Scout AI", "url": "https://openfpl.kassem.dev/", "description": "AI-powered Fantasy Premier League scout using an ensemble of Ridge, XGBoost, CatBoost, and MLP models, time-series feature engineering, and live official FPL data to forecast player points and optimize squad selection." },
+					{ "@type": "ListItem", "position": 7, "name": "Open-Source LangChain MCP Work", "url": "https://github.com/langchain-ai/langchain-mcp-adapters/pull/380", "description": "Multi-server resource loading for get_resources in LangChain MCP adapters, merged upstream, plus PyTorch and NLP Kaggle notebooks." }
 				]
 			}
 		</script>
@@ -117,7 +117,7 @@
 						<p class="eyebrow">Projects</p>
 						<h1>Selected projects</h1>
 					</div>
-					<p style="max-width:65ch;margin-bottom:2.5rem;">
+					<p class="section-intro">
 						Production systems from my enterprise and client work, followed by products and open-source work I run myself. Client names are omitted.
 					</p>
 					<div class="project-grid">
@@ -153,16 +153,16 @@
 						</article>
 						<article class="project-card">
 							<div class="project-topline"><h3>OpenFPL Scout AI</h3></div>
-							<p><a href="https://openfpl.kassem.dev/" target="_blank" rel="noreferrer">OpenFPL Scout AI</a> is a live Fantasy Premier League scout built on XGBoost regression and time-series features, trained on historical form and refreshed with official FPL data. It forecasts player points, optimizes a full 15-player squad, and ranks captaincy picks before every gameweek deadline.</p>
+							<p><a href="https://openfpl.kassem.dev/" target="_blank" rel="noreferrer">OpenFPL Scout AI</a> is a live Fantasy Premier League scout built on an ensemble of Ridge, XGBoost, CatBoost, and MLP models over time-series features, trained on historical form and refreshed with official FPL data, and validated on a full held-out season. It forecasts player points, optimizes a full 15-player squad, and ranks captaincy picks before every gameweek deadline.</p>
 							<p class="impact">Impact: a free public app, rebuilt every gameweek from live data.</p>
 							<div class="project-links"><a href="https://openfpl.kassem.dev/" target="_blank" rel="noreferrer">Live App</a><a href="https://github.com/elcaiseri/OpenFPL-Scout-AI" target="_blank" rel="noreferrer">Code</a></div>
-							<div class="tag-list compact"><span>XGBoost</span><span>Time Series</span><span>Optimization</span><span>Live Data</span></div>
+							<div class="tag-list compact"><span>Ensemble Models</span><span>Time Series</span><span>Optimization</span><span>Live Data</span></div>
 						</article>
 						<article class="project-card">
 							<div class="project-topline"><h3>Open-Source LangChain MCP Work</h3></div>
-							<p>Contributions to the LangChain MCP adapter ecosystem for LLM agent tool use, plus 15+ reproducible Kaggle notebooks on PyTorch, NLP, and ML fundamentals.</p>
+							<p>Designed multi-server resource loading for <code>get_resources</code> in LangChain&#39;s MCP adapters: fetch resources from every connected server concurrently when no server is named, with clear validation errors. The LangChain team merged the feature upstream in #380, building on my PR #360. I&#39;ve also published 15+ reproducible Kaggle notebooks on PyTorch, NLP, and ML fundamentals.</p>
 							<p class="impact">Impact: open-source tooling and learning resources for the ML community.</p>
-							<div class="project-links"><a href="https://github.com/elcaiseri" target="_blank" rel="noreferrer">GitHub Profile</a><a href="https://www.kaggle.com/elcaiseri" target="_blank" rel="noreferrer">Kaggle Profile</a></div>
+							<div class="project-links"><a href="https://github.com/langchain-ai/langchain-mcp-adapters/pull/360" target="_blank" rel="noreferrer">PR #360</a><a href="https://github.com/langchain-ai/langchain-mcp-adapters/pull/380" target="_blank" rel="noreferrer">Merged in #380</a><a href="https://www.kaggle.com/elcaiseri" target="_blank" rel="noreferrer">Kaggle Notebooks</a></div>
 							<div class="tag-list compact"><span>LangChain</span><span>MCP</span><span>Open Source</span><span>Kaggle</span></div>
 						</article>
 					</div>
