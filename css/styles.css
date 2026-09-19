@@ -87,6 +87,26 @@ li {
   font-size: 0.84rem;
 }
 
+.nav a[aria-current="page"] {
+  color: var(--accent-strong);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 30;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #f7fff7;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 .section {
   padding: 4.5rem 0;
 }
@@ -454,6 +474,14 @@ h3 {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 6px rgba(76, 175, 80, 0.14);
+}
+
+.timeline-meta p {
+  margin: 0 0 0.5rem;
+}
+
+.timeline-item h3 + p {
+  margin-bottom: 0;
 }
 
 .timeline-item ul {

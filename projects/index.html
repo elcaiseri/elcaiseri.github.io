@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Islam Kassem | LLM Engineer Portfolio — AI &amp; Machine Learning Projects</title>
+		<title>Projects | Islam Kassem, AI Engineer</title>
 		<meta
 			name="description"
 			content="Production AI and machine learning projects by Islam Kassem: LLM systems, RAG pipelines, Whisper ASR, computer vision, and MLOps built with PyTorch, LangChain, FAISS, and AWS."
 		/>
 		<meta name="author" content="Islam Kassem" />
-		<meta property="og:title" content="Islam Kassem | LLM Engineer Portfolio — AI &amp; Machine Learning Projects" />
+		<meta property="og:title" content="Projects | Islam Kassem, AI Engineer" />
 		<meta
 			property="og:description"
 			content="Production AI and ML projects: LLM systems, RAG pipelines, Whisper ASR, computer vision, and MLOps built with PyTorch, LangChain, and AWS."
@@ -19,7 +19,7 @@
 		<meta property="og:site_name" content="Islam Kassem" />
 		<meta property="og:image" content="https://kassem.dev/assets/social-card.png" />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Islam Kassem | LLM Engineer Portfolio — AI &amp; Machine Learning Projects" />
+		<meta name="twitter:title" content="Projects | Islam Kassem, AI Engineer" />
 		<meta
 			name="twitter:description"
 			content="Production AI and ML projects: LLM systems, RAG pipelines, Whisper ASR, computer vision, and MLOps built with PyTorch, LangChain, and AWS."
@@ -57,12 +57,13 @@
 				"description": "Production AI and ML projects including LLM systems, RAG pipelines, Whisper ASR, computer vision, and MLOps infrastructure.",
 				"url": "https://kassem.dev/projects/",
 				"itemListElement": [
-					{ "@type": "ListItem", "position": 1, "name": "Enterprise ASR & AI Assistants", "description": "Enterprise speech-to-text pipelines and LLM applications using Whisper large-v3, PyTorch, FastAPI, and AWS." },
-					{ "@type": "ListItem", "position": 2, "name": "AI Meeting Assistant", "description": "Generative AI pipeline combining Whisper, GPT-4, and LangChain agents for meeting transcription and action-item automation." },
-					{ "@type": "ListItem", "position": 3, "name": "Resume Matching with RAG", "description": "RAG system using sentence-transformers, FAISS, and cosine similarity for semantic candidate-to-role matching." },
-					{ "@type": "ListItem", "position": 4, "name": "Fashion Search & Recommendations", "description": "Visual search and recommendation pipelines using CLIP embeddings, ResNet, and Pinecone vector DB." },
-					{ "@type": "ListItem", "position": 5, "name": "OpenFPL Scout AI", "url": "https://openfpl.kassem.dev/", "description": "AI-powered Fantasy Premier League scout using XGBoost, time-series feature engineering, and live official FPL data to forecast player points and optimize squad selection." },
-					{ "@type": "ListItem", "position": 6, "name": "Open-Source LangChain MCP Work", "url": "https://github.com/elcaiseri", "description": "LangChain MCP adapter contributions and PyTorch/NLP Kaggle notebooks for the ML community." }
+					{ "@type": "ListItem", "position": 1, "name": "On-Premise LLM & Speech Platform", "description": "Enterprise RAG assistants and Whisper large-v3 transcription on self-hosted LLaMA and Qwen models running on GPU Kubernetes." },
+					{ "@type": "ListItem", "position": 2, "name": "AI Meeting Assistant", "description": "Generative AI pipeline combining Whisper, LLM summarization, and LangChain agents for meeting transcription and action-item automation." },
+					{ "@type": "ListItem", "position": 3, "name": "Semantic Resume–Role Matching", "description": "Dense retrieval with sentence-transformers, FAISS, and re-ranking for candidate-to-role matching in government hiring workflows." },
+					{ "@type": "ListItem", "position": 4, "name": "Video Interview Intelligence", "description": "Interview analysis combining facial recognition, sentiment analysis, document processing, and fraud detection." },
+					{ "@type": "ListItem", "position": 5, "name": "Fashion Visual Search & Recommendations", "description": "Visual search on transformer embeddings with FAISS retrieval, CNN auto-tagging, and recommendation pipelines." },
+					{ "@type": "ListItem", "position": 6, "name": "OpenFPL Scout AI", "url": "https://openfpl.kassem.dev/", "description": "AI-powered Fantasy Premier League scout using XGBoost, time-series feature engineering, and live official FPL data to forecast player points and optimize squad selection." },
+					{ "@type": "ListItem", "position": 7, "name": "Open-Source LangChain MCP Work", "url": "https://github.com/elcaiseri", "description": "LangChain MCP adapter contributions and PyTorch/NLP Kaggle notebooks for the ML community." }
 				]
 			}
 		</script>
@@ -95,62 +96,72 @@
 		</script>
 	</head>
 	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
 		<div class="site-shell">
 			<header class="topbar">
-				<a class="brand" href="../">Islam Kassem</a>
+				<a class="brand" href="/">Islam Kassem</a>
 				<nav class="nav" aria-label="Section navigation">
-					<a href="../about/">About</a>
-					<a href="../skills/">Skills</a>
-					<a href="../projects/">Projects</a>
-					<a href="../services/">Services</a>
-					<a href="../credentials/">Credentials</a>
-					<a href="../blog/">Blog</a>
-					<a href="../contact/">Contact</a>
+					<a href="/about/">About</a>
+					<a href="/skills/">Skills</a>
+					<a href="/projects/" aria-current="page">Projects</a>
+					<a href="/services/">Services</a>
+					<a href="/credentials/">Credentials</a>
+					<a href="/blog/">Blog</a>
+					<a href="/contact/">Contact</a>
 				</nav>
 			</header>
 
-			<main>
+			<main id="main">
 				<section class="section reveal">
 					<div class="section-heading">
 						<p class="eyebrow">Projects</p>
-						<h1>LLM Engineer Portfolio — Production AI and Machine Learning Projects</h1>
+						<h1>Selected projects</h1>
 					</div>
+					<p style="max-width:65ch;margin-bottom:2.5rem;">
+						Production systems from my enterprise and client work, followed by products and open-source work I run myself. Client names are omitted.
+					</p>
 					<div class="project-grid">
 						<article class="project-card">
-							<div class="project-topline"><h3>Enterprise ASR &amp; AI Assistants</h3></div>
-							<p>Built enterprise-grade speech-to-text pipelines and LLM applications using Whisper large-v3, PyTorch, FastAPI, and AWS EC2. Delivered real-time transcription APIs, domain-adapted chatbot interfaces, and end-to-end AI assistant systems for large-scale client deployments.</p>
-							<p class="impact">Impact: moved AI initiatives from exploration into production-focused delivery pipelines.</p>
-							<div class="tag-list compact"><span>Whisper ASR</span><span>LLMs</span><span>MLOps</span><span>Deployment</span></div>
+							<div class="project-topline"><h3>On-Premise LLM &amp; Speech Platform</h3></div>
+							<p>Enterprise RAG assistants, LLM chatbots, and Whisper large-v3 transcription running on self-hosted LLaMA and Qwen models on GPU Kubernetes. Retrieval runs over FAISS and Chroma, and transcripts feed NLP extraction and analytics, all without data leaving the client&#39;s infrastructure.</p>
+							<p class="impact">Impact: data-sovereign generative AI for privacy-critical enterprise environments.</p>
+							<div class="tag-list compact"><span>On-Prem LLMs</span><span>RAG</span><span>Whisper ASR</span><span>Kubernetes</span></div>
 						</article>
 						<article class="project-card">
 							<div class="project-topline"><h3>AI Meeting Assistant</h3></div>
-							<p>Engineered a multi-stage generative AI pipeline combining Whisper transcription, GPT-4 summarization, and LangChain agents to automate action-item extraction and follow-up drafting. Reduced post-meeting documentation time from hours to minutes across enterprise teams.</p>
-							<p class="impact">Impact: reduced manual documentation work and accelerated meeting turnaround.</p>
+							<p>A multi-stage pipeline that transcribes meetings with Whisper, summarizes them with LLMs, and uses LangChain agents to extract action items and draft follow-ups for enterprise teams.</p>
+							<p class="impact">Impact: post-meeting documentation cut from hours to minutes.</p>
 							<div class="tag-list compact"><span>Whisper</span><span>LLM Agents</span><span>Summarization</span><span>Automation</span></div>
 						</article>
 						<article class="project-card">
-							<div class="project-topline"><h3>Resume Matching with RAG</h3></div>
-							<p>Built a retrieval-augmented generation system using sentence-transformers, FAISS vector indexing, and cosine similarity ranking to match candidate profiles to job requirements. Improved screening precision for recruitment workflows handling thousands of applications.</p>
-							<p class="impact">Impact: increased candidate-job fit accuracy for hiring teams.</p>
-							<div class="tag-list compact"><span>RAG</span><span>Embeddings</span><span>Semantic Search</span><span>Recruitment Tech</span></div>
+							<div class="project-topline"><h3>Semantic Resume–Role Matching</h3></div>
+							<p>Dense retrieval with sentence-transformers and FAISS, followed by re-ranking, to match candidate resumes to job requirements across recruitment workflows handling thousands of applications.</p>
+							<p class="impact">Impact: deployed in government hiring workflows.</p>
+							<div class="tag-list compact"><span>Embeddings</span><span>FAISS</span><span>Re-ranking</span><span>Recruitment Tech</span></div>
 						</article>
 						<article class="project-card">
-							<div class="project-topline"><h3>Fashion Search &amp; Recommendations</h3></div>
-							<p>Developed visual search, item recommendation, and auto-tagging pipelines for fashion e-commerce using CLIP embeddings, ResNet feature extraction, and Pinecone vector DB. Improved catalog discoverability and reduced manual tagging overhead across large product inventories.</p>
-							<p class="impact">Impact: improved engagement and streamlined catalog operations.</p>
-							<div class="tag-list compact"><span>Computer Vision</span><span>Recommendations</span><span>CNNs</span><span>Retrieval</span></div>
+							<div class="project-topline"><h3>Video Interview Intelligence</h3></div>
+							<p>Analysis of recorded interviews combining facial recognition, sentiment analysis, and document processing, with AI-driven fraud detection to flag inconsistent or impersonated candidates.</p>
+							<p class="impact">Impact: added automated integrity checks to enterprise HR workflows.</p>
+							<div class="tag-list compact"><span>Computer Vision</span><span>Sentiment Analysis</span><span>Fraud Detection</span><span>Video</span></div>
+						</article>
+						<article class="project-card">
+							<div class="project-topline"><h3>Fashion Visual Search &amp; Recommendations</h3></div>
+							<p>Visual search on CLIP-style transformer embeddings with FAISS approximate-nearest-neighbor retrieval, CNN-based auto-tagging, and recommendation pipelines mixing collaborative filtering with embedding retrieval.</p>
+							<p class="impact">Impact: replaced manual catalog tagging and improved product discoverability.</p>
+							<div class="tag-list compact"><span>Computer Vision</span><span>Embeddings</span><span>Recommendations</span><span>Retrieval</span></div>
 						</article>
 						<article class="project-card">
 							<div class="project-topline"><h3>OpenFPL Scout AI</h3></div>
-							<p><a href="https://openfpl.kassem.dev/" target="_blank" rel="noreferrer">OpenFPL Scout AI</a> (openfpl.kassem.dev) is an ML-powered Fantasy Premier League prediction system using XGBoost regression, time-series feature engineering, and scikit-learn pipelines trained on historical form and live official FPL data. It forecasts player points, optimizes a full 15-player squad, and ranks captaincy picks ahead of every gameweek deadline.</p>
-							<p class="impact">Impact: enables data-driven FPL decisions with real-time predictive insights.</p>
+							<p><a href="https://openfpl.kassem.dev/" target="_blank" rel="noreferrer">OpenFPL Scout AI</a> is a live Fantasy Premier League scout built on XGBoost regression and time-series features, trained on historical form and refreshed with official FPL data. It forecasts player points, optimizes a full 15-player squad, and ranks captaincy picks before every gameweek deadline.</p>
+							<p class="impact">Impact: a free public app, rebuilt every gameweek from live data.</p>
 							<div class="project-links"><a href="https://openfpl.kassem.dev/" target="_blank" rel="noreferrer">Live App</a><a href="https://github.com/elcaiseri/OpenFPL-Scout-AI" target="_blank" rel="noreferrer">Code</a></div>
-							<div class="tag-list compact"><span>Fantasy Premier League</span><span>Machine Learning</span><span>Time Series</span><span>Predictive Analytics</span><span>Live Data</span><span>Sports Intelligence</span></div>
+							<div class="tag-list compact"><span>XGBoost</span><span>Time Series</span><span>Optimization</span><span>Live Data</span></div>
 						</article>
 						<article class="project-card">
 							<div class="project-topline"><h3>Open-Source LangChain MCP Work</h3></div>
-							<p>Contributed to the LangChain MCP adapter ecosystem for Claude integration, and published 15+ reproducible Kaggle notebooks covering PyTorch deep learning, NLP pipelines, and production ML engineering patterns used by thousands of practitioners.</p>
-							<p class="impact">Impact: extended open-source tooling and community learning resources.</p>
+							<p>Contributions to the LangChain MCP adapter ecosystem for LLM agent tool use, plus 15+ reproducible Kaggle notebooks on PyTorch, NLP, and ML fundamentals.</p>
+							<p class="impact">Impact: open-source tooling and learning resources for the ML community.</p>
 							<div class="project-links"><a href="https://github.com/elcaiseri" target="_blank" rel="noreferrer">GitHub Profile</a><a href="https://www.kaggle.com/elcaiseri" target="_blank" rel="noreferrer">Kaggle Profile</a></div>
 							<div class="tag-list compact"><span>LangChain</span><span>MCP</span><span>Open Source</span><span>Kaggle</span></div>
 						</article>
