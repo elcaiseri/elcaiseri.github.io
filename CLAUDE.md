@@ -30,6 +30,8 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 | `resume/` | Resume page + PDF download |
 | `contact/` | Contact form and social links |
 | `open-fpl/` | Legacy path — redirects to the OpenFPL Scout AI app at `openfpl.kassem.dev` |
+| `assets/profile/` | Profile photo derivatives: `-portrait-{400,640,900,1145}.{jpg,webp}` for the hero `<picture>`, plus 1:1 / 4:3 / 16:9 crops referenced by the Person structured data |
+| `assets/social-preview.png` | 1200×630 Open Graph / Twitter card image |
 | `css/styles.css` | Single stylesheet; uses CSS custom properties for theming |
 | `js/main.js` | IntersectionObserver for scroll-reveal animations |
 
@@ -39,3 +41,4 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 - CSS custom properties (variables) are defined in `:root` in `styles.css`; use those for colors and spacing rather than hard-coding values.
 - When adding a new page: create the subdirectory with an `index.html`, add it to `sitemap.xml`, and update the nav in **every existing page**.
 - Structured data (Schema.org), Open Graph, and Twitter Card meta tags are present on each page — keep them updated when page content changes.
+- The hero profile photo is served through a `<picture>` with a WebP `<source>` and a JPEG `srcset`. If the photo changes, regenerate every size in `assets/profile/` rather than swapping a single file, and delete variants nothing references.

@@ -49,7 +49,11 @@
         "@type": "Person",
         "name": "Islam Kassem",
         "url": "https://kassem.dev/home/",
-        "image": "https://kassem.dev/assets/Islam-Kassem-Profile-Pic.jpg",
+        "image": [
+          "https://kassem.dev/assets/profile/islam-kassem-square-800.jpg",
+          "https://kassem.dev/assets/profile/islam-kassem-4x3-1024.jpg",
+          "https://kassem.dev/assets/profile/islam-kassem-16x9-1200.jpg"
+        ],
         "jobTitle": "AI Engineer",
         "description": "AI Engineer and Machine Learning Engineer specializing in production LLM systems, RAG pipelines, generative AI, Whisper ASR, and MLOps infrastructure.",
         "sameAs": [
@@ -119,9 +123,17 @@
 
         <aside class="hero-panel" aria-label="Key profile details">
           <figure class="profile-card">
-            <img src="/assets/Islam-Kassem-Profile-Pic.jpg"
-              alt="Islam Kassem — AI Engineer and Machine Learning Engineer specializing in LLMs and production ML"
-              width="576" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="/assets/profile/islam-kassem-portrait-400.webp 400w, /assets/profile/islam-kassem-portrait-640.webp 640w, /assets/profile/islam-kassem-portrait-900.webp 900w, /assets/profile/islam-kassem-portrait-1145.webp 1145w"
+                sizes="(max-width: 980px) calc(100vw - 4.5rem), 400px" />
+              <img src="/assets/profile/islam-kassem-portrait-640.jpg"
+                srcset="/assets/profile/islam-kassem-portrait-400.jpg 400w, /assets/profile/islam-kassem-portrait-640.jpg 640w, /assets/profile/islam-kassem-portrait-900.jpg 900w, /assets/profile/islam-kassem-portrait-1145.jpg 1145w"
+                sizes="(max-width: 980px) calc(100vw - 4.5rem), 400px"
+                alt="Islam Kassem — AI Engineer and Machine Learning Engineer specializing in LLMs and production ML"
+                width="1145" height="1374" loading="eager" decoding="async" fetchpriority="high" />
+            </picture>
           </figure>
           <div class="stat-card">
             <span class="stat-value">50+</span>
