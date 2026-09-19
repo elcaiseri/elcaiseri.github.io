@@ -284,7 +284,12 @@ h3 {
   padding: 1rem;
 }
 
+.stat-label {
+  overflow-wrap: break-word;
+}
+
 .stat-card {
+  min-width: 0;
   min-height: 140px;
   display: flex;
   flex-direction: column;
@@ -293,7 +298,8 @@ h3 {
 }
 
 .stat-value {
-  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  line-height: 1;
   font-weight: 800;
   letter-spacing: -0.06em;
 }
@@ -393,6 +399,13 @@ h3 {
 
 .project-card .project-links {
   margin-top: 0;
+  gap: 0.25rem 1.25rem;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .project-topline {
@@ -664,6 +677,19 @@ h3 {
 }
 
 @media (max-width: 980px) {
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.5rem;
+  }
+
   .hero,
   .skills-grid,
   .project-grid,
@@ -724,8 +750,8 @@ h3 {
   }
 
   .nav a {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    padding: 0 0.6rem;
     border-radius: 6px;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
   }
@@ -790,8 +816,8 @@ h3 {
   }
 
   .nav a {
-    font-size: 0.7rem;
-    padding: 0.35rem 0.55rem;
+    font-size: 0.78rem;
+    padding: 0 0.6rem;
     white-space: nowrap;
     flex-shrink: 0;
   }
@@ -806,5 +832,82 @@ h3 {
 
   h2 {
     font-size: clamp(1.4rem, 3vw, 2.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-panel {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    display: grid;
+    grid-template-columns: 6.6rem 1fr;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1.9rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    margin-top: 0;
+    padding: 0.35rem 0 0.25rem;
+    gap: 0;
+  }
+
+  .brand {
+    min-height: 36px;
+    justify-content: center;
+  }
+
+  .nav a {
+    min-height: 40px;
+  }
+
+  /* hint that the nav row scrolls sideways */
+  .nav {
+    -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, #000 88%, transparent);
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 140px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero-panel {
+    padding: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 0.85rem;
+  }
+
+  .stat-card {
+    grid-template-columns: 5.4rem 1fr;
+  }
+
+  .stat-value {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
   }
 }
