@@ -22,6 +22,7 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 | Path | Purpose |
 |---|---|
 | `index.html` | Homepage (hero, services summary, credentials, contact) |
+| `ar/` | Arabic (RTL) homepage — linked to `/` with `hreflang` tags in both heads and in `sitemap.xml` |
 | `about/` | Professional background |
 | `projects/` | ML/AI project showcase |
 | `services/` | Upwork service offerings |
@@ -40,5 +41,7 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 - Navigation links use **absolute paths** (`/about/`, `/projects/`) so they work from any subdirectory.
 - CSS custom properties (variables) are defined in `:root` in `styles.css`; use those for colors and spacing rather than hard-coding values.
 - When adding a new page: create the subdirectory with an `index.html`, add it to `sitemap.xml`, and update the nav in **every existing page**.
+- Structured data: the canonical Person entity lives on the homepage as `https://kassem.dev/#person`; every other page refers to it by that `@id` instead of redefining it.
+- Arabic page: if homepage content changes, mirror it in `ar/index.html`. RTL overrides live at the end of `styles.css` under `[dir="rtl"]`.
 - Structured data (Schema.org), Open Graph, and Twitter Card meta tags are present on each page — keep them updated when page content changes.
 - The hero profile photo is served through a `<picture>` with a WebP `<source>` and a JPEG `srcset`. If the photo changes, regenerate every size in `assets/profile/` rather than swapping a single file, and delete variants nothing references.

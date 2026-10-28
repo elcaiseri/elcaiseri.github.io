@@ -911,3 +911,62 @@ h3 {
     font-size: 0.8rem;
   }
 }
+
+/* Arabic (RTL) pages — /ar/ */
+[dir="rtl"] body,
+[dir="rtl"] .brand,
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .nav a,
+[dir="rtl"] .project-topline span,
+[dir="rtl"] .timeline-meta p,
+[dir="rtl"] .stat-label {
+  font-family: "IBM Plex Sans Arabic", "Manrope", sans-serif;
+}
+
+/* Arabic letters must stay joined: no tracking, no case transforms */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .stat-value,
+[dir="rtl"] .project-topline span,
+[dir="rtl"] .timeline-meta p {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3 {
+  line-height: 1.35;
+}
+
+[dir="rtl"] .skip-link {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .timeline::before {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .timeline-item {
+  padding-left: 0;
+  padding-right: 2.75rem;
+}
+
+[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: 0.72rem;
+}
+
+[dir="rtl"] .timeline-item ul {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+/* Latin fragments (emails, URLs, tech names) inside Arabic text */
+[dir="rtl"] [dir="ltr"] {
+  unicode-bidi: isolate;
+}
