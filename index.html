@@ -44,51 +44,141 @@
 	<link rel="stylesheet" href="css/styles.css" />
 	<script defer src="js/main.js"></script>
 	<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Person",
-				"name": "Islam Kassem",
-				"url": "https://kassem.dev/",
-				"image": [
-					"https://kassem.dev/assets/profile/islam-kassem-square-800.jpg",
-					"https://kassem.dev/assets/profile/islam-kassem-4x3-1024.jpg",
-					"https://kassem.dev/assets/profile/islam-kassem-16x9-1200.jpg"
-				],
-				"address": { "@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA" },
-				"homeLocation": { "@type": "Place", "name": "Riyadh, Saudi Arabia" },
-				"workLocation": { "@type": "Place", "name": "Riyadh, Saudi Arabia" },
-				"jobTitle": "AI Engineer",
-				"description": "AI Engineer and Machine Learning Engineer based in Riyadh, Saudi Arabia, specializing in production LLM systems, RAG pipelines, generative AI, Whisper ASR, and MLOps infrastructure.",
-				"sameAs": [
-					"https://www.linkedin.com/in/elcaiseri",
-					"https://github.com/elcaiseri",
-					"https://www.kaggle.com/elcaiseri",
-					"https://medium.com/@elcaiseri"
-				],
-				"knowsAbout": [
-					"Large Language Models",
-					"Retrieval-Augmented Generation",
-					"Generative AI",
-					"Whisper ASR",
-					"Computer Vision",
-					"MLOps",
-					"PyTorch",
-					"Kubernetes",
-					"AWS",
-					"Machine Learning System Design",
-					"Distributed Training",
-					"LLM Fine-Tuning",
-					"Vector Databases",
-					"Production ML Pipelines",
-					"Deep Learning"
-				],
-				"hasOccupation": [
-					{ "@type": "Occupation", "name": "AI Engineer" },
-					{ "@type": "Occupation", "name": "Machine Learning Engineer" },
-					{ "@type": "Occupation", "name": "LLM Engineer" }
-				]
-			}
-		</script>
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Person",
+					"@id": "https://kassem.dev/#person",
+					"name": "Islam Kassem",
+					"alternateName": [
+						"Eslam Kassem",
+						"إسلام قاسم",
+						"elcaiseri"
+					],
+					"givenName": "Islam",
+					"familyName": "Kassem",
+					"url": "https://kassem.dev/",
+					"mainEntityOfPage": "https://kassem.dev/",
+					"image": [
+						"https://kassem.dev/assets/profile/islam-kassem-square-800.jpg",
+						"https://kassem.dev/assets/profile/islam-kassem-4x3-1024.jpg",
+						"https://kassem.dev/assets/profile/islam-kassem-16x9-1200.jpg"
+					],
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Riyadh",
+						"addressCountry": "SA"
+					},
+					"homeLocation": {
+						"@type": "Place",
+						"name": "Riyadh, Saudi Arabia"
+					},
+					"workLocation": {
+						"@type": "Place",
+						"name": "Riyadh, Saudi Arabia"
+					},
+					"jobTitle": "Senior AI/ML Engineer",
+					"description": "Senior AI/ML Engineer based in Riyadh, Saudi Arabia, building production LLM systems, agentic RAG, Arabic/English NLP, Whisper ASR, on-premise generative AI, and MLOps infrastructure.",
+					"knowsLanguage": [
+						{
+							"@type": "Language",
+							"name": "Arabic",
+							"alternateName": "ar"
+						},
+						{
+							"@type": "Language",
+							"name": "English",
+							"alternateName": "en"
+						}
+					],
+					"alumniOf": [
+						{
+							"@type": "CollegeOrUniversity",
+							"name": "Cairo University",
+							"sameAs": "https://en.wikipedia.org/wiki/Cairo_University"
+						},
+						{
+							"@type": "CollegeOrUniversity",
+							"name": "Port Said University",
+							"sameAs": "https://en.wikipedia.org/wiki/Port_Said_University"
+						}
+					],
+					"award": [
+						"Kaggle Code Master (Top 1%)",
+						"Upwork Top Rated, 100% Job Success Score"
+					],
+					"sameAs": [
+						"https://www.linkedin.com/in/elcaiseri",
+						"https://github.com/elcaiseri",
+						"https://www.kaggle.com/elcaiseri",
+						"https://medium.com/@elcaiseri",
+						"https://elcaiseri.medium.com/",
+						"https://www.upwork.com/freelancers/~0189bd1304d9abc2ae"
+					],
+					"knowsAbout": [
+						"Large Language Models",
+						"Retrieval-Augmented Generation",
+						"Agentic RAG",
+						"GraphRAG",
+						"AI Agents",
+						"Model Context Protocol",
+						"Arabic Natural Language Processing",
+						"Generative AI",
+						"Whisper ASR",
+						"Computer Vision",
+						"LLM Fine-Tuning",
+						"LLM Inference Optimization",
+						"MLOps",
+						"PyTorch",
+						"Kubernetes",
+						"AWS",
+						"Machine Learning System Design",
+						"Vector Databases",
+						"Deep Learning"
+					],
+					"hasOccupation": [
+						{
+							"@type": "Occupation",
+							"name": "Senior AI Engineer"
+						},
+						{
+							"@type": "Occupation",
+							"name": "Machine Learning Engineer"
+						},
+						{
+							"@type": "Occupation",
+							"name": "LLM Engineer"
+						}
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://kassem.dev/#website",
+					"url": "https://kassem.dev/",
+					"name": "Islam Kassem",
+					"alternateName": "kassem.dev",
+					"inLanguage": "en",
+					"publisher": {
+						"@id": "https://kassem.dev/#person"
+					}
+				},
+				{
+					"@type": "ProfilePage",
+					"@id": "https://kassem.dev/#profilepage",
+					"url": "https://kassem.dev/",
+					"name": "Islam Kassem | Senior AI/ML Engineer in Riyadh",
+					"isPartOf": {
+						"@id": "https://kassem.dev/#website"
+					},
+					"mainEntity": {
+						"@id": "https://kassem.dev/#person"
+					},
+					"dateModified": "2026-10-28"
+				}
+			]
+		}
+	</script>
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -111,8 +201,8 @@
 				"Live official Fantasy Premier League data"
 			],
 			"keywords": "Fantasy Premier League, FPL, FPL AI, FPL scout, player predictions, squad optimizer, captain picks, machine learning",
-			"author": { "@type": "Person", "name": "Islam Kassem", "url": "https://kassem.dev/" },
-			"creator": { "@type": "Person", "name": "Islam Kassem", "url": "https://kassem.dev/" },
+			"author": { "@type": "Person", "@id": "https://kassem.dev/#person", "name": "Islam Kassem", "url": "https://kassem.dev/" },
+			"creator": { "@type": "Person", "@id": "https://kassem.dev/#person", "name": "Islam Kassem", "url": "https://kassem.dev/" },
 			"sameAs": ["https://github.com/elcaiseri/OpenFPL-Scout-AI"]
 		}
 	</script>
