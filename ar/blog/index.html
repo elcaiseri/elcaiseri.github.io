@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>إسلام قاسم | مدونة الذكاء الاصطناعي والتعلم الآلي</title>
+	<meta name="description"
+		content="مقالات تقنية لإسلام قاسم عن النماذج اللغوية الكبيرة وأنظمة RAG وPyTorch والتعلم الآلي في الإنتاج، منشورة على Medium باللغة الإنجليزية." />
+	<meta name="author" content="إسلام قاسم" />
+	<meta property="og:title" content="إسلام قاسم | مدونة الذكاء الاصطناعي والتعلم الآلي" />
+	<meta property="og:description"
+		content="مقالات عن بناء أنظمة الذكاء الاصطناعي وفهمها: من بنية المحوّلات إلى أنظمة RAG في الإنتاج وأساسيات التعلم الآلي." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://kassem.dev/ar/blog/" />
+	<meta property="og:site_name" content="Islam Kassem" />
+	<meta property="og:locale" content="ar_SA" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:image" content="https://kassem.dev/assets/social-card.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="إسلام قاسم | مدونة الذكاء الاصطناعي والتعلم الآلي" />
+	<meta name="twitter:description"
+		content="مقالات عن بناء أنظمة الذكاء الاصطناعي وفهمها: من بنية المحوّلات إلى أنظمة RAG في الإنتاج وأساسيات التعلم الآلي." />
+	<meta name="twitter:image" content="https://kassem.dev/assets/social-card.png" />
+	<meta name="robots" content="index, follow, max-image-preview:large" />
+	<link rel="canonical" href="https://kassem.dev/ar/blog/" />
+	<link rel="alternate" hreflang="en" href="https://kassem.dev/blog/" />
+	<link rel="alternate" hreflang="ar" href="https://kassem.dev/ar/blog/" />
+	<link rel="alternate" hreflang="x-default" href="https://kassem.dev/blog/" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<script>
+		document.documentElement.classList.add("js");
+	</script>
+	<link rel="stylesheet" href="/css/styles.css" />
+	<script defer src="/js/main.js"></script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "CollectionPage",
+			"@id": "https://kassem.dev/ar/blog/#webpage",
+			"name": "إسلام قاسم | مدونة الذكاء الاصطناعي والتعلم الآلي",
+			"url": "https://kassem.dev/ar/blog/",
+			"description": "مقالات تقنية لإسلام قاسم عن النماذج اللغوية الكبيرة وأنظمة RAG وPyTorch والتعلم الآلي في الإنتاج، منشورة على Medium باللغة الإنجليزية.",
+			"inLanguage": "ar",
+			"isPartOf": {
+				"@type": "WebSite",
+				"@id": "https://kassem.dev/#website",
+				"name": "Islam Kassem",
+				"url": "https://kassem.dev/"
+			},
+			"about": {
+				"@type": "Person",
+				"@id": "https://kassem.dev/#person",
+				"name": "Islam Kassem",
+				"url": "https://kassem.dev/"
+			}
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "الرئيسية",
+					"item": "https://kassem.dev/ar/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "المدونة",
+					"item": "https://kassem.dev/ar/blog/"
+				}
+			]
+		}
+	</script>
+</head>
+<body>
+	<a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+	<div class="site-shell">
+		<header class="topbar">
+			<a class="brand" href="/ar/">إسلام قاسم</a>
+			<nav class="nav" aria-label="التنقل بين الأقسام">
+				<a href="/ar/about/">نبذة</a>
+				<a href="/ar/skills/">المهارات</a>
+				<a href="/ar/projects/">المشاريع</a>
+				<a href="/ar/services/">الخدمات</a>
+				<a href="/ar/credentials/">المؤهلات</a>
+				<a href="/ar/blog/" aria-current="page">المدونة</a>
+				<a href="/ar/contact/">تواصل</a>
+				<a href="/blog/" hreflang="en" lang="en" dir="ltr">English</a>
+			</nav>
+		</header>
+
+		<main id="main">
+			<section class="section reveal">
+				<div class="section-heading">
+					<p class="eyebrow">المدونة</p>
+					<h1>كتابات في الذكاء الاصطناعي والتعلم الآلي</h1>
+				</div>
+				<p class="section-intro">
+					مقالات تقنية عن بناء أنظمة الذكاء الاصطناعي وفهمها، من بنية المحوّلات والذكاء الاصطناعي التوليدي إلى أنظمة RAG
+					في الإنتاج وأساسيات التعلم الآلي. المقالات منشورة على Medium باللغة الإنجليزية.
+				</p>
+				<div class="project-grid">
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">OpenFPL Scout AI: What a Full Season of Blind Validation Actually Proved</bdi></h3>
+						</div>
+						<p>اختبار صارم خارج العينة لأداة OpenFPL: تدريب على موسمين، ثم تقييم واحد على موسم كامل لم تره النماذج، وعرض أمين لما تستطيع التنبؤات فعله وما لا تستطيعه.</p>
+						<p class="impact">أغسطس ٢٠٢٦ · التعلم الآلي · تقييم النماذج</p>
+						<div class="project-links">
+							<a href="https://medium.com/data-science-collective/openfpl-scout-ai-what-a-full-season-of-blind-validation-actually-proved-755bb680d146" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>Model Evaluation</span><span>Fantasy Premier League</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Understanding Large Language Models: A Beginner's Guide</bdi></h3>
+						</div>
+						<p>شرح من الأساس لطريقة عمل النماذج اللغوية الكبيرة: البنية، والتدريب، والحدس وراء قدرتها على توليد نص متماسك.</p>
+						<p class="impact">فبراير ٢٠٢٦ · النماذج اللغوية الكبيرة · الذكاء الاصطناعي التوليدي</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/understanding-large-language-models-a-beginners-guide-147a6bf3e4c0" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>LLMs</span><span>Generative AI</span><span>Deep Learning</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">OpenFPL-Scout-AI: Data-Driven Fantasy Premier League Success</bdi></h3>
+						</div>
+						<p>كيف تُشغّل نماذج التعلم الآلي وخصائص السلاسل الزمنية وواجهات البيانات الحية الاختيارَ الآلي لفريق FPL والتنبؤ بأداء اللاعبين.</p>
+						<p class="impact">أغسطس ٢٠٢٥ · التعلم الآلي · التحليلات التنبؤية</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/openfpl-scout-ai-data-driven-fantasy-premier-league-success-2882c6266ca9" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>Time Series</span><span>Python</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">How GPT-2 Works: Building a Transformer Language Model From Scratch in PyTorch</bdi></h3>
+						</div>
+						<p>تنفيذ GPT-2 خطوة بخطوة في PyTorch: رؤوس الانتباه، والترميز الموضعي، وحلقة التدريب الانحدارية الذاتية كاملة.</p>
+						<p class="impact">أبريل ٢٠٢٥ · PyTorch · المحوّلات · التعلم العميق</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/how-gpt-2-works-building-a-transformer-language-model-from-scratch-in-pytorch-b4abc4a7a7b7" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>PyTorch</span><span>Transformers</span><span>LLMs</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Building an ML-Powered Survey Analysis System with RAG: A Deep Dive</bdi></h3>
+						</div>
+						<p>كيف تجمع بين التوليد المعزز بالاسترجاع ومصنّفات التعلم الآلي لتحليل إجابات الاستبيانات المفتوحة على نطاق واسع.</p>
+						<p class="impact">أكتوبر ٢٠٢٤ · RAG · معالجة اللغات الطبيعية · التعلم الآلي في الإنتاج</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/building-an-ml-powered-survey-analysis-system-with-rag-a-deep-dive-b6797d5a8ff2" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>RAG</span><span>NLP</span><span>Machine Learning</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Master Fantasy Premier League with FantasyLTX</bdi></h3>
+						</div>
+						<p>نهج قائم على البيانات للنجاح في FPL باستخدام نماذج التعلم الآلي لاختيار اللاعبين وقرارات القائد واستراتيجية الانتقالات.</p>
+						<p class="impact">سبتمبر ٢٠٢٤ · التعلم الآلي · تحليل البيانات</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/master-fantasy-premier-league-with-fantasyltx-a-data-driven-approach-to-fpl-success-a1f7527f72af" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>Python</span><span>Analytics</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Building a K-Nearest Neighbors Classifier from Scratch</bdi></h3>
+						</div>
+						<p>دليل شامل لتنفيذ خوارزمية أقرب الجيران (KNN) بلغة Python من المبادئ الأولى: مقاييس المسافة، وحدود القرار، والمفاضلات في الأداء.</p>
+						<p class="impact">أغسطس ٢٠٢٤ · التعلم الآلي · Python · الخوارزميات</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/building-a-k-nearest-neighbors-knn-classifier-from-scratch-a-comprehensive-guide-dd756f17a50b" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>Python</span><span>Algorithms</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Building a Naive Bayes Classifier from Scratch</bdi></h3>
+						</div>
+						<p>بناء مصنّف بايز الساذج خطوة بخطوة باستخدام مبرهنة بايز والاحتمال الشرطي، دون أي مكتبة تعلم آلي.</p>
+						<p class="impact">أغسطس ٢٠٢٤ · التعلم الآلي · Python · التصنيف</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/building-a-naive-bayes-classifier-from-scratch-a-step-by-step-guide-557638e2d878" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>Python</span><span>Classification</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Image Similarity Estimation Using a Siamese Network with Triplet Loss</bdi></h3>
+						</div>
+						<p>دليل عملي لبناء شبكة سيامية في PyTorch بدالة الخسارة الثلاثية لتعلّم تضمينات الصور وقياس التشابه البصري.</p>
+						<p class="impact">أغسطس ٢٠٢٤ · PyTorch · الرؤية الحاسوبية · التعلم العميق</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/image-similarity-estimation-using-a-siamese-network-with-triplet-loss-a-practical-guide-124938e24b3a" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>PyTorch</span><span>Computer Vision</span><span>Deep Learning</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Building a Simple Logistic Regression Model from Scratch with NumPy</bdi></h3>
+						</div>
+						<p>التصنيف الثنائي من الأساس: الانحدار التدرجي، ودالة sigmoid، وتحسين دالة الخسارة باستخدام NumPy فقط.</p>
+						<p class="impact">يوليو ٢٠٢٤ · التعلم الآلي · NumPy · التصنيف</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/building-a-simple-logistic-regression-model-from-scratch-with-numpy-c8cf2439d059" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>NumPy</span><span>Python</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-topline">
+							<h3><bdi lang="en">Understanding Linear Regression by Building It from Scratch with NumPy</bdi></h3>
+						</div>
+						<p>أساسيات التعلم الآلي: تنفيذ الانحدار الخطي بالمعادلة الطبيعية والانحدار التدرجي، مع شرح بصري للرياضيات.</p>
+						<p class="impact">يوليو ٢٠٢٤ · التعلم الآلي · NumPy · الأساسيات</p>
+						<div class="project-links">
+							<a href="https://elcaiseri.medium.com/understanding-linear-regression-by-building-it-from-scratch-with-numpy-43ac1c5dda7a" target="_blank" rel="noreferrer">اقرأ على Medium (بالإنجليزية) ←</a>
+						</div>
+						<div class="tag-list compact" dir="ltr">
+							<span>Machine Learning</span><span>NumPy</span><span>Python</span>
+						</div>
+					</article>
+
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
