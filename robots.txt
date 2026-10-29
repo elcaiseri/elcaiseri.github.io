@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kassem.dev/sitemap.xml
+Sitemap: https://kassem.dev/ar/sitemap.xml
