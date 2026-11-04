@@ -602,7 +602,8 @@ h3 {
   margin-bottom: 0;
 }
 
-.service-intro + .project-grid {
+.service-intro + .project-grid,
+.service-intro + .credentials-grid {
   margin-top: 1.75rem;
 }
 
