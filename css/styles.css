@@ -89,7 +89,8 @@ li {
   font-size: 0.84rem;
 }
 
-.nav a[aria-current="page"] {
+.nav a[aria-current="page"],
+.nav a[aria-current="true"] {
   color: var(--accent-strong);
 }
 
@@ -571,6 +572,24 @@ h3 {
 .section-intro {
   max-width: 65ch;
   margin: 0 0 2.5rem;
+}
+
+/* Intro text on the focused service pages (/services/<slug>/) */
+.service-intro {
+  max-width: 65ch;
+}
+
+.service-intro p {
+  margin: 0 0 1.1rem;
+  font-size: 1.04rem;
+}
+
+.service-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.service-intro + .project-grid {
+  margin-top: 1.75rem;
 }
 
 .section-actions {

@@ -25,7 +25,7 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 | `ar/` | Arabic (RTL) mirror of the whole site: `ar/index.html` plus `ar/{about,skills,projects,services,credentials,blog,contact}/`. Each Arabic page and its English page link to each other with `hreflang` tags in both heads and in `sitemap.xml` |
 | `about/` | Professional background |
 | `projects/` | ML/AI project showcase |
-| `services/` | Upwork service offerings |
+| `services/` | Upwork service offerings, plus focused service pages `services/{rag-development,arabic-llm,on-premise-llm}/` (each with an Arabic twin under `ar/services/`). On these subpages the nav marks Services with `aria-current="true"`, and they're linked from the "Specialist services" section of both Services pages instead of from the nav |
 | `skills/` | Technical skills breakdown |
 | `credentials/` | Education and Kaggle Master status |
 | `resume/` | Resume page + PDF download |
