@@ -193,6 +193,14 @@ h3 {
   font-size: 1.08rem;
 }
 
+.hero-note {
+  max-width: 60ch;
+  margin: 0.9rem 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 .hero-actions,
 .project-links {
   display: flex;
