@@ -28,7 +28,7 @@ All pages are standalone HTML files inside subdirectories (`about/index.html`, `
 | `services/` | Upwork service offerings, plus focused service pages `services/{rag-development,arabic-llm,on-premise-llm}/` (each with an Arabic twin under `ar/services/`). On these subpages the nav marks Services with `aria-current="true"`, and they're linked from the "Specialist services" section of both Services pages instead of from the nav |
 | `skills/` | Technical skills breakdown |
 | `credentials/` | Education and Kaggle Master status |
-| `resume/` | Resume page + PDF download |
+| `resume/` | Resume page (a `noindex` redirect) + PDF download. The PDF is listed in `sitemap.xml` without language alternates and carries Title/Author metadata; if you replace the PDF, keep its filename, set that metadata again and update its `lastmod` |
 | `contact/` | Contact form and social links |
 | `open-fpl/` | Legacy path — redirects to the OpenFPL Scout AI app at `openfpl.kassem.dev` |
 | `assets/profile/` | Profile photo derivatives: `-portrait-{400,640,900,1145}.{jpg,webp}` for the hero `<picture>`, plus 1:1 / 4:3 / 16:9 crops referenced by the Person structured data |
