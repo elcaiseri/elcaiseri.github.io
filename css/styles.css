@@ -401,6 +401,20 @@ h3 {
   margin-bottom: 0.6rem;
 }
 
+/* On Skills, Credentials, Projects and Blog the cards are the page's main
+   sections, so their titles are h2 elements kept at card-title size. */
+.skill-group h2,
+.project-card h2,
+.credential-card h2 {
+  font-size: 1.15rem;
+  letter-spacing: normal;
+  max-width: none;
+}
+
+.credential-card h2 {
+  margin-bottom: 0.6rem;
+}
+
 .project-card .tag-list.compact {
   margin-top: auto;
   padding-top: 0.25rem;
