@@ -188,41 +188,22 @@ h3 {
   font-size: 1.15rem;
 }
 
-/* Homepage hero: the h1 is your name plus role; the tagline sits under it */
-.hero-title {
+/* Homepage hero: the small line above the headline is the h1 (it starts with the
+   name) and keeps the eyebrow look; the big headline is a <p> styled like an h1. */
+.hero-copy h1.eyebrow {
   max-width: none;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
-.hero-name,
-.hero-role {
-  display: block;
-}
-
-.hero-role {
-  margin-top: 0.7rem;
-  font-size: max(1.05rem, 0.42em);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--accent-strong);
-}
-
-.hero-sep {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
-.hero-tagline {
-  max-width: 30ch;
-  margin: 1.4rem 0 0;
+.hero-headline {
+  margin: 0;
   color: var(--text);
-  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  max-width: 14ch;
 }
 
 .hero-summary {
@@ -808,7 +789,8 @@ h3 {
   }
 
   h1,
-  h2 {
+  h2,
+  .hero-headline {
     max-width: none;
   }
 }
@@ -915,7 +897,8 @@ h3 {
     padding: 2.5rem 0;
   }
 
-  h1 {
+  h1,
+  .hero-headline {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
   }
 
@@ -1016,8 +999,7 @@ h3 {
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3,
-[dir="rtl"] .hero-role,
-[dir="rtl"] .hero-tagline,
+[dir="rtl"] .hero-headline,
 [dir="rtl"] .eyebrow,
 [dir="rtl"] .stat-value,
 [dir="rtl"] .project-topline span,
@@ -1028,7 +1010,8 @@ h3 {
 
 [dir="rtl"] h1,
 [dir="rtl"] h2,
-[dir="rtl"] h3 {
+[dir="rtl"] h3,
+[dir="rtl"] .hero-headline {
   line-height: 1.35;
 }
 
